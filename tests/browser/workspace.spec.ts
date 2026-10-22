@@ -190,6 +190,8 @@ test("WCAG, responsive layout and late-response logout privacy", async ({
     ).violations,
   ).toEqual([]);
   await signIn(page);
+  await page.locator(".table-wrap").focus();
+  await expect(page.locator(".table-wrap")).toBeFocused();
   expect(
     (
       await new AxeBuilder({ page })

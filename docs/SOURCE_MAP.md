@@ -931,14 +931,14 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/browser/workspace.spec.ts` | 166 | `state` |
 | `tests/browser/workspace.spec.ts` | 167 | `changed` |
 | `tests/browser/workspace.spec.ts` | 180 | `{ page, }` |
-| `tests/browser/workspace.spec.ts` | 205 | `release` |
-| `tests/browser/workspace.spec.ts` | 206 | `received` |
-| `tests/browser/workspace.spec.ts` | 207 | `hold` |
-| `tests/browser/workspace.spec.ts` | 207 | `resolve` |
-| `tests/browser/workspace.spec.ts` | 210 | `responseReady` |
-| `tests/browser/workspace.spec.ts` | 210 | `resolve` |
-| `tests/browser/workspace.spec.ts` | 215 | `route` |
-| `tests/browser/workspace.spec.ts` | 216 | `response` |
+| `tests/browser/workspace.spec.ts` | 207 | `release` |
+| `tests/browser/workspace.spec.ts` | 208 | `received` |
+| `tests/browser/workspace.spec.ts` | 209 | `hold` |
+| `tests/browser/workspace.spec.ts` | 209 | `resolve` |
+| `tests/browser/workspace.spec.ts` | 212 | `responseReady` |
+| `tests/browser/workspace.spec.ts` | 212 | `resolve` |
+| `tests/browser/workspace.spec.ts` | 217 | `route` |
+| `tests/browser/workspace.spec.ts` | 218 | `response` |
 | `tools/browser_checks.mjs` | 8 | `project` |
 | `tools/browser_checks.mjs` | 9 | `result` |
 | `tools/source_index.mjs` | 7 | `collect` |
