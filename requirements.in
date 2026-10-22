@@ -1,0 +1,5 @@
+# Jason Stys: pinned local API, strict contracts and memory-hard account hashing.
+fastapi==0.159.1
+uvicorn==0.54.0
+pydantic==2.14.1
+argon2-cffi==25.1.0

@@ -1,0 +1,516 @@
+<!doctype html>
+<!-- Jason Stys: accessible fleet maintenance desk; no third-party assets or runtime analytics. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Serialized drone component records, inspections and evidence-based readiness by Jason Stys."
+    />
+    <title>Drone Maintenance Readiness Studio · Jason Stys</title>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to workspace</a>
+    <header>
+      <div class="logo" aria-hidden="true">◈</div>
+      <div>
+        <p class="eyebrow">JASON STYS / FLEET SYSTEMS</p>
+        <h1>Drone Maintenance Readiness Studio</h1>
+        <p class="muted">Trace the component. Preserve the evidence.</p>
+      </div>
+      <span class="local">LOCAL · RECORD-BASED</span>
+    </header>
+    <main id="main">
+      <div class="notice">
+        Advisory records only—not flight authorization, airworthiness
+        certification or a replacement for manufacturer instructions and a
+        physical preflight inspection. Demo thresholds are fictional.
+      </div>
+      <p id="message" role="status" aria-live="polite"></p>
+      <section id="login-panel" class="panel login">
+        <p class="eyebrow">PRIVATE STAFF WORKSPACE</p>
+        <h2>Sign in to the maintenance desk</h2>
+        <p>
+          Local accounts. No cloud uploads, trackers or public registration.
+        </p>
+        <form id="login-form">
+          <label
+            >Username<input
+              id="username"
+              autocomplete="username"
+              minlength="3"
+              maxlength="40"
+              required /></label
+          ><label
+            >Password<input
+              id="password"
+              type="password"
+              autocomplete="current-password"
+              maxlength="128"
+              required /></label
+          ><button type="submit">Sign in</button>
+        </form>
+      </section>
+      <section id="workspace" hidden>
+        <div class="toolbar">
+          <div>
+            <p class="eyebrow">MAINTENANCE WORKSPACE</p>
+            <p id="identity"></p>
+          </div>
+          <div>
+            <button id="refresh" class="secondary">Refresh records</button>
+            <button id="logout" class="secondary">Sign out</button>
+          </div>
+        </div>
+        <div id="metrics" class="metrics"></div>
+        <div class="layout">
+          <aside class="panel">
+            <h2>Fleet roster</h2>
+            <label
+              >Filter status<select id="status-filter">
+                <option value="all">All aircraft</option>
+                <option value="blocked">Blocked</option>
+                <option value="unknown">Unknown</option>
+                <option value="review">Review</option>
+                <option value="within_recorded_limits">
+                  Within recorded limits
+                </option>
+              </select></label
+            >
+            <div id="roster"></div>
+            <hr />
+            <h3>Policy &amp; integrity</h3>
+            <p id="policy-label"></p>
+            <p id="generation" class="mono"></p>
+            <p class="muted">
+              Changes invalidate older fleet assessments. All signed-in staff
+              share this one organization.
+            </p>
+            <a
+              href="/api/evidence/export"
+              id="ledger-export"
+              class="button secondary"
+              download
+              >Download private ledger</a
+            >
+          </aside>
+          <div class="desk">
+            <section class="panel">
+              <div class="toolbar">
+                <div>
+                  <p class="eyebrow">SELECTED AIRCRAFT</p>
+                  <h2 id="aircraft-name"></h2>
+                </div>
+                <span id="aircraft-status" class="badge"></span>
+              </div>
+              <p id="aircraft-totals" class="muted"></p>
+              <div class="table-wrap">
+                <table>
+                  <caption>
+                    Required serialized components
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Position / serial</th>
+                      <th scope="col">Recorded use</th>
+                      <th scope="col">Remaining / inspection</th>
+                      <th scope="col">Finding</th>
+                    </tr>
+                  </thead>
+                  <tbody id="parts"></tbody>
+                </table>
+              </div>
+              <div id="aircraft-findings"></div>
+              <p class="muted">
+                Component counters follow their serialized identity across
+                aircraft. Operating cycles are not inferred equivalent full
+                battery charge cycles.
+              </p>
+            </section>
+            <div class="two-col">
+              <section class="panel">
+                <h3>Record usage</h3>
+                <p>
+                  Records self-reported operation against the parts installed
+                  now. Unsafe/blocked operation is still recorded, not
+                  concealed. No backdating or submitted component list.
+                </p>
+                <form id="usage-form">
+                  <label
+                    >Operating minutes<input
+                      id="usage-minutes"
+                      type="number"
+                      min="1"
+                      max="120"
+                      step="1"
+                      value="12"
+                      required /></label
+                  ><label
+                    >Operating cycles<input
+                      id="usage-cycles"
+                      type="number"
+                      min="1"
+                      max="100"
+                      value="1"
+                      required /></label
+                  ><label
+                    >Usage evidence note<textarea
+                      id="usage-note"
+                      minlength="10"
+                      maxlength="500"
+                      required
+                    ></textarea></label
+                  ><button type="submit" data-roles="operator technician">
+                    Record attributable usage
+                  </button>
+                </form>
+                <button id="retry-usage" class="secondary" hidden>
+                  Retry pending usage safely
+                </button>
+                <p id="usage-result" class="muted"></p>
+              </section>
+              <section class="panel">
+                <h3>Assessment &amp; planning</h3>
+                <p>
+                  Explicit constant-workload scenario—not an AI failure
+                  prediction. Zero rate means no finite usage estimate.
+                </p>
+                <form id="assess-form">
+                  <label
+                    >Planned daily minutes<input
+                      id="daily-minutes"
+                      type="number"
+                      min="0"
+                      max="1440"
+                      value="20"
+                      required /></label
+                  ><label
+                    >Planned daily operating cycles<input
+                      id="daily-cycles"
+                      type="number"
+                      min="0"
+                      max="100"
+                      value="2"
+                      required /></label
+                  ><button type="submit">Capture fleet assessment</button>
+                </form>
+                <label
+                  >Saved assessment<select id="report-select">
+                    <option value="">Choose an assessment</option>
+                  </select></label
+                >
+                <p id="report-state" class="muted"></p>
+                <a id="report-export" class="button secondary" download hidden
+                  >Download assessment JSON</a
+                >
+                <form id="review-form" hidden>
+                  <label
+                    >Independent assessment note<textarea
+                      id="review-note"
+                      minlength="10"
+                      maxlength="500"
+                      required
+                    ></textarea></label
+                  ><button type="submit" data-roles="reviewer">
+                    Acknowledge evidence
+                  </button>
+                </form>
+                <p class="muted">
+                  Acknowledgement can document blocked/unknown findings but
+                  never overrides them or authorizes flight.
+                </p>
+              </section>
+            </div>
+            <section class="panel">
+              <div class="toolbar">
+                <h2>Component lifecycle desk</h2>
+                <label class="inline"
+                  >Component<select id="component-select"></select
+                ></label>
+              </div>
+              <p id="component-summary"></p>
+              <div id="component-findings"></div>
+              <svg
+                id="usage-chart"
+                viewBox="0 0 600 140"
+                role="img"
+                aria-label="Recorded cumulative component operating minutes"
+              ></svg>
+              <p class="muted">
+                Chart: recorded cumulative use, not a continuous telemetry trace
+                or battery-life prediction.
+              </p>
+              <div class="two-col">
+                <form id="swap-form">
+                  <h3>Swap / remove a part</h3>
+                  <label
+                    >Required position<select id="slot-select"></select></label
+                  ><label
+                    >Incoming component<select id="incoming">
+                      <option value="">Remove only</option>
+                    </select></label
+                  ><label
+                    >Swap evidence note<textarea
+                      id="swap-note"
+                      minlength="10"
+                      maxlength="500"
+                      required
+                    ></textarea></label
+                  ><button type="submit" data-roles="technician">
+                    Record component swap
+                  </button>
+                  <p class="muted">
+                    The old component keeps its full recorded life;
+                    incompatible, double-installed or retired parts are
+                    rejected.
+                  </p>
+                </form>
+                <form id="inspection-form">
+                  <h3>Inspection evidence</h3>
+                  <label
+                    >Recorded result<select id="inspection-result">
+                      <option value="pass">Passed physical inspection</option>
+                      <option value="fail">Failed physical inspection</option>
+                    </select></label
+                  >
+                  <div id="battery-fields">
+                    <label
+                      >Measured capacity, percent<input
+                        id="capacity"
+                        type="number"
+                        min="0"
+                        max="100"
+                        step="0.1"
+                        placeholder="Blank means unknown" /></label
+                    ><label
+                      >Measured resistance, mΩ<input
+                        id="resistance"
+                        type="number"
+                        min="0"
+                        max="1000"
+                        step="0.1"
+                        placeholder="Blank means unknown"
+                    /></label>
+                  </div>
+                  <label
+                    >Inspection evidence note<textarea
+                      id="inspection-note"
+                      minlength="10"
+                      maxlength="500"
+                      required
+                    ></textarea></label
+                  ><button type="submit" data-roles="technician">
+                    Record inspection
+                  </button>
+                  <p class="muted">
+                    A passing inspection never silently closes an existing
+                    defect. Battery values are recorded observations, not
+                    inferred state-of-health.
+                  </p>
+                </form>
+              </div>
+              <div class="two-col">
+                <form id="defect-form">
+                  <h3>Report a component finding</h3>
+                  <label
+                    >Severity<select id="severity">
+                      <option value="blocking">Blocking defect</option>
+                      <option value="watch">Watch / human review</option>
+                    </select></label
+                  ><label
+                    >Defect evidence note<textarea
+                      id="defect-note"
+                      minlength="10"
+                      maxlength="500"
+                      required
+                    ></textarea></label
+                  ><button type="submit" data-roles="operator technician">
+                    Record defect
+                  </button>
+                </form>
+                <div>
+                  <h3>Irreversible retirement</h3>
+                  <label
+                    >Retirement evidence note<textarea
+                      id="retire-note"
+                      minlength="10"
+                      maxlength="500"
+                    ></textarea></label
+                  ><label class="check"
+                    ><input id="retire-confirm" type="checkbox" /> I intend to
+                    retire this removed serialized part permanently in this
+                    workspace.</label
+                  ><button
+                    id="retire"
+                    class="secondary"
+                    data-roles="technician"
+                  >
+                    Retire removed component
+                  </button>
+                  <p class="muted">
+                    No restoration, deletion or lifetime reset. Follow
+                    applicable handling/disposal procedures; this app supplies
+                    no physical repair instructions.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section class="panel">
+              <h2>Corrective work &amp; independent verification</h2>
+              <div id="defects"></div>
+              <div class="two-col">
+                <form id="work-form">
+                  <label>Open defect<select id="work-defect"></select></label
+                  ><label
+                    >Completed work evidence<textarea
+                      id="work-note"
+                      minlength="10"
+                      maxlength="500"
+                      required
+                    ></textarea></label
+                  ><button type="submit" data-roles="technician">
+                    Record completed work
+                  </button>
+                </form>
+                <form id="verify-form">
+                  <label
+                    >Completed work order<select
+                      id="verify-work"
+                    ></select></label
+                  ><label
+                    >Independent verification note<textarea
+                      id="verify-note"
+                      minlength="10"
+                      maxlength="500"
+                      required
+                    ></textarea></label
+                  ><button type="submit" data-roles="reviewer">
+                    Verify completed work
+                  </button>
+                  <p class="muted">
+                    Requires another person, a passing inspection recorded after
+                    the work, and known life/history/health within configured
+                    limits. Other defects stay open and keep their own findings.
+                    Lifetime limits cannot be reset or overridden.
+                  </p>
+                </form>
+              </div>
+            </section>
+            <details class="panel" id="admin-panel" hidden>
+              <summary>
+                Administrator · controlled standards and opening records
+              </summary>
+              <p>
+                Illustrative configuration is not an approved manufacturer
+                standard. Publishing new limits/profiles never rewrites existing
+                life records. Missing/changed requirements remain visible as
+                findings.
+              </p>
+              <form id="policy-form">
+                <label
+                  >Policy JSON<textarea
+                    id="policy-json"
+                    class="code"
+                    required
+                  ></textarea></label
+                ><button type="submit" data-roles="admin">
+                  Publish new policy version
+                </button>
+              </form>
+              <div class="two-col">
+                <form id="aircraft-form">
+                  <h3>New aircraft opening record</h3>
+                  <label
+                    >Aircraft JSON<textarea
+                      id="aircraft-json"
+                      class="code"
+                      required
+                    ></textarea></label
+                  ><button type="submit" data-roles="admin">
+                    Create aircraft
+                  </button>
+                </form>
+                <form id="component-form">
+                  <h3>New serialized component</h3>
+                  <label
+                    >Component JSON<textarea
+                      id="component-json"
+                      class="code"
+                      required
+                    ></textarea></label
+                  ><button type="submit" data-roles="admin">
+                    Create component
+                  </button>
+                </form>
+              </div>
+              <p class="muted">
+                Use the documented strict schemas. Opening counters/history
+                attestations are immutable; duplicate serials are rejected. Do
+                not claim complete history without evidence.
+              </p>
+            </details>
+            <details class="panel">
+              <summary>Recent private evidence trail</summary>
+              <pre id="ledger"></pre>
+              <h3>Recent recorded usage</h3>
+              <pre id="usage-history"></pre>
+            </details>
+          </div>
+        </div>
+      </section>
+      <details class="panel help">
+        <summary>Help · workflow, roles and limitations</summary>
+        <h2>A record-based maintenance tool, not flight clearance</h2>
+        <p>
+          Operators record self-reported usage and findings. Technicians record
+          swaps, inspections, completed work and retirement. A different
+          reviewer verifies completed work only after a fresh passing inspection
+          and checks current part conditions. Administrators provision
+          aircraft/components and publish versioned standards. The OS owner
+          provisions staff accounts through the local CLI.
+        </p>
+        <p>
+          Blocked means a known configured limit/condition failed. Unknown means
+          missing or contradictory evidence. Review means a warning band or
+          watch item. Within recorded limits means only that the configured
+          checks passed using supplied records—not that the drone is safe,
+          lawful or cleared to fly. Manufacturer requirements, preflight
+          inspection and responsible human decisions remain necessary.
+        </p>
+        <p>
+          Usage is attributed to installed parts at recording time; operating
+          cycles are not battery equivalent full charge cycles. Missing
+          component/history/inspection data is never guessed. Assessments retain
+          their original inputs; any domain change, server-clock rollback or
+          inspection deadline can make them stale. Independent acknowledgement
+          does not remove bad findings.
+        </p>
+        <p>
+          The app is one local staff workspace, not multi-tenant cloud hosting.
+          All staff can read organizational maintenance notes and JSON evidence.
+          Downloads are private records; share only through authorized channels.
+          The OS owner can access disk files. No cloud analytics, device
+          control, real maintenance measurements, manufacturer endorsement or
+          compliance certification is included. Source documentation has setup,
+          schemas, troubleshooting and measured test evidence.
+        </p>
+      </details>
+    </main>
+    <footer>
+      Designed &amp; built by <strong>Jason Stys</strong>
+      <nav aria-label="Author links">
+        <a
+          href="https://github.com/JasonStys/drone-maintenance-readiness-studio"
+          rel="noreferrer"
+          >Source &amp; documentation</a
+        ><a
+          href="https://www.linkedin.com/in/jason-stys-31b30b351/"
+          rel="noreferrer"
+          >Contact on LinkedIn</a
+        >
+      </nav>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

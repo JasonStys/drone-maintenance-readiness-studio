@@ -1,0 +1,32 @@
+-- Jason Stys: serialized life records, swap history, work verification and tamper-evident state ledger.
+-- Exact table/column/constraint lines: docs/SOURCE_MAP.md. Parameterized SQL only.
+PRAGMA foreign_keys=ON;
+CREATE TABLE IF NOT EXISTS users(name TEXT PRIMARY KEY,password_hash TEXT NOT NULL,role TEXT NOT NULL CHECK(role IN ('admin','operator','technician','reviewer')));
+CREATE TABLE IF NOT EXISTS sessions(digest TEXT PRIMARY KEY,username TEXT NOT NULL REFERENCES users(name),csrf TEXT NOT NULL,expires REAL NOT NULL,created REAL NOT NULL);
+CREATE INDEX IF NOT EXISTS sessions_user ON sessions(username);
+CREATE TABLE IF NOT EXISTS attempts(client TEXT PRIMARY KEY,count INTEGER NOT NULL,started REAL NOT NULL);
+CREATE TABLE IF NOT EXISTS policies(version INTEGER PRIMARY KEY,content TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS workspace(id INTEGER PRIMARY KEY CHECK(id=1),generation INTEGER NOT NULL,policy INTEGER NOT NULL REFERENCES policies(version));
+CREATE TABLE IF NOT EXISTS aircraft(id TEXT PRIMARY KEY,serial TEXT NOT NULL UNIQUE,content TEXT NOT NULL,seconds INTEGER NOT NULL CHECK(seconds BETWEEN 0 AND 1000000000000),cycles INTEGER NOT NULL CHECK(cycles BETWEEN 0 AND 1000000000000));
+CREATE TABLE IF NOT EXISTS components(id TEXT PRIMARY KEY,serial TEXT NOT NULL UNIQUE,content TEXT NOT NULL,seconds INTEGER NOT NULL CHECK(seconds BETWEEN 0 AND 1000000000000),cycles INTEGER NOT NULL CHECK(cycles BETWEEN 0 AND 1000000000000),retired INTEGER NOT NULL CHECK(retired IN (0,1)));
+CREATE TABLE IF NOT EXISTS installations(id INTEGER PRIMARY KEY,aircraft TEXT NOT NULL REFERENCES aircraft(id),slot TEXT NOT NULL,component TEXT NOT NULL REFERENCES components(id),installed INTEGER NOT NULL,removed INTEGER);
+CREATE UNIQUE INDEX IF NOT EXISTS one_location ON installations(component) WHERE removed IS NULL;
+CREATE UNIQUE INDEX IF NOT EXISTS one_part_per_slot ON installations(aircraft,slot) WHERE removed IS NULL;
+CREATE TABLE IF NOT EXISTS inspections(id INTEGER PRIMARY KEY,component TEXT NOT NULL REFERENCES components(id),passed INTEGER NOT NULL CHECK(passed IN (0,1)),capacity REAL,resistance REAL,note TEXT NOT NULL,actor TEXT NOT NULL,at REAL NOT NULL,generation INTEGER NOT NULL);
+CREATE INDEX IF NOT EXISTS inspections_latest ON inspections(component,id DESC);
+CREATE TABLE IF NOT EXISTS defects(id INTEGER PRIMARY KEY,component TEXT NOT NULL REFERENCES components(id),severity TEXT NOT NULL CHECK(severity IN ('watch','blocking')),note TEXT NOT NULL,actor TEXT NOT NULL,at REAL NOT NULL,closed INTEGER NOT NULL CHECK(closed IN (0,1)));
+CREATE TABLE IF NOT EXISTS work(id INTEGER PRIMARY KEY,defect INTEGER NOT NULL UNIQUE REFERENCES defects(id),note TEXT NOT NULL,technician TEXT NOT NULL,at REAL NOT NULL,completed_generation INTEGER NOT NULL,reviewer TEXT,review_note TEXT,verified REAL);
+CREATE TABLE IF NOT EXISTS usage(id INTEGER PRIMARY KEY,request_id TEXT NOT NULL UNIQUE,request_digest TEXT NOT NULL,aircraft TEXT NOT NULL REFERENCES aircraft(id),seconds INTEGER NOT NULL,cycles INTEGER NOT NULL,components TEXT NOT NULL,note TEXT NOT NULL,actor TEXT NOT NULL,at REAL NOT NULL,generation INTEGER NOT NULL);
+CREATE INDEX IF NOT EXISTS usage_aircraft ON usage(aircraft,id DESC);
+CREATE TABLE IF NOT EXISTS ledger(generation INTEGER PRIMARY KEY,actor TEXT NOT NULL,event TEXT NOT NULL,at REAL NOT NULL,previous TEXT NOT NULL,state_digest TEXT NOT NULL,detail TEXT NOT NULL,digest TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS assessments(id INTEGER PRIMARY KEY,creator TEXT NOT NULL,created REAL NOT NULL,generation INTEGER NOT NULL,content TEXT NOT NULL,digest TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS reviews(assessment INTEGER PRIMARY KEY REFERENCES assessments(id),actor TEXT NOT NULL,note TEXT NOT NULL,at REAL NOT NULL,digest TEXT NOT NULL);
+CREATE TRIGGER IF NOT EXISTS immutable_policy_update BEFORE UPDATE ON policies BEGIN SELECT RAISE(ABORT,'immutable policy'); END;
+CREATE TRIGGER IF NOT EXISTS immutable_policy_delete BEFORE DELETE ON policies BEGIN SELECT RAISE(ABORT,'immutable policy'); END;
+CREATE TRIGGER IF NOT EXISTS immutable_usage_update BEFORE UPDATE ON usage BEGIN SELECT RAISE(ABORT,'immutable usage'); END;
+CREATE TRIGGER IF NOT EXISTS immutable_usage_delete BEFORE DELETE ON usage BEGIN SELECT RAISE(ABORT,'immutable usage'); END;
+CREATE TRIGGER IF NOT EXISTS immutable_inspection_update BEFORE UPDATE ON inspections BEGIN SELECT RAISE(ABORT,'immutable inspection'); END;
+CREATE TRIGGER IF NOT EXISTS immutable_ledger_update BEFORE UPDATE ON ledger BEGIN SELECT RAISE(ABORT,'immutable ledger'); END;
+CREATE TRIGGER IF NOT EXISTS immutable_ledger_delete BEFORE DELETE ON ledger BEGIN SELECT RAISE(ABORT,'immutable ledger'); END;
+CREATE TRIGGER IF NOT EXISTS immutable_assessment_update BEFORE UPDATE ON assessments BEGIN SELECT RAISE(ABORT,'immutable assessment'); END;
+CREATE TRIGGER IF NOT EXISTS immutable_review_update BEFORE UPDATE ON reviews BEGIN SELECT RAISE(ABORT,'immutable review'); END;
