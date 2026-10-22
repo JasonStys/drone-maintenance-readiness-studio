@@ -192,6 +192,14 @@ test("WCAG, responsive layout and late-response logout privacy", async ({
   await signIn(page);
   await page.locator(".table-wrap").focus();
   await expect(page.locator(".table-wrap")).toBeFocused();
+  await page
+    .getByText("Recent private evidence trail", { exact: true })
+    .click();
+  await page
+    .getByText("Help · workflow, roles and limitations", { exact: true })
+    .click();
+  await page.locator("#ledger").focus();
+  await expect(page.locator("#ledger")).toBeFocused();
   expect(
     (
       await new AxeBuilder({ page })

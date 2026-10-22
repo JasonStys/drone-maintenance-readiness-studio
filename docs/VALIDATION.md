@@ -15,7 +15,15 @@ Local measurements: 2026-10-22 UTC, Windows 11 build 26300, Python 3.14.6, Node 
 | Live pip-audit, fully locked dev/runtime graph | No known vulnerabilities |
 | Google OSV-Scanner v2.7.0 live complete npm lock scan | 81/81 dependency identities, 0 findings, no ignored advisories |
 
-Final hosted results are recorded below after execution. CI is authoritative for each exact revision, not an assertion that every future dependency/update will pass.
+## Hosted evidence
+
+Implementation revision `78c2afadf52be43057aef92bd9e1b2a66a8959e4` passed all five [Validation jobs](https://github.com/JasonStys/drone-maintenance-readiness-studio/actions/runs/39736534532): Linux Python 3.12/3.14, Windows/macOS Python 3.14 and actual-service Chromium/Firefox/WebKit/mobile acceptance. Both [CodeQL languages](https://github.com/JasonStys/drone-maintenance-readiness-studio/actions/runs/39736534491) completed successfully; the API reported zero analysis results and zero open alerts for that revision.
+
+Final follow-up also makes the related private ledger/usage scroll regions keyboard-focusable and opens the evidence/help sections during the unchanged full Axe check. Its exact-commit workflow results are available from [Actions](https://github.com/JasonStys/drone-maintenance-readiness-studio/actions); verify the newest main SHA rather than assuming an earlier green revision certifies a later one. This document links immutable completed evidence, not a circular assertion about its own future workflow result.
+
+Read-only storage check at 2026-10-21 23:53 -07:00: 102 repositories, 62,959,952 artifact bytes, separate caches 8,185,324,614 bytes, quota percentage unavailable. This repository had zero artifacts and zero cache bytes. No cleanup, retention or billing changes were made.
+
+## Performance and review notes
 
 Measured benchmark after installed-position indexing: original 3-aircraft / 10-component / 1-ledger-entry snapshot, no concurrent writers. Warm once. Pure engine 100 measured iterations: median 0.053 ms, maximum 0.123 ms. Real verified SQLite dashboard 30 iterations: median 1.125 ms, maximum 1.517 ms. Numbers are local observations, vary with hardware/load, and are not timing gates or maximum-capacity/operational SLAs. Rerunning `python -m tools.benchmark` reports the current host result rather than assuming these exact numbers. The indexed engine performs a linear traversal, not repeated aircraft-by-installation scans.
 
