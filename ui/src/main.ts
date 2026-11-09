@@ -111,6 +111,100 @@ let epoch = 0;
 let busy = false;
 let logoutPending = false;
 let pendingUsage: Record<string, unknown> | null = null;
+interface Impact {
+  source_generation: number;
+  source_policy_version: number;
+  notice: string;
+  changes: {
+    aircraft: {
+      id: string;
+      before: AircraftResult;
+      after: AircraftResult;
+      changed: boolean;
+    }[];
+    components: {
+      id: string;
+      before: PartResult;
+      after: PartResult;
+      changed: boolean;
+    }[];
+  };
+}
+let impact: Impact | null = null;
+let impactRevision = 0;
+const previewPolicy = document.createElement("button");
+previewPolicy.type = "button";
+previewPolicy.dataset.roles = "admin";
+previewPolicy.textContent = "Preview policy impact";
+const downloadImpact = document.createElement("button");
+downloadImpact.type = "button";
+downloadImpact.dataset.roles = "admin";
+downloadImpact.id = "download-policy-impact";
+downloadImpact.textContent = "Download unpublished impact";
+const impactOutput = document.createElement("div");
+impactOutput.setAttribute("role", "region");
+impactOutput.setAttribute(
+  "aria-label",
+  "Unpublished maintenance policy impact",
+);
+el("policy-form").append(previewPolicy, downloadImpact, impactOutput);
+
+/** Clear private hypothetical output on draft, assumptions, generation or session changes. */
+function clearImpact(): void {
+  impactRevision++;
+  impact = null;
+  impactOutput.replaceChildren();
+  downloadImpact.disabled = true;
+}
+for (const id of ["policy-json", "daily-minutes", "daily-cycles"])
+  el(id).addEventListener("input", clearImpact);
+previewPolicy.onclick = () =>
+  void task(async () => {
+    if (!dashboard) return;
+    clearImpact();
+    const requested = impactRevision;
+    const result = await api<Impact>("/api/policies/preview", {
+      expected_generation: dashboard.state.generation,
+      policy: JSON.parse(value("policy-json")),
+      assumptions: {
+        daily_seconds: Number(value("daily-minutes")) * 60,
+        daily_cycles: Number(value("daily-cycles")),
+      },
+    });
+    if (requested !== impactRevision)
+      throw new Error(
+        "Draft or assumptions changed during preview; compare again",
+      );
+    impact = result;
+    const heading = document.createElement("h3");
+    heading.textContent = "Unpublished maintenance policy impact";
+    const notice = document.createElement("p");
+    notice.textContent = `${result.notice} Source generation ${result.source_generation}, policy v${result.source_policy_version}.`;
+    impactOutput.append(heading, notice);
+    const list = document.createElement("ul");
+    for (const row of result.changes.aircraft) {
+      const item = document.createElement("li");
+      item.textContent = `Aircraft ${row.id}: ${statusLabel(row.before.status)} → ${statusLabel(row.after.status)}${row.changed ? " · finding/configuration changed" : " · unchanged"}`;
+      list.append(item);
+    }
+    for (const row of result.changes.components) {
+      const item = document.createElement("li");
+      item.textContent = `Part ${row.id}: ${statusLabel(row.before.status)} → ${statusLabel(row.after.status)} · remaining seconds ${row.before.remaining_seconds ?? "unknown"} → ${row.after.remaining_seconds ?? "unknown"} · cycles ${row.before.remaining_cycles ?? "unknown"} → ${row.after.remaining_cycles ?? "unknown"} · inspection due ${row.before.inspection_due ?? "unknown"} → ${row.after.inspection_due ?? "unknown"} · draft findings ${row.after.findings.map((finding) => finding.code).join(", ") || "none"}`;
+      list.append(item);
+    }
+    impactOutput.append(list);
+  });
+downloadImpact.onclick = () => {
+  if (!impact) return;
+  const url = URL.createObjectURL(
+    new Blob([JSON.stringify(impact, null, 2)], { type: "application/json" }),
+  );
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `unpublished-maintenance-impact-generation-${impact.source_generation}.json`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+};
 /** Fixed document IDs only; user input never creates selectors or HTML. */
 function el<T extends HTMLElement = HTMLElement>(id: string): T {
   return document.getElementById(id) as T;
@@ -132,6 +226,7 @@ function buttons(): void {
       (button.id !== "logout" &&
         (busy || (!!roles && !roles.includes(user?.role ?? ""))));
   }
+  downloadImpact.disabled ||= !impact;
 }
 /** Same-origin JSON only; reject late account/selection responses and clear private view on expiry. */
 async function api<T>(path: string, body?: unknown): Promise<T> {
@@ -177,6 +272,7 @@ async function task(action: () => Promise<void>): Promise<void> {
 }
 /** Remove private state, pending usage payload, report links and rendered notes from signed-out DOM. */
 function reset(): void {
+  clearImpact();
   epoch++;
   user = null;
   dashboard = null;
@@ -248,6 +344,7 @@ function findings(id: string, entries: Finding[]): void {
 }
 /** Re-render current coherent generation and clear any prior report's claim of freshness until re-fetched. */
 function render(next: Dashboard): void {
+  clearImpact();
   dashboard = next;
   const state = next.state;
   if (!state.aircraft.some((asset) => asset.id === selectedAircraft))

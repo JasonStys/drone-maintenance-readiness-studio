@@ -200,6 +200,12 @@ class Assess(Change):
     assumptions: Assumptions
 
 
+class PolicyPreview(Publish):
+    """Administrator-only unpublished policy comparison at one server time and workload."""
+
+    assumptions: Assumptions
+
+
 class Review(StrictModel):
     """Independent acknowledgement cannot change or override a readiness finding."""
 

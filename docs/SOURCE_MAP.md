@@ -118,6 +118,46 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/test_evidence.py` | 163 | `asset` |
 | `tests/test_evidence.py` | 175 | `policy` |
 | `tests/test_evidence.py` | 177 | `published` |
+| `tests/test_impact.py` | 9 | `test_exact_hard_limit_and_deadline_deltas_preserve_lifetime_records(state, assumptions)` |
+| `tests/test_impact.py` | 11 | `original` |
+| `tests/test_impact.py` | 12 | `policy` |
+| `tests/test_impact.py` | 13 | `battery` |
+| `tests/test_impact.py` | 13 | `limit` |
+| `tests/test_impact.py` | 15 | `at` |
+| `tests/test_impact.py` | 15 | `row` |
+| `tests/test_impact.py` | 16 | `result` |
+| `tests/test_impact.py` | 17 | `row` |
+| `tests/test_impact.py` | 23 | `finding` |
+| `tests/test_impact.py` | 27 | `recorded` |
+| `tests/test_impact.py` | 27 | `row` |
+| `tests/test_impact.py` | 33 | `test_draft_cannot_erase_history_defects_or_missing_configuration(state, assumptions)` |
+| `tests/test_impact.py` | 35 | `policy` |
+| `tests/test_impact.py` | 36 | `limit` |
+| `tests/test_impact.py` | 39 | `at` |
+| `tests/test_impact.py` | 39 | `row` |
+| `tests/test_impact.py` | 40 | `impact` |
+| `tests/test_impact.py` | 41 | `row` |
+| `tests/test_impact.py` | 41 | `statuses` |
+| `tests/test_impact.py` | 44 | `changed` |
+| `tests/test_impact.py` | 45 | `profile` |
+| `tests/test_impact.py` | 47 | `unknown` |
+| `tests/test_impact.py` | 49 | `row` |
+| `tests/test_impact.py` | 54 | `finding` |
+| `tests/test_impact.py` | 56 | `same` |
+| `tests/test_impact.py` | 57 | `row` |
+| `tests/test_impact.py` | 57 | `rows` |
+| `tests/test_impact.py` | 60 | `test_actual_preview_api_roles_csrf_generation_immutability_and_race(store, state, assumptions, login, client, monkeypatch)` |
+| `tests/test_impact.py` | 64 | `body` |
+| `tests/test_impact.py` | 69 | `endpoint` |
+| `tests/test_impact.py` | 70 | `role` |
+| `tests/test_impact.py` | 74 | `original` |
+| `tests/test_impact.py` | 75 | `token` |
+| `tests/test_impact.py` | 78 | `result` |
+| `tests/test_impact.py` | 86 | `concurrent()` |
+| `tests/test_impact.py` | 88 | `result` |
+| `tests/test_impact.py` | 99 | `test_tampered_source_ledger_cannot_be_previewed(store, state, assumptions, login, client)` |
+| `tests/test_impact.py` | 102 | `db` |
+| `tests/test_impact.py` | 104 | `response` |
 | `tests/test_lifecycle.py` | 12 | `NOTE` |
 | `tests/test_lifecycle.py` | 15 | `test_two_repairs_do_not_deadlock_or_close_other_defects(client, login, post)` |
 | `tests/test_lifecycle.py` | 18 | `second` |
@@ -313,52 +353,53 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `workbench/__main__.py` | 28 | `args` |
 | `workbench/__main__.py` | 29 | `store` |
 | `workbench/__main__.py` | 36 | `password` |
-| `workbench/api.py` | 34 | `ROOT` |
-| `workbench/api.py` | 35 | `BODY_GATE` |
-| `workbench/api.py` | 36 | `HEADERS` |
-| `workbench/api.py` | 46 | `create_app(database, port)` |
-| `workbench/api.py` | 50 | `authority` |
-| `workbench/api.py` | 50 | `origin` |
-| `workbench/api.py` | 51 | `app` |
-| `workbench/api.py` | 54 | `store` |
-| `workbench/api.py` | 57 | `boundary(request, call_next)` |
-| `workbench/api.py` | 59 | `acquired` |
-| `workbench/api.py` | 79 | `acquired` |
-| `workbench/api.py` | 80 | `data` |
-| `workbench/api.py` | 82 | `chunk` |
-| `workbench/api.py` | 87 | `response` |
-| `workbench/api.py` | 89 | `response` |
-| `workbench/api.py` | 91 | `response` |
-| `workbench/api.py` | 99 | `invalid(_request, error)` |
-| `workbench/api.py` | 104 | `e` |
-| `workbench/api.py` | 110 | `conflict(_request, _error)` |
-| `workbench/api.py` | 117 | `health()` |
-| `workbench/api.py` | 122 | `login(body, request)` |
-| `workbench/api.py` | 124 | `token` |
-| `workbench/api.py` | 124 | `user` |
-| `workbench/api.py` | 125 | `response` |
-| `workbench/api.py` | 132 | `me(request)` |
-| `workbench/api.py` | 137 | `logout(request)` |
-| `workbench/api.py` | 140 | `response` |
-| `workbench/api.py` | 145 | `workspace(request)` |
-| `workbench/api.py` | 151 | `aircraft(body, request)` |
-| `workbench/api.py` | 157 | `component(body, request)` |
-| `workbench/api.py` | 163 | `publish(body, request)` |
-| `workbench/api.py` | 169 | `swap(body, request)` |
-| `workbench/api.py` | 175 | `usage(body, request)` |
-| `workbench/api.py` | 177 | `result` |
-| `workbench/api.py` | 181 | `inspect(body, request)` |
-| `workbench/api.py` | 187 | `defect(body, request)` |
-| `workbench/api.py` | 193 | `work(body, request)` |
-| `workbench/api.py` | 199 | `verify(body, request)` |
-| `workbench/api.py` | 205 | `retire(body, request)` |
-| `workbench/api.py` | 211 | `assess(body, request)` |
-| `workbench/api.py` | 213 | `identifier` |
-| `workbench/api.py` | 217 | `report(identifier, request)` |
-| `workbench/api.py` | 223 | `review(identifier, body, request)` |
-| `workbench/api.py` | 229 | `export(identifier, request)` |
-| `workbench/api.py` | 238 | `evidence(request)` |
-| `workbench/api.py` | 247 | `index()` |
+| `workbench/api.py` | 35 | `ROOT` |
+| `workbench/api.py` | 36 | `BODY_GATE` |
+| `workbench/api.py` | 37 | `HEADERS` |
+| `workbench/api.py` | 47 | `create_app(database, port)` |
+| `workbench/api.py` | 51 | `authority` |
+| `workbench/api.py` | 51 | `origin` |
+| `workbench/api.py` | 52 | `app` |
+| `workbench/api.py` | 55 | `store` |
+| `workbench/api.py` | 58 | `boundary(request, call_next)` |
+| `workbench/api.py` | 60 | `acquired` |
+| `workbench/api.py` | 80 | `acquired` |
+| `workbench/api.py` | 81 | `data` |
+| `workbench/api.py` | 83 | `chunk` |
+| `workbench/api.py` | 88 | `response` |
+| `workbench/api.py` | 90 | `response` |
+| `workbench/api.py` | 92 | `response` |
+| `workbench/api.py` | 100 | `invalid(_request, error)` |
+| `workbench/api.py` | 105 | `e` |
+| `workbench/api.py` | 111 | `conflict(_request, _error)` |
+| `workbench/api.py` | 118 | `health()` |
+| `workbench/api.py` | 123 | `login(body, request)` |
+| `workbench/api.py` | 125 | `token` |
+| `workbench/api.py` | 125 | `user` |
+| `workbench/api.py` | 126 | `response` |
+| `workbench/api.py` | 133 | `me(request)` |
+| `workbench/api.py` | 138 | `logout(request)` |
+| `workbench/api.py` | 141 | `response` |
+| `workbench/api.py` | 146 | `workspace(request)` |
+| `workbench/api.py` | 152 | `aircraft(body, request)` |
+| `workbench/api.py` | 158 | `component(body, request)` |
+| `workbench/api.py` | 164 | `publish(body, request)` |
+| `workbench/api.py` | 170 | `preview_policy(body, request)` |
+| `workbench/api.py` | 175 | `swap(body, request)` |
+| `workbench/api.py` | 181 | `usage(body, request)` |
+| `workbench/api.py` | 183 | `result` |
+| `workbench/api.py` | 187 | `inspect(body, request)` |
+| `workbench/api.py` | 193 | `defect(body, request)` |
+| `workbench/api.py` | 199 | `work(body, request)` |
+| `workbench/api.py` | 205 | `verify(body, request)` |
+| `workbench/api.py` | 211 | `retire(body, request)` |
+| `workbench/api.py` | 217 | `assess(body, request)` |
+| `workbench/api.py` | 219 | `identifier` |
+| `workbench/api.py` | 223 | `report(identifier, request)` |
+| `workbench/api.py` | 229 | `review(identifier, body, request)` |
+| `workbench/api.py` | 235 | `export(identifier, request)` |
+| `workbench/api.py` | 244 | `evidence(request)` |
+| `workbench/api.py` | 253 | `index()` |
 | `workbench/auth.py` | 17 | `HASHER` |
 | `workbench/auth.py` | 18 | `DUMMY` |
 | `workbench/auth.py` | 19 | `VERIFY_GATE` |
@@ -463,6 +504,16 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `workbench/examples.py` | 70 | `cycles` |
 | `workbench/examples.py` | 70 | `seconds` |
 | `workbench/examples.py` | 140 | `defects` |
+| `workbench/impact.py` | 13 | `policy_impact(state, policy, at, assumptions)` |
+| `workbench/impact.py` | 15 | `hypothetical` |
+| `workbench/impact.py` | 18 | `record` |
+| `workbench/impact.py` | 21 | `after` |
+| `workbench/impact.py` | 21 | `before` |
+| `workbench/impact.py` | 22 | `changes` |
+| `workbench/impact.py` | 23 | `kind` |
+| `workbench/impact.py` | 24 | `previous` |
+| `workbench/impact.py` | 24 | `row` |
+| `workbench/impact.py` | 32 | `row` |
 | `workbench/models.py` | 10 | `Key` |
 | `workbench/models.py` | 11 | `Kind` |
 | `workbench/models.py` | 12 | `Counter` |
@@ -555,8 +606,10 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `workbench/models.py` | 194 | `daily_cycles` |
 | `workbench/models.py` | 197 | `Assess(class)` |
 | `workbench/models.py` | 200 | `assumptions` |
-| `workbench/models.py` | 203 | `Review(class)` |
-| `workbench/models.py` | 206 | `note` |
+| `workbench/models.py` | 203 | `PolicyPreview(class)` |
+| `workbench/models.py` | 206 | `assumptions` |
+| `workbench/models.py` | 209 | `Review(class)` |
+| `workbench/models.py` | 212 | `note` |
 | `workbench/schema.sql` | 3 | `PRAGMA foreign_keys=ON;` |
 | `workbench/schema.sql` | 4 | `CREATE TABLE IF NOT EXISTS users(name TEXT PRIMARY KEY,password_hash TEXT NOT NULL,role TEXT NOT NULL CHECK(role IN ('admin','operator','technician','reviewer')));` |
 | `workbench/schema.sql` | 5 | `CREATE TABLE IF NOT EXISTS sessions(digest TEXT PRIMARY KEY,username TEXT NOT NULL REFERENCES users(name),csrf TEXT NOT NULL,expires REAL NOT NULL,created REAL NOT NULL);` |
@@ -587,164 +640,168 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `workbench/schema.sql` | 30 | `CREATE TRIGGER IF NOT EXISTS immutable_ledger_delete BEFORE DELETE ON ledger BEGIN SELECT RAISE(ABORT,'immutable ledger'); END;` |
 | `workbench/schema.sql` | 31 | `CREATE TRIGGER IF NOT EXISTS immutable_assessment_update BEFORE UPDATE ON assessments BEGIN SELECT RAISE(ABORT,'immutable assessment'); END;` |
 | `workbench/schema.sql` | 32 | `CREATE TRIGGER IF NOT EXISTS immutable_review_update BEFORE UPDATE ON reviews BEGIN SELECT RAISE(ABORT,'immutable review'); END;` |
-| `workbench/store.py` | 19 | `QUERIES` |
-| `workbench/store.py` | 29 | `CAPACITY` |
-| `workbench/store.py` | 41 | `canonical(value)` |
-| `workbench/store.py` | 46 | `digest(value)` |
-| `workbench/store.py` | 51 | `Store(class)` |
-| `workbench/store.py` | 54 | `__init__(self, path)` |
-| `workbench/store.py` | 58 | `db` |
-| `workbench/store.py` | 62 | `connect(self, write)` |
-| `workbench/store.py` | 64 | `db` |
-| `workbench/store.py` | 76 | `state(self, db)` |
-| `workbench/store.py` | 78 | `workspace` |
-| `workbench/store.py` | 81 | `result` |
-| `workbench/store.py` | 82 | `query` |
-| `workbench/store.py` | 82 | `table` |
-| `workbench/store.py` | 83 | `rows` |
-| `workbench/store.py` | 84 | `record` |
-| `workbench/store.py` | 85 | `value` |
-| `workbench/store.py` | 87 | `content` |
-| `workbench/store.py` | 92 | `value` |
-| `workbench/store.py` | 99 | `verify(self, db, state)` |
-| `workbench/store.py` | 101 | `generation` |
-| `workbench/store.py` | 101 | `previous` |
-| `workbench/store.py` | 102 | `last` |
-| `workbench/store.py` | 103 | `row` |
-| `workbench/store.py` | 104 | `value` |
-| `workbench/store.py` | 105 | `checksum` |
-| `workbench/store.py` | 112 | `generation` |
-| `workbench/store.py` | 112 | `last` |
-| `workbench/store.py` | 112 | `previous` |
-| `workbench/store.py` | 121 | `seal(self, db, actor, event, detail)` |
-| `workbench/store.py` | 123 | `state` |
-| `workbench/store.py` | 124 | `row` |
-| `workbench/store.py` | 125 | `value` |
-| `workbench/store.py` | 136 | `initialize(self, examples)` |
-| `workbench/store.py` | 138 | `db` |
-| `workbench/store.py` | 144 | `records` |
-| `workbench/store.py` | 145 | `table` |
-| `workbench/store.py` | 146 | `value` |
-| `workbench/store.py` | 148 | `item` |
-| `workbench/store.py` | 152 | `item` |
-| `workbench/store.py` | 156 | `item` |
-| `workbench/store.py` | 162 | `insert_asset(self, db, table, value)` |
-| `workbench/store.py` | 166 | `content` |
-| `workbench/store.py` | 166 | `k` |
-| `workbench/store.py` | 166 | `v` |
-| `workbench/store.py` | 167 | `values` |
-| `workbench/store.py` | 181 | `snapshot(self)` |
-| `workbench/store.py` | 183 | `db` |
-| `workbench/store.py` | 185 | `state` |
-| `workbench/store.py` | 186 | `tip` |
-| `workbench/store.py` | 190 | `change(self, expected, user, event, roles, detail)` |
-| `workbench/store.py` | 194 | `db` |
-| `workbench/store.py` | 195 | `state` |
-| `workbench/store.py` | 207 | `entity(self, state, table, identifier)` |
-| `workbench/store.py` | 209 | `item` |
-| `workbench/store.py` | 209 | `result` |
-| `workbench/store.py` | 214 | `create(self, body, user, table)` |
-| `workbench/store.py` | 216 | `value` |
-| `workbench/store.py` | 218 | `db` |
-| `workbench/store.py` | 219 | `state` |
-| `workbench/store.py` | 220 | `_` |
-| `workbench/store.py` | 225 | `p` |
-| `workbench/store.py` | 230 | `publish(self, body, user)` |
-| `workbench/store.py` | 233 | `db` |
-| `workbench/store.py` | 234 | `state` |
-| `workbench/store.py` | 235 | `_` |
-| `workbench/store.py` | 237 | `version` |
-| `workbench/store.py` | 243 | `swap(self, body, user)` |
-| `workbench/store.py` | 247 | `db` |
-| `workbench/store.py` | 247 | `generation` |
-| `workbench/store.py` | 247 | `state` |
-| `workbench/store.py` | 248 | `aircraft` |
-| `workbench/store.py` | 249 | `profile` |
-| `workbench/store.py` | 250 | `p` |
-| `workbench/store.py` | 252 | `s` |
-| `workbench/store.py` | 252 | `slot` |
-| `workbench/store.py` | 256 | `part` |
-| `workbench/store.py` | 261 | `i` |
-| `workbench/store.py` | 274 | `usage(self, body, user)` |
-| `workbench/store.py` | 279 | `request_digest` |
-| `workbench/store.py` | 280 | `db` |
-| `workbench/store.py` | 281 | `state` |
-| `workbench/store.py` | 283 | `previous` |
-| `workbench/store.py` | 296 | `aircraft` |
-| `workbench/store.py` | 297 | `parts` |
-| `workbench/store.py` | 299 | `i` |
-| `workbench/store.py` | 302 | `key` |
-| `workbench/store.py` | 302 | `value` |
-| `workbench/store.py` | 312 | `identifier` |
-| `workbench/store.py` | 317 | `generation` |
-| `workbench/store.py` | 319 | `cursor` |
-| `workbench/store.py` | 337 | `inspect(self, body, user)` |
-| `workbench/store.py` | 340 | `db` |
-| `workbench/store.py` | 341 | `state` |
-| `workbench/store.py` | 342 | `generation` |
-| `workbench/store.py` | 344 | `part` |
-| `workbench/store.py` | 351 | `now` |
-| `workbench/store.py` | 373 | `defect(self, body, user)` |
-| `workbench/store.py` | 377 | `_` |
-| `workbench/store.py` | 377 | `db` |
-| `workbench/store.py` | 377 | `state` |
-| `workbench/store.py` | 386 | `complete_work(self, body, user)` |
-| `workbench/store.py` | 389 | `db` |
-| `workbench/store.py` | 390 | `state` |
-| `workbench/store.py` | 391 | `generation` |
-| `workbench/store.py` | 393 | `defect` |
-| `workbench/store.py` | 394 | `w` |
-| `workbench/store.py` | 401 | `verify_work(self, body, user)` |
-| `workbench/store.py` | 405 | `db` |
-| `workbench/store.py` | 405 | `generation` |
-| `workbench/store.py` | 405 | `state` |
-| `workbench/store.py` | 406 | `work` |
-| `workbench/store.py` | 409 | `defect` |
-| `workbench/store.py` | 410 | `part` |
-| `workbench/store.py` | 411 | `_` |
-| `workbench/store.py` | 411 | `inspections` |
-| `workbench/store.py` | 412 | `inspection` |
-| `workbench/store.py` | 421 | `policy` |
-| `workbench/store.py` | 422 | `limit` |
-| `workbench/store.py` | 422 | `p` |
-| `workbench/store.py` | 425 | `result` |
-| `workbench/store.py` | 445 | `retire(self, body, user)` |
-| `workbench/store.py` | 449 | `_` |
-| `workbench/store.py` | 449 | `db` |
-| `workbench/store.py` | 449 | `state` |
-| `workbench/store.py` | 450 | `part` |
-| `workbench/store.py` | 453 | `i` |
-| `workbench/store.py` | 458 | `assess(self, body, user)` |
-| `workbench/store.py` | 460 | `db` |
-| `workbench/store.py` | 461 | `state` |
-| `workbench/store.py` | 462 | `tip` |
-| `workbench/store.py` | 469 | `now` |
-| `workbench/store.py` | 470 | `content` |
-| `workbench/store.py` | 477 | `cursor` |
-| `workbench/store.py` | 483 | `report(self, identifier, db)` |
-| `workbench/store.py` | 486 | `connection` |
-| `workbench/store.py` | 489 | `state` |
-| `workbench/store.py` | 491 | `row` |
-| `workbench/store.py` | 494 | `content` |
-| `workbench/store.py` | 502 | `review` |
-| `workbench/store.py` | 505 | `record` |
-| `workbench/store.py` | 507 | `checksum` |
-| `workbench/store.py` | 510 | `now` |
-| `workbench/store.py` | 522 | `review(self, identifier, body, user)` |
-| `workbench/store.py` | 526 | `db` |
-| `workbench/store.py` | 527 | `report` |
-| `workbench/store.py` | 532 | `record` |
-| `workbench/store.py` | 540 | `dashboard(self)` |
-| `workbench/store.py` | 542 | `db` |
-| `workbench/store.py` | 544 | `state` |
-| `workbench/store.py` | 545 | `tip` |
-| `workbench/store.py` | 554 | `r` |
-| `workbench/store.py` | 560 | `r` |
-| `workbench/store.py` | 566 | `evidence(self)` |
-| `workbench/store.py` | 568 | `db` |
-| `workbench/store.py` | 570 | `state` |
-| `workbench/store.py` | 571 | `tip` |
-| `workbench/store.py` | 578 | `row` |
+| `workbench/store.py` | 20 | `QUERIES` |
+| `workbench/store.py` | 30 | `CAPACITY` |
+| `workbench/store.py` | 42 | `canonical(value)` |
+| `workbench/store.py` | 47 | `digest(value)` |
+| `workbench/store.py` | 52 | `Store(class)` |
+| `workbench/store.py` | 55 | `__init__(self, path)` |
+| `workbench/store.py` | 59 | `db` |
+| `workbench/store.py` | 63 | `connect(self, write)` |
+| `workbench/store.py` | 65 | `db` |
+| `workbench/store.py` | 77 | `state(self, db)` |
+| `workbench/store.py` | 79 | `workspace` |
+| `workbench/store.py` | 82 | `result` |
+| `workbench/store.py` | 83 | `query` |
+| `workbench/store.py` | 83 | `table` |
+| `workbench/store.py` | 84 | `rows` |
+| `workbench/store.py` | 85 | `record` |
+| `workbench/store.py` | 86 | `value` |
+| `workbench/store.py` | 88 | `content` |
+| `workbench/store.py` | 93 | `value` |
+| `workbench/store.py` | 100 | `verify(self, db, state)` |
+| `workbench/store.py` | 102 | `generation` |
+| `workbench/store.py` | 102 | `previous` |
+| `workbench/store.py` | 103 | `last` |
+| `workbench/store.py` | 104 | `row` |
+| `workbench/store.py` | 105 | `value` |
+| `workbench/store.py` | 106 | `checksum` |
+| `workbench/store.py` | 113 | `generation` |
+| `workbench/store.py` | 113 | `last` |
+| `workbench/store.py` | 113 | `previous` |
+| `workbench/store.py` | 122 | `seal(self, db, actor, event, detail)` |
+| `workbench/store.py` | 124 | `state` |
+| `workbench/store.py` | 125 | `row` |
+| `workbench/store.py` | 126 | `value` |
+| `workbench/store.py` | 137 | `initialize(self, examples)` |
+| `workbench/store.py` | 139 | `db` |
+| `workbench/store.py` | 145 | `records` |
+| `workbench/store.py` | 146 | `table` |
+| `workbench/store.py` | 147 | `value` |
+| `workbench/store.py` | 149 | `item` |
+| `workbench/store.py` | 153 | `item` |
+| `workbench/store.py` | 157 | `item` |
+| `workbench/store.py` | 163 | `insert_asset(self, db, table, value)` |
+| `workbench/store.py` | 167 | `content` |
+| `workbench/store.py` | 167 | `k` |
+| `workbench/store.py` | 167 | `v` |
+| `workbench/store.py` | 168 | `values` |
+| `workbench/store.py` | 182 | `snapshot(self)` |
+| `workbench/store.py` | 184 | `db` |
+| `workbench/store.py` | 186 | `state` |
+| `workbench/store.py` | 187 | `tip` |
+| `workbench/store.py` | 191 | `change(self, expected, user, event, roles, detail)` |
+| `workbench/store.py` | 195 | `db` |
+| `workbench/store.py` | 196 | `state` |
+| `workbench/store.py` | 208 | `entity(self, state, table, identifier)` |
+| `workbench/store.py` | 210 | `item` |
+| `workbench/store.py` | 210 | `result` |
+| `workbench/store.py` | 215 | `create(self, body, user, table)` |
+| `workbench/store.py` | 217 | `value` |
+| `workbench/store.py` | 219 | `db` |
+| `workbench/store.py` | 220 | `state` |
+| `workbench/store.py` | 221 | `_` |
+| `workbench/store.py` | 226 | `p` |
+| `workbench/store.py` | 231 | `publish(self, body, user)` |
+| `workbench/store.py` | 234 | `db` |
+| `workbench/store.py` | 235 | `state` |
+| `workbench/store.py` | 236 | `_` |
+| `workbench/store.py` | 238 | `version` |
+| `workbench/store.py` | 244 | `swap(self, body, user)` |
+| `workbench/store.py` | 248 | `db` |
+| `workbench/store.py` | 248 | `generation` |
+| `workbench/store.py` | 248 | `state` |
+| `workbench/store.py` | 249 | `aircraft` |
+| `workbench/store.py` | 250 | `profile` |
+| `workbench/store.py` | 251 | `p` |
+| `workbench/store.py` | 253 | `s` |
+| `workbench/store.py` | 253 | `slot` |
+| `workbench/store.py` | 257 | `part` |
+| `workbench/store.py` | 262 | `i` |
+| `workbench/store.py` | 275 | `usage(self, body, user)` |
+| `workbench/store.py` | 280 | `request_digest` |
+| `workbench/store.py` | 281 | `db` |
+| `workbench/store.py` | 282 | `state` |
+| `workbench/store.py` | 284 | `previous` |
+| `workbench/store.py` | 297 | `aircraft` |
+| `workbench/store.py` | 298 | `parts` |
+| `workbench/store.py` | 300 | `i` |
+| `workbench/store.py` | 303 | `key` |
+| `workbench/store.py` | 303 | `value` |
+| `workbench/store.py` | 313 | `identifier` |
+| `workbench/store.py` | 318 | `generation` |
+| `workbench/store.py` | 320 | `cursor` |
+| `workbench/store.py` | 338 | `inspect(self, body, user)` |
+| `workbench/store.py` | 341 | `db` |
+| `workbench/store.py` | 342 | `state` |
+| `workbench/store.py` | 343 | `generation` |
+| `workbench/store.py` | 345 | `part` |
+| `workbench/store.py` | 352 | `now` |
+| `workbench/store.py` | 374 | `defect(self, body, user)` |
+| `workbench/store.py` | 378 | `_` |
+| `workbench/store.py` | 378 | `db` |
+| `workbench/store.py` | 378 | `state` |
+| `workbench/store.py` | 387 | `complete_work(self, body, user)` |
+| `workbench/store.py` | 390 | `db` |
+| `workbench/store.py` | 391 | `state` |
+| `workbench/store.py` | 392 | `generation` |
+| `workbench/store.py` | 394 | `defect` |
+| `workbench/store.py` | 395 | `w` |
+| `workbench/store.py` | 402 | `verify_work(self, body, user)` |
+| `workbench/store.py` | 406 | `db` |
+| `workbench/store.py` | 406 | `generation` |
+| `workbench/store.py` | 406 | `state` |
+| `workbench/store.py` | 407 | `work` |
+| `workbench/store.py` | 410 | `defect` |
+| `workbench/store.py` | 411 | `part` |
+| `workbench/store.py` | 412 | `_` |
+| `workbench/store.py` | 412 | `inspections` |
+| `workbench/store.py` | 413 | `inspection` |
+| `workbench/store.py` | 422 | `policy` |
+| `workbench/store.py` | 423 | `limit` |
+| `workbench/store.py` | 423 | `p` |
+| `workbench/store.py` | 426 | `result` |
+| `workbench/store.py` | 446 | `retire(self, body, user)` |
+| `workbench/store.py` | 450 | `_` |
+| `workbench/store.py` | 450 | `db` |
+| `workbench/store.py` | 450 | `state` |
+| `workbench/store.py` | 451 | `part` |
+| `workbench/store.py` | 454 | `i` |
+| `workbench/store.py` | 459 | `assess(self, body, user)` |
+| `workbench/store.py` | 461 | `db` |
+| `workbench/store.py` | 462 | `state` |
+| `workbench/store.py` | 463 | `tip` |
+| `workbench/store.py` | 470 | `now` |
+| `workbench/store.py` | 471 | `content` |
+| `workbench/store.py` | 478 | `cursor` |
+| `workbench/store.py` | 484 | `preview_policy(self, body, user)` |
+| `workbench/store.py` | 488 | `state` |
+| `workbench/store.py` | 488 | `tip` |
+| `workbench/store.py` | 491 | `result` |
+| `workbench/store.py` | 503 | `report(self, identifier, db)` |
+| `workbench/store.py` | 506 | `connection` |
+| `workbench/store.py` | 509 | `state` |
+| `workbench/store.py` | 511 | `row` |
+| `workbench/store.py` | 514 | `content` |
+| `workbench/store.py` | 522 | `review` |
+| `workbench/store.py` | 525 | `record` |
+| `workbench/store.py` | 527 | `checksum` |
+| `workbench/store.py` | 530 | `now` |
+| `workbench/store.py` | 542 | `review(self, identifier, body, user)` |
+| `workbench/store.py` | 546 | `db` |
+| `workbench/store.py` | 547 | `report` |
+| `workbench/store.py` | 552 | `record` |
+| `workbench/store.py` | 560 | `dashboard(self)` |
+| `workbench/store.py` | 562 | `db` |
+| `workbench/store.py` | 564 | `state` |
+| `workbench/store.py` | 565 | `tip` |
+| `workbench/store.py` | 574 | `r` |
+| `workbench/store.py` | 580 | `r` |
+| `workbench/store.py` | 586 | `evidence(self)` |
+| `workbench/store.py` | 588 | `db` |
+| `workbench/store.py` | 590 | `state` |
+| `workbench/store.py` | 591 | `tip` |
+| `workbench/store.py` | 598 | `row` |
 | `ui/src/main.ts` | 10 | `User` |
 | `ui/src/main.ts` | 15 | `Finding` |
 | `ui/src/main.ts` | 20 | `Asset` |
@@ -766,132 +823,152 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `ui/src/main.ts` | 111 | `busy` |
 | `ui/src/main.ts` | 112 | `logoutPending` |
 | `ui/src/main.ts` | 113 | `pendingUsage` |
-| `ui/src/main.ts` | 115 | `el` |
-| `ui/src/main.ts` | 115 | `id` |
-| `ui/src/main.ts` | 119 | `value` |
-| `ui/src/main.ts` | 119 | `id` |
-| `ui/src/main.ts` | 123 | `text` |
-| `ui/src/main.ts` | 123 | `id` |
-| `ui/src/main.ts` | 123 | `content` |
-| `ui/src/main.ts` | 127 | `buttons` |
-| `ui/src/main.ts` | 128 | `button` |
-| `ui/src/main.ts` | 129 | `roles` |
-| `ui/src/main.ts` | 137 | `api` |
-| `ui/src/main.ts` | 137 | `path` |
-| `ui/src/main.ts` | 137 | `body` |
-| `ui/src/main.ts` | 138 | `generation` |
-| `ui/src/main.ts` | 139 | `response` |
-| `ui/src/main.ts` | 150 | `result` |
-| `ui/src/main.ts` | 161 | `task` |
-| `ui/src/main.ts` | 161 | `action` |
-| `ui/src/main.ts` | 163 | `generation` |
-| `ui/src/main.ts` | 171 | `error` |
-| `ui/src/main.ts` | 179 | `reset` |
-| `ui/src/main.ts` | 185 | `id` |
-| `ui/src/main.ts` | 187 | `id` |
-| `ui/src/main.ts` | 203 | `area` |
-| `ui/src/main.ts` | 205 | `id` |
-| `ui/src/main.ts` | 222 | `options` |
-| `ui/src/main.ts` | 223 | `id` |
-| `ui/src/main.ts` | 224 | `entries` |
-| `ui/src/main.ts` | 225 | `selection` |
-| `ui/src/main.ts` | 227 | `select` |
-| `ui/src/main.ts` | 228 | `previous` |
-| `ui/src/main.ts` | 230 | `[key, label]` |
-| `ui/src/main.ts` | 231 | `option` |
-| `ui/src/main.ts` | 236 | `[key]` |
-| `ui/src/main.ts` | 239 | `findings` |
-| `ui/src/main.ts` | 239 | `id` |
-| `ui/src/main.ts` | 239 | `entries` |
-| `ui/src/main.ts` | 240 | `root` |
-| `ui/src/main.ts` | 242 | `finding` |
-| `ui/src/main.ts` | 243 | `item` |
-| `ui/src/main.ts` | 250 | `render` |
-| `ui/src/main.ts` | 250 | `next` |
-| `ui/src/main.ts` | 252 | `state` |
-| `ui/src/main.ts` | 253 | `asset` |
-| `ui/src/main.ts` | 255 | `part` |
-| `ui/src/main.ts` | 257 | `metrics` |
-| `ui/src/main.ts` | 259 | `status` |
-| `ui/src/main.ts` | 265 | `div` |
-| `ui/src/main.ts` | 267 | `count` |
-| `ui/src/main.ts` | 269 | `asset` |
-| `ui/src/main.ts` | 271 | `label` |
-| `ui/src/main.ts` | 276 | `policy` |
-| `ui/src/main.ts` | 277 | `record` |
-| `ui/src/main.ts` | 322 | `part` |
-| `ui/src/main.ts` | 327 | `part` |
-| `ui/src/main.ts` | 336 | `d` |
-| `ui/src/main.ts` | 336 | `work` |
-| `ui/src/main.ts` | 338 | `d` |
-| `ui/src/main.ts` | 346 | `work` |
-| `ui/src/main.ts` | 347 | `work` |
-| `ui/src/main.ts` | 356 | `record` |
-| `ui/src/main.ts` | 365 | `defects` |
-| `ui/src/main.ts` | 367 | `defect` |
-| `ui/src/main.ts` | 367 | `entry` |
-| `ui/src/main.ts` | 368 | `p` |
-| `ui/src/main.ts` | 387 | `roster` |
-| `ui/src/main.ts` | 388 | `root` |
-| `ui/src/main.ts` | 391 | `asset` |
-| `ui/src/main.ts` | 392 | `result` |
-| `ui/src/main.ts` | 393 | `item` |
-| `ui/src/main.ts` | 400 | `button` |
-| `ui/src/main.ts` | 413 | `aircraftDesk` |
-| `ui/src/main.ts` | 415 | `asset` |
-| `ui/src/main.ts` | 416 | `item` |
-| `ui/src/main.ts` | 418 | `result` |
-| `ui/src/main.ts` | 419 | `item` |
-| `ui/src/main.ts` | 436 | `policy` |
-| `ui/src/main.ts` | 437 | `record` |
-| `ui/src/main.ts` | 439 | `profile` |
-| `ui/src/main.ts` | 439 | `entry` |
-| `ui/src/main.ts` | 442 | `slot` |
-| `ui/src/main.ts` | 448 | `slot` |
-| `ui/src/main.ts` | 449 | `row` |
-| `ui/src/main.ts` | 450 | `part` |
-| `ui/src/main.ts` | 451 | `entry` |
-| `ui/src/main.ts` | 453 | `status` |
-| `ui/src/main.ts` | 454 | `entry` |
-| `ui/src/main.ts` | 456 | `content` |
-| `ui/src/main.ts` | 464 | `cell` |
-| `ui/src/main.ts` | 473 | `componentDesk` |
-| `ui/src/main.ts` | 475 | `part` |
-| `ui/src/main.ts` | 476 | `entry` |
-| `ui/src/main.ts` | 478 | `result` |
-| `ui/src/main.ts` | 479 | `entry` |
-| `ui/src/main.ts` | 491 | `cumulative` |
-| `ui/src/main.ts` | 492 | `values` |
-| `ui/src/main.ts` | 493 | `record` |
-| `ui/src/main.ts` | 498 | `chart` |
-| `ui/src/main.ts` | 500 | `line` |
-| `ui/src/main.ts` | 511 | `refresh` |
-| `ui/src/main.ts` | 517 | `mutate` |
-| `ui/src/main.ts` | 518 | `path` |
-| `ui/src/main.ts` | 519 | `fields` |
-| `ui/src/main.ts` | 530 | `showReport` |
-| `ui/src/main.ts` | 530 | `report` |
-| `ui/src/main.ts` | 546 | `event` |
-| `ui/src/main.ts` | 562 | `csrf` |
-| `ui/src/main.ts` | 572 | `response` |
-| `ui/src/main.ts` | 598 | `sendUsage` |
-| `ui/src/main.ts` | 601 | `next` |
-| `ui/src/main.ts` | 611 | `error` |
-| `ui/src/main.ts` | 618 | `event` |
-| `ui/src/main.ts` | 638 | `event` |
-| `ui/src/main.ts` | 642 | `report` |
-| `ui/src/main.ts` | 655 | `id` |
-| `ui/src/main.ts` | 658 | `event` |
-| `ui/src/main.ts` | 669 | `event` |
-| `ui/src/main.ts` | 680 | `event` |
-| `ui/src/main.ts` | 683 | `battery` |
-| `ui/src/main.ts` | 684 | `part` |
-| `ui/src/main.ts` | 699 | `event` |
-| `ui/src/main.ts` | 709 | `event` |
-| `ui/src/main.ts` | 718 | `event` |
-| `ui/src/main.ts` | 736 | `event` |
-| `ui/src/main.ts` | 742 | `event` |
-| `ui/src/main.ts` | 748 | `event` |
+| `ui/src/main.ts` | 114 | `Impact` |
+| `ui/src/main.ts` | 133 | `impact` |
+| `ui/src/main.ts` | 134 | `impactRevision` |
+| `ui/src/main.ts` | 135 | `previewPolicy` |
+| `ui/src/main.ts` | 139 | `downloadImpact` |
+| `ui/src/main.ts` | 144 | `impactOutput` |
+| `ui/src/main.ts` | 153 | `clearImpact` |
+| `ui/src/main.ts` | 159 | `id` |
+| `ui/src/main.ts` | 165 | `requested` |
+| `ui/src/main.ts` | 166 | `result` |
+| `ui/src/main.ts` | 179 | `heading` |
+| `ui/src/main.ts` | 181 | `notice` |
+| `ui/src/main.ts` | 184 | `list` |
+| `ui/src/main.ts` | 185 | `row` |
+| `ui/src/main.ts` | 186 | `item` |
+| `ui/src/main.ts` | 190 | `row` |
+| `ui/src/main.ts` | 191 | `item` |
+| `ui/src/main.ts` | 192 | `finding` |
+| `ui/src/main.ts` | 199 | `url` |
+| `ui/src/main.ts` | 202 | `link` |
+| `ui/src/main.ts` | 209 | `el` |
+| `ui/src/main.ts` | 209 | `id` |
+| `ui/src/main.ts` | 213 | `value` |
+| `ui/src/main.ts` | 213 | `id` |
+| `ui/src/main.ts` | 217 | `text` |
+| `ui/src/main.ts` | 217 | `id` |
+| `ui/src/main.ts` | 217 | `content` |
+| `ui/src/main.ts` | 221 | `buttons` |
+| `ui/src/main.ts` | 222 | `button` |
+| `ui/src/main.ts` | 223 | `roles` |
+| `ui/src/main.ts` | 232 | `api` |
+| `ui/src/main.ts` | 232 | `path` |
+| `ui/src/main.ts` | 232 | `body` |
+| `ui/src/main.ts` | 233 | `generation` |
+| `ui/src/main.ts` | 234 | `response` |
+| `ui/src/main.ts` | 245 | `result` |
+| `ui/src/main.ts` | 256 | `task` |
+| `ui/src/main.ts` | 256 | `action` |
+| `ui/src/main.ts` | 258 | `generation` |
+| `ui/src/main.ts` | 266 | `error` |
+| `ui/src/main.ts` | 274 | `reset` |
+| `ui/src/main.ts` | 281 | `id` |
+| `ui/src/main.ts` | 283 | `id` |
+| `ui/src/main.ts` | 299 | `area` |
+| `ui/src/main.ts` | 301 | `id` |
+| `ui/src/main.ts` | 318 | `options` |
+| `ui/src/main.ts` | 319 | `id` |
+| `ui/src/main.ts` | 320 | `entries` |
+| `ui/src/main.ts` | 321 | `selection` |
+| `ui/src/main.ts` | 323 | `select` |
+| `ui/src/main.ts` | 324 | `previous` |
+| `ui/src/main.ts` | 326 | `[key, label]` |
+| `ui/src/main.ts` | 327 | `option` |
+| `ui/src/main.ts` | 332 | `[key]` |
+| `ui/src/main.ts` | 335 | `findings` |
+| `ui/src/main.ts` | 335 | `id` |
+| `ui/src/main.ts` | 335 | `entries` |
+| `ui/src/main.ts` | 336 | `root` |
+| `ui/src/main.ts` | 338 | `finding` |
+| `ui/src/main.ts` | 339 | `item` |
+| `ui/src/main.ts` | 346 | `render` |
+| `ui/src/main.ts` | 346 | `next` |
+| `ui/src/main.ts` | 349 | `state` |
+| `ui/src/main.ts` | 350 | `asset` |
+| `ui/src/main.ts` | 352 | `part` |
+| `ui/src/main.ts` | 354 | `metrics` |
+| `ui/src/main.ts` | 356 | `status` |
+| `ui/src/main.ts` | 362 | `div` |
+| `ui/src/main.ts` | 364 | `count` |
+| `ui/src/main.ts` | 366 | `asset` |
+| `ui/src/main.ts` | 368 | `label` |
+| `ui/src/main.ts` | 373 | `policy` |
+| `ui/src/main.ts` | 374 | `record` |
+| `ui/src/main.ts` | 419 | `part` |
+| `ui/src/main.ts` | 424 | `part` |
+| `ui/src/main.ts` | 433 | `d` |
+| `ui/src/main.ts` | 433 | `work` |
+| `ui/src/main.ts` | 435 | `d` |
+| `ui/src/main.ts` | 443 | `work` |
+| `ui/src/main.ts` | 444 | `work` |
+| `ui/src/main.ts` | 453 | `record` |
+| `ui/src/main.ts` | 462 | `defects` |
+| `ui/src/main.ts` | 464 | `defect` |
+| `ui/src/main.ts` | 464 | `entry` |
+| `ui/src/main.ts` | 465 | `p` |
+| `ui/src/main.ts` | 484 | `roster` |
+| `ui/src/main.ts` | 485 | `root` |
+| `ui/src/main.ts` | 488 | `asset` |
+| `ui/src/main.ts` | 489 | `result` |
+| `ui/src/main.ts` | 490 | `item` |
+| `ui/src/main.ts` | 497 | `button` |
+| `ui/src/main.ts` | 510 | `aircraftDesk` |
+| `ui/src/main.ts` | 512 | `asset` |
+| `ui/src/main.ts` | 513 | `item` |
+| `ui/src/main.ts` | 515 | `result` |
+| `ui/src/main.ts` | 516 | `item` |
+| `ui/src/main.ts` | 533 | `policy` |
+| `ui/src/main.ts` | 534 | `record` |
+| `ui/src/main.ts` | 536 | `profile` |
+| `ui/src/main.ts` | 536 | `entry` |
+| `ui/src/main.ts` | 539 | `slot` |
+| `ui/src/main.ts` | 545 | `slot` |
+| `ui/src/main.ts` | 546 | `row` |
+| `ui/src/main.ts` | 547 | `part` |
+| `ui/src/main.ts` | 548 | `entry` |
+| `ui/src/main.ts` | 550 | `status` |
+| `ui/src/main.ts` | 551 | `entry` |
+| `ui/src/main.ts` | 553 | `content` |
+| `ui/src/main.ts` | 561 | `cell` |
+| `ui/src/main.ts` | 570 | `componentDesk` |
+| `ui/src/main.ts` | 572 | `part` |
+| `ui/src/main.ts` | 573 | `entry` |
+| `ui/src/main.ts` | 575 | `result` |
+| `ui/src/main.ts` | 576 | `entry` |
+| `ui/src/main.ts` | 588 | `cumulative` |
+| `ui/src/main.ts` | 589 | `values` |
+| `ui/src/main.ts` | 590 | `record` |
+| `ui/src/main.ts` | 595 | `chart` |
+| `ui/src/main.ts` | 597 | `line` |
+| `ui/src/main.ts` | 608 | `refresh` |
+| `ui/src/main.ts` | 614 | `mutate` |
+| `ui/src/main.ts` | 615 | `path` |
+| `ui/src/main.ts` | 616 | `fields` |
+| `ui/src/main.ts` | 627 | `showReport` |
+| `ui/src/main.ts` | 627 | `report` |
+| `ui/src/main.ts` | 643 | `event` |
+| `ui/src/main.ts` | 659 | `csrf` |
+| `ui/src/main.ts` | 669 | `response` |
+| `ui/src/main.ts` | 695 | `sendUsage` |
+| `ui/src/main.ts` | 698 | `next` |
+| `ui/src/main.ts` | 708 | `error` |
+| `ui/src/main.ts` | 715 | `event` |
+| `ui/src/main.ts` | 735 | `event` |
+| `ui/src/main.ts` | 739 | `report` |
+| `ui/src/main.ts` | 752 | `id` |
+| `ui/src/main.ts` | 755 | `event` |
+| `ui/src/main.ts` | 766 | `event` |
+| `ui/src/main.ts` | 777 | `event` |
+| `ui/src/main.ts` | 780 | `battery` |
+| `ui/src/main.ts` | 781 | `part` |
+| `ui/src/main.ts` | 796 | `event` |
+| `ui/src/main.ts` | 806 | `event` |
+| `ui/src/main.ts` | 815 | `event` |
+| `ui/src/main.ts` | 833 | `event` |
+| `ui/src/main.ts` | 839 | `event` |
+| `ui/src/main.ts` | 845 | `event` |
 | `ui/src/view.test.ts` | 17 | `value` |
 | `ui/src/view.ts` | 5 | `statusLabel` |
 | `ui/src/view.ts` | 5 | `status` |
@@ -913,32 +990,42 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/browser/workspace.spec.ts` | 9 | `account` |
 | `tests/browser/workspace.spec.ts` | 19 | `ready` |
 | `tests/browser/workspace.spec.ts` | 19 | `page` |
-| `tests/browser/workspace.spec.ts` | 22 | `{ page, }` |
-| `tests/browser/workspace.spec.ts` | 35 | `route` |
-| `tests/browser/workspace.spec.ts` | 36 | `response` |
-| `tests/browser/workspace.spec.ts` | 57 | `workspace` |
-| `tests/browser/workspace.spec.ts` | 61 | `p` |
-| `tests/browser/workspace.spec.ts` | 66 | `download` |
-| `tests/browser/workspace.spec.ts` | 68 | `report` |
-| `tests/browser/workspace.spec.ts` | 87 | `{ page, }` |
-| `tests/browser/workspace.spec.ts` | 126 | `workspace` |
-| `tests/browser/workspace.spec.ts` | 128 | `d` |
-| `tests/browser/workspace.spec.ts` | 132 | `a` |
-| `tests/browser/workspace.spec.ts` | 136 | `{ page, }` |
-| `tests/browser/workspace.spec.ts` | 142 | `policy` |
-| `tests/browser/workspace.spec.ts` | 150 | `component` |
-| `tests/browser/workspace.spec.ts` | 165 | `identity` |
-| `tests/browser/workspace.spec.ts` | 166 | `state` |
-| `tests/browser/workspace.spec.ts` | 167 | `changed` |
-| `tests/browser/workspace.spec.ts` | 180 | `{ page, }` |
-| `tests/browser/workspace.spec.ts` | 215 | `release` |
-| `tests/browser/workspace.spec.ts` | 216 | `received` |
-| `tests/browser/workspace.spec.ts` | 217 | `hold` |
-| `tests/browser/workspace.spec.ts` | 217 | `resolve` |
-| `tests/browser/workspace.spec.ts` | 220 | `responseReady` |
-| `tests/browser/workspace.spec.ts` | 220 | `resolve` |
-| `tests/browser/workspace.spec.ts` | 225 | `route` |
-| `tests/browser/workspace.spec.ts` | 226 | `response` |
+| `tests/browser/workspace.spec.ts` | 23 | `{ page, }` |
+| `tests/browser/workspace.spec.ts` | 28 | `original` |
+| `tests/browser/workspace.spec.ts` | 30 | `draft` |
+| `tests/browser/workspace.spec.ts` | 32 | `limit` |
+| `tests/browser/workspace.spec.ts` | 44 | `after` |
+| `tests/browser/workspace.spec.ts` | 46 | `key` |
+| `tests/browser/workspace.spec.ts` | 55 | `pending` |
+| `tests/browser/workspace.spec.ts` | 59 | `file` |
+| `tests/browser/workspace.spec.ts` | 60 | `saved` |
+| `tests/browser/workspace.spec.ts` | 69 | `policy` |
+| `tests/browser/workspace.spec.ts` | 81 | `{ page, }` |
+| `tests/browser/workspace.spec.ts` | 94 | `route` |
+| `tests/browser/workspace.spec.ts` | 95 | `response` |
+| `tests/browser/workspace.spec.ts` | 116 | `workspace` |
+| `tests/browser/workspace.spec.ts` | 120 | `p` |
+| `tests/browser/workspace.spec.ts` | 125 | `download` |
+| `tests/browser/workspace.spec.ts` | 127 | `report` |
+| `tests/browser/workspace.spec.ts` | 146 | `{ page, }` |
+| `tests/browser/workspace.spec.ts` | 185 | `workspace` |
+| `tests/browser/workspace.spec.ts` | 187 | `d` |
+| `tests/browser/workspace.spec.ts` | 191 | `a` |
+| `tests/browser/workspace.spec.ts` | 195 | `{ page, }` |
+| `tests/browser/workspace.spec.ts` | 201 | `policy` |
+| `tests/browser/workspace.spec.ts` | 209 | `component` |
+| `tests/browser/workspace.spec.ts` | 224 | `identity` |
+| `tests/browser/workspace.spec.ts` | 225 | `state` |
+| `tests/browser/workspace.spec.ts` | 226 | `changed` |
+| `tests/browser/workspace.spec.ts` | 239 | `{ page, }` |
+| `tests/browser/workspace.spec.ts` | 274 | `release` |
+| `tests/browser/workspace.spec.ts` | 275 | `received` |
+| `tests/browser/workspace.spec.ts` | 276 | `hold` |
+| `tests/browser/workspace.spec.ts` | 276 | `resolve` |
+| `tests/browser/workspace.spec.ts` | 279 | `responseReady` |
+| `tests/browser/workspace.spec.ts` | 279 | `resolve` |
+| `tests/browser/workspace.spec.ts` | 284 | `route` |
+| `tests/browser/workspace.spec.ts` | 285 | `response` |
 | `tools/browser_checks.mjs` | 8 | `project` |
 | `tools/browser_checks.mjs` | 9 | `result` |
 | `tools/source_index.mjs` | 7 | `collect` |

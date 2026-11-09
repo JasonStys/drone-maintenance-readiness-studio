@@ -9,6 +9,19 @@ A local, authenticated maintenance desk for tracing **serialized drone component
 
 ## What works
 
+**Preview standards before publication:** an administrator can edit Policy JSON,
+choose the explicit daily-workload assumptions and preview how the draft affects
+the recorded fleet. Both evaluations use identical records and one server time.
+The UI and downloadable comparison show every aircraft/part's status, findings,
+remaining configured seconds/cycles and inspection deadlines. Source generation,
+verified ledger tip/state digest and draft-policy digest identify the inputs.
+
+This is a read-only hypothetical comparison: no policy version, ledger entry,
+usage counter, assessment or review is created. Unknown history, failed inspection,
+open defects and missing required slots remain visible. Admin role, CSRF, verified
+source ledger and current-generation guards apply. Draft or workload edits clear
+old output. See [validation and limits](docs/reports/PRACTICAL_WORKFLOWS_20261109.md).
+
 - **Fleet and lifecycle desk:** filter aircraft by finding, inspect installed serials, cumulative seconds/operating cycles, remaining configured life, inspection deadlines, complete findings and a recorded-use chart. Assembly-level records do not pretend to track every rotor individually.
 - **Controlled standards:** administrators publish immutable profiles, required positions, kind-specific time/cycle/inspection limits, warning bands and battery observation thresholds. Missing/changed requirements remain visible; opening-history attestations cannot be rewritten through the application.
 - **Atomic swaps and exactly-once usage:** a part cannot be installed twice, mismatched or reinstalled after retirement. The server attributes usage to the actual installed parts. An explicit retry recovers an ambiguously successful request without double-counting; stale competing edits are rejected.
