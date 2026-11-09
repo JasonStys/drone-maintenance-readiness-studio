@@ -19,6 +19,65 @@ async function signIn(page: Page, role = "operator"): Promise<void> {
 async function ready(page: Page): Promise<void> {
   await expect(page.locator("#message")).toContainText("Ready");
 }
+
+test("administrator previews maintenance standards without changing the ledger", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await signIn(page, "admin");
+  const original = await (await page.request.get("/api/workspace")).json();
+  await page.locator("#admin-panel summary").click();
+  const draft = JSON.parse(await page.locator("#policy-json").inputValue());
+  draft.limits.find(
+    (limit: { kind: string }) => limit.kind === "battery",
+  ).seconds = 3600;
+  await page.locator("#policy-json").fill(JSON.stringify(draft));
+  await page
+    .getByRole("button", { name: "Preview policy impact", exact: true })
+    .click();
+  await expect(
+    page.getByLabel("Unpublished maintenance policy impact"),
+  ).toContainText("UNPUBLISHED POLICY IMPACT");
+  await expect(
+    page.getByLabel("Unpublished maintenance policy impact"),
+  ).toContainText("Part flood-battery");
+  const after = await (await page.request.get("/api/workspace")).json();
+  // Dashboard readiness is recomputed at server time on every read; compare all persisted evidence.
+  for (const key of ["state", "ledger_tip", "reports", "ledger"])
+    expect(after[key]).toEqual(original[key]);
+  expect(
+    (
+      await new AxeBuilder({ page })
+        .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+        .analyze()
+    ).violations,
+  ).toEqual([]);
+  const pending = page.waitForEvent("download");
+  await page
+    .getByRole("button", { name: "Download unpublished impact" })
+    .click();
+  const file = await (await pending).path();
+  const saved = JSON.parse(fs.readFileSync(file!, "utf8"));
+  expect(saved.published).toBe(false);
+  expect(saved.source_generation).toBe(original.state.generation);
+  expect(saved.draft_policy_digest).toMatch(/^[a-f0-9]{64}$/);
+  await page
+    .locator("#policy-json")
+    .fill(
+      JSON.stringify(
+        original.state.policies.find(
+          (policy: { version: number }) =>
+            policy.version === original.state.policy_version,
+        ).content,
+      ),
+    );
+  await expect(
+    page.getByLabel("Unpublished maintenance policy impact"),
+  ).toBeEmpty();
+  await expect(
+    page.getByRole("button", { name: "Download unpublished impact" }),
+  ).toBeDisabled();
+});
 test("ambiguous usage retry records once, assessment export and stale detection", async ({
   page,
 }) => {

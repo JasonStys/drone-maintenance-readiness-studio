@@ -14,6 +14,7 @@ from fastapi import HTTPException
 
 from workbench.engine import active_policy, component_result, evaluate, indexes
 from workbench.examples import example_policy, example_records
+from workbench.impact import policy_impact
 from workbench.models import Assumptions
 
 QUERIES = {
@@ -479,6 +480,25 @@ class Store:
                 (user["name"], now, state["generation"], canonical(content), digest(content)),
             )
             return cursor.lastrowid
+
+    def preview_policy(self, body, user):
+        """Verify source ledger and generation before/after a non-publishing admin draft calculation."""
+        if user["role"] != "admin":
+            raise HTTPException(403, "Administrator role required")
+        state, tip = self.snapshot()
+        if body.expected_generation != state["generation"]:
+            raise HTTPException(409, "Workspace changed; refresh before previewing")
+        result = policy_impact(state, body.policy, time.time(), body.assumptions)
+        if self.snapshot()[0]["generation"] != state["generation"]:
+            raise HTTPException(409, "Workspace changed during preview; refresh")
+        return {
+            "source_generation": state["generation"],
+            "source_policy_version": state["policy_version"],
+            "source_ledger_tip": tip,
+            "source_state_digest": digest(state),
+            "draft_policy_digest": digest(body.policy.model_dump()),
+            **result,
+        }
 
     def report(self, identifier, db=None):
         """Verify stored evidence and mark generation/clock/expiry stale without rewriting original results."""

@@ -21,6 +21,7 @@ from workbench.models import (
     Login,
     NewAircraft,
     NewComponent,
+    PolicyPreview,
     Publish,
     Retire,
     Review,
@@ -164,6 +165,11 @@ def create_app(database: Path, port=8901):
         """Admin publishes immutable configuration; removing required evidence yields visible findings."""
         store.publish(body, auth.authorize(request))
         return store.dashboard()
+
+    @app.post("/api/policies/preview")
+    def preview_policy(body: PolicyPreview, request: Request):
+        """Admin-only read-only standards impact with actual CSRF and verified generation guards."""
+        return store.preview_policy(body, auth.authorize(request))
 
     @app.post("/api/swaps")
     def swap(body: Swap, request: Request):
