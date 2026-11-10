@@ -10,6 +10,11 @@ import subprocess
 import sys
 from pathlib import Path
 
+if __package__:
+    from .publication_text import public_text
+else:
+    from publication_text import public_text
+
 ROOT = Path(__file__).resolve().parents[1]
 EXCLUDE = {
     ".git",
@@ -26,6 +31,11 @@ EXCLUDE = {
     "playwright-report",
 }
 SPECIAL = {
+    ".gitattributes": "Portable text normalization and explicit reviewed Office binary handling.",
+    "docs/handbook.md": "Current usage, architecture, security and test documentation entry point.",
+    "docs/reports/project-guide.docx": "Reviewed Word project guide bound to the documented source revision.",
+    "docs/reports/publications.json": "Exact publication digests, approved pages and immutable source baseline.",
+    "docs/reports/documentation-refresh-2026-11-09.md": "Dated documentation integration validation and interpretation limits.",
     "package.json": "Exact frontend/test dependency pins and reproducible task commands.",
     "package-lock.json": "Resolved npm dependency versions and integrity hashes.",
     "requirements.lock": "Production Python transitive dependency hash lock.",
@@ -69,7 +79,7 @@ def render():
     ]
     for path in files():
         relative = path.relative_to(ROOT).as_posix()
-        content = path.read_text(encoding="utf-8") if path.is_file() else ""
+        content = public_text(path, ROOT) if path.is_file() else ""
         description = SPECIAL.get(relative) or next(
             (
                 line.strip(' #/*!-"<>')
