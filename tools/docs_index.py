@@ -31,6 +31,7 @@ EXCLUDE = {
     "playwright-report",
 }
 SPECIAL = {
+    "docs/reports/office-package-guard-2026-11-10.md": "Dated Office embedded-part guard and actual regression validation results.",
     ".gitattributes": "Portable text normalization and explicit reviewed Office binary handling.",
     "docs/handbook.md": "Current usage, architecture, security and test documentation entry point.",
     "docs/reports/project-guide.docx": "Reviewed Word project guide bound to the documented source revision.",
