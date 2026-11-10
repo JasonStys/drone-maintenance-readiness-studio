@@ -18,7 +18,7 @@ are unchanged. UI draft, workload, refresh and account changes clear the result.
 ## Local validation
 
 - 88 Python tests passed; 98.50% branch-inclusive package coverage; new module100%.
-  Independent known-fixture arithmetic checks3600s/four-cycle inclusive thresholds,
+  Independent known-fixture arithmetic checks 3600 s/four-cycle inclusive thresholds,
   exact inspection deadline, zero remaining-life estimate and source immutability.
 - Looser limits cannot cure failed inspections/open defects/unknown history.
   New required component slots yield unknown, not assumed compliance. Unchanged
@@ -30,10 +30,10 @@ are unchanged. UI draft, workload, refresh and account changes clear the result.
   uses separate actual temporary services for Chromium/Firefox/WebKit/mobile,
   including populated admin preview/download, unchanged persisted state and
   ledger, draft invalidation, WCAG and existing lifecycle/review/privacy journeys.
-- Existing synthetic three-aircraft/ten-component benchmark: pure engine100runs,
-  median0.106ms; verified SQLite dashboard30runs, median3.110ms. This does not
+- Existing synthetic three-aircraft/ten-component benchmark: pure engine 100 runs,
+  median0.106ms; verified SQLite dashboard 30 runs, median3.110ms. This does not
   measure maximum capacity, concurrent users or an operational SLA.
-- Locked Python audit: no known vulnerabilities. Live OSV npm81/81 identities,
+- Locked Python audit: no known vulnerabilities. Live OSV npm 81/81 identities,
   zero findings. Existing source maps, lint, formatting, budget and CI gates remain.
 
 An initial browser assertion compared live dashboard clock-derived values between
@@ -48,5 +48,4 @@ These are illustrative configured thresholds and constant-workload scenarios,
 not manufacturer-approved limits, failure predictions, maintenance approval,
 airworthiness or permission to fly. No drone, live fleet, operational records or
 hardware was used. The workstation owner remains trusted; local data is not
-encrypted against its OS administrator. Remote publication validation is handled
-by the parent worker; no Actions were triggered by this worker.
+encrypted against its OS administrator. The later hosted workflow observations are recorded separately from this local validation session.

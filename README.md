@@ -1,4 +1,5 @@
 <!-- Jason Stys: purpose, executable quickstart, feature/implementation guide and evidence index. -->
+
 # Drone Maintenance Readiness Studio
 
 By [Jason Stys](https://github.com/JasonStys) · [Contact / LinkedIn](https://www.linkedin.com/in/jason-stys-31b30b351/)
@@ -66,18 +67,18 @@ The [user guide](docs/USER_GUIDE.md) explains each role, form, result and recove
 
 Python handles typed domain rules, HTTP authentication and atomic ledger operations; SQL supplies constraints/transactions; TypeScript handles role-aware interaction and safe text-only rendering; HTML/CSS provide an accessible responsive desk. No extra language is added merely for a badge.
 
-| Path | Major responsibility |
-| --- | --- |
-| `workbench/models.py` | Strict finite unit-explicit policies and write contracts |
-| `workbench/engine.py` | Pure readiness findings, exact thresholds, deadline and workload calculations |
-| `workbench/store.py` / `schema.sql` | Serialized lifecycle, transaction/CAS/idempotency, repair verification and hashed evidence |
-| `workbench/auth.py` / `api.py` | Local credentials, live roles, browser boundaries, private endpoints and fixed static assets |
-| `workbench/__main__.py` / `examples.py` | Trusted setup/launch commands and original fictional scenarios |
-| `ui/index.html`, `ui/src/main.ts`, `style.css`, `view.ts` | Responsive forms, roster, chart, reports and pure presentation helpers |
-| `tests/` | Domain, real SQLite/API, concurrency, contracts, security, launcher and browser regressions |
-| `tools/` | Isolated browser service, measured benchmark, full-lock OSV audit and exact source-navigation checks |
-| `.github/workflows/` | Cross-platform validation and Python/TypeScript CodeQL; no artifact/cache uploads |
-| `docs/` | Architecture/ADR, API, help, threat model, operations, research, test plan and measured evidence |
+| Path                                                      | Major responsibility                                                                                 |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `workbench/models.py`                                     | Strict finite unit-explicit policies and write contracts                                             |
+| `workbench/engine.py`                                     | Pure readiness findings, exact thresholds, deadline and workload calculations                        |
+| `workbench/store.py` / `schema.sql`                       | Serialized lifecycle, transaction/CAS/idempotency, repair verification and hashed evidence           |
+| `workbench/auth.py` / `api.py`                            | Local credentials, live roles, browser boundaries, private endpoints and fixed static assets         |
+| `workbench/__main__.py` / `examples.py`                   | Trusted setup/launch commands and original fictional scenarios                                       |
+| `ui/index.html`, `ui/src/main.ts`, `style.css`, `view.ts` | Responsive forms, roster, chart, reports and pure presentation helpers                               |
+| `tests/`                                                  | Domain, real SQLite/API, concurrency, contracts, security, launcher and browser regressions          |
+| `tools/`                                                  | Isolated browser service, measured benchmark, full-lock OSV audit and exact source-navigation checks |
+| `.github/workflows/`                                      | Cross-platform validation and Python/TypeScript CodeQL; no artifact/cache uploads                    |
+| `docs/`                                                   | Architecture/ADR, API, help, threat model, operations, research, test plan and measured evidence     |
 
 Every tracked file is described in the generated [file catalog](docs/FILE_CATALOG.md). Source headers point to the generated [exact declaration/parameter/variable line map](docs/SOURCE_MAP.md), preventing manually maintained line comments from becoming stale. Functions/classes carry their own responsibility documentation. Complexity and bounded-workspace tradeoffs are documented in [architecture](docs/ARCHITECTURE.md).
 
@@ -104,3 +105,9 @@ npm run test:e2e
 On Linux browser hosts use `npx playwright install --with-deps chromium firefox webkit`. The e2e launcher starts a fresh real service/database per engine; tests do not bypass authentication throttling or retry failures. CI requires at least 90% branch-aware Python package coverage, 100% tested `view.ts` helper coverage, exact committed source maps, compressed payload budgets and live zero-finding dependency scans. Browser acceptance, rather than helper coverage, exercises the full DOM controller.
 
 [Validation results](docs/VALIDATION.md) distinguish measured checks from limits and unknowns. [GitHub Actions](https://github.com/JasonStys/drone-maintenance-readiness-studio/actions) contains the commit-specific results. MIT-licensed original source; see [contributing](CONTRIBUTING.md) and [security reporting](SECURITY.md).
+
+## Documentation editions
+
+Start with the [organized handbook](docs/handbook.md) for current usage, design, security and test guidance. Reviewed downloadable editions: [project-guide.docx](docs/reports/project-guide.docx).
+
+[Publication identities and source scope](docs/reports/publications.json) · [Documentation validation record](docs/reports/documentation-refresh-2026-11-09.md). Historical results retain their own tested revision and date.

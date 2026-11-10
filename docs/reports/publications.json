@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "project": "drone-maintenance-readiness-studio",
+  "author": "Jason Stys",
+  "editionDate": "2026-11-09",
+  "sourceBaseline": "50109b28e90285a63bbb07ad7a0d146bc6b404c9",
+  "sourceUrl": "https://github.com/JasonStys/drone-maintenance-readiness-studio/tree/50109b28e90285a63bbb07ad7a0d146bc6b404c9",
+  "functionalEvidenceBaseline": "50109b28e90285a63bbb07ad7a0d146bc6b404c9",
+  "evidenceObservedAt": "2026-11-10T05:25:40.628667+00:00",
+  "workflowEvidence": [
+    {
+      "conclusion": "success",
+      "databaseId": 42710677128,
+      "event": "push",
+      "headSha": "50109b28e90285a63bbb07ad7a0d146bc6b404c9",
+      "name": "Validation",
+      "status": "completed",
+      "url": "https://github.com/JasonStys/drone-maintenance-readiness-studio/actions/runs/42710677128"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 42710676956,
+      "event": "push",
+      "headSha": "50109b28e90285a63bbb07ad7a0d146bc6b404c9",
+      "name": "CodeQL",
+      "status": "completed",
+      "url": "https://github.com/JasonStys/drone-maintenance-readiness-studio/actions/runs/42710676956"
+    }
+  ],
+  "summary": "Compare unpublished maintenance standards against the same ledger, time and workload, exposing component findings and deadline deltas.",
+  "rationale": "Lets authorized reviewers assess standards changes before altering maintenance records or policy.",
+  "limitations": [
+    "Hypothetical configured thresholds and constant workloads, not manufacturer approval or probabilistic component-life predictions.",
+    "Draft comparisons do not publish a maintenance standard, alter the ledger or authorize service/flight.",
+    "No live fleet/hardware integration is supplied; local data is unencrypted and trusts the OS owner.",
+    "Source-first project with current package/service validation; no public native desktop application release is supplied."
+  ],
+  "documents": [
+    {
+      "filename": "project-guide.docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "bytes": 45944,
+      "sha256": "84d7960e7c1fc0ccbebfdc685c4d7d6912d57d7e8a9910de2f0628ea86f79020",
+      "sourceBaseline": "50109b28e90285a63bbb07ad7a0d146bc6b404c9",
+      "visualReview": {
+        "approved": true,
+        "method": "Every rendered page individually viewed at readable original resolution",
+        "pageCount": 6,
+        "renderedPageSha256": {
+          "page-1.png": "f1c92383bae2c20e382da6fe3958dc027828887c79327c01f23420ff1e1c4b86",
+          "page-2.png": "91507c082b80a43e5a0946736e760eeb38ef26cd3ccc91bf44f3c2dd0c462a23",
+          "page-3.png": "d0c8697d2a9e113e90c1b085420c65a3968baaf96a587fed24e8079fc9788907",
+          "page-4.png": "77c490aa02f045f2f42fc6cc9455ce27a775c540ebd41338a7e4acb8ef6882f9",
+          "page-5.png": "5e9e611cb2eabb6dba954be7c1de4008a82987853bea4ba1d631906766cefba0",
+          "page-6.png": "08a2ad1e927fd16882774ad064c6f18a7cca33b2cba357969cbd00e81d45789a"
+        }
+      }
+    }
+  ],
+  "scope": "Reviewed documentation editions of the cited source. Checksums identify bytes, not authorship. Historical measurements retain their own dates; integration CI must be checked separately."
+}
