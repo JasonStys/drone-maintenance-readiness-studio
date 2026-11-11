@@ -1,5 +1,6 @@
 /** @file Jason Stys: private role-aware fleet desk, safe DOM rendering and generation-aware workflows. Lines: docs/SOURCE_MAP.md. */
 import "./style.css";
+import { objectFromText, readObjectFile } from "./import_file";
 import {
   minutes,
   reportId,
@@ -157,7 +158,73 @@ function clearImpact(): void {
   downloadImpact.disabled = true;
 }
 for (const id of ["policy-json", "daily-minutes", "daily-cycles"])
-  el(id).addEventListener("input", clearImpact);
+  el(id).addEventListener("input", () => {
+    clearImpact();
+    text(
+      "message",
+      "Draft or assumptions changed. Preview again before publishing.",
+    );
+  });
+/** Draft-only file import is bound to the current administrator, input revision and actual bytes. */
+async function importPolicy(file: File): Promise<void> {
+  if (busy || logoutPending || user?.role !== "admin") return;
+  clearImpact();
+  const requested = impactRevision;
+  const generation = epoch;
+  text("message", "Reading local policy draft…");
+  try {
+    const policy = await readObjectFile(file);
+    if (
+      generation !== epoch ||
+      requested !== impactRevision ||
+      busy ||
+      logoutPending ||
+      user?.role !== "admin"
+    )
+      return;
+    const formatted = JSON.stringify(policy, null, 2);
+    objectFromText(formatted);
+    el<HTMLTextAreaElement>("policy-json").value = formatted;
+    clearImpact();
+    text(
+      "message",
+      "Policy imported into draft only. Review and preview before publishing.",
+    );
+  } catch (error) {
+    if (generation === epoch && requested === impactRevision)
+      text(
+        "message",
+        error instanceof Error ? error.message : "Could not read JSON file",
+      );
+  }
+}
+el<HTMLInputElement>("policy-file").onchange = (event) => {
+  const input = event.currentTarget as HTMLInputElement;
+  const file = input.files?.[0];
+  input.value = "";
+  if (file) void importPolicy(file);
+};
+/** Download an explicitly unapproved draft, without a domain mutation or fabricated historical record. */
+el("download-policy-draft").onclick = () => {
+  if (busy || logoutPending || user?.role !== "admin") return;
+  try {
+    const policy = objectFromText(value("policy-json"));
+    const url = URL.createObjectURL(
+      new Blob([JSON.stringify(policy, null, 2)], { type: "application/json" }),
+    );
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "maintenance-policy-draft.json";
+    link.click();
+    URL.revokeObjectURL(url);
+  } catch (error) {
+    text(
+      "message",
+      error instanceof Error ? error.message : "Could not download JSON draft",
+    );
+  }
+};
+text("application-version", `Application v${__APP_VERSION__}`);
 previewPolicy.onclick = () =>
   void task(async () => {
     if (!dashboard) return;
@@ -467,6 +534,12 @@ function render(next: Dashboard): void {
       "finding " + (defect.severity === "blocking" ? "blocked" : "review");
     p.textContent = `#${defect.id} · ${defect.component} · ${defect.note}`;
     defects.append(p);
+  }
+  if (!defects.childElementCount) {
+    const notice = document.createElement("p");
+    notice.textContent =
+      "No open component findings are recorded. Closed history remains in the ledger; this is not flight authorization.";
+    defects.append(notice);
   }
   if (assessment) {
     text(

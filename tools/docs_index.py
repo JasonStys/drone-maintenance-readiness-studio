@@ -31,6 +31,9 @@ EXCLUDE = {
     "playwright-report",
 }
 SPECIAL = {
+    "licenses/PYTHON.txt": "Official Python3.14.10 runtime license terms retained with the portable application.",
+    "docs/DESKTOP.md": "Complete native profile/staff/Open/Quit workflow, actual JSON features, build steps and privacy/lifecycle limits.",
+    "docs/reports/DESKTOP_CANDIDATE_20261110.md": "Dated candidate validation, original gates, real native roles/exports, observed failures and explicit release limitations.",
     "docs/reports/office-package-guard-2026-11-10.md": "Dated Office embedded-part guard and actual regression validation results.",
     ".gitattributes": "Portable text normalization and explicit reviewed Office binary handling.",
     "docs/handbook.md": "Current usage, architecture, security and test documentation entry point.",

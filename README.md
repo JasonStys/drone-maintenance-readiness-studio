@@ -2,7 +2,7 @@
 
 # Drone Maintenance Readiness Studio
 
-By [Jason Stys](https://github.com/JasonStys) · [Contact / LinkedIn](https://www.linkedin.com/in/jason-stys-31b30b351/)
+By [Jason Stys](https://github.com/JasonStys) Â· [Contact / LinkedIn](https://www.linkedin.com/in/jason-stys-31b30b351/)
 
 A local, authenticated maintenance desk for tracing **serialized drone components, lifetime usage, inspections, defects and independently verified corrective work**. A component's recorded life follows its physical identity across aircraft swaps; replacing a battery never erases its earlier use. The interface explains exactly which records block an assessment and which missing records make it unknown.
 
@@ -31,9 +31,13 @@ old output. See [validation and limits](docs/reports/PRACTICAL_WORKFLOWS_2026110
 - **Private local staff accounts:** operator, technician, reviewer and administrator roles; Argon2id passwords, opaque expiring sessions, CSRF/origin checks and server-side authorization. All staff intentionally share one organization's records. No public signup, cloud uploads, external scripts, analytics or model APIs.
 - **Tamper-evident ledger:** each domain mutation seals the complete normalized state and previous entry. This detects ordinary record/chain alterations, **not** a privileged database owner rewriting all hashes. It is not a signature or proof that a physical inspection occurred.
 
+## Complete desktop application candidate
+
+The 0.2.0 source includes the complete authenticated application, native **profile / first-account / staff / Open / Quit** controls, private persistent profiles and real JSON-file draft import/export. It packages patched Python3.14.10 and actual Tcl/Tk with their notices; no Python/Node installation is required for an extracted release. Prepared examples stay inside the original full application. See [desktop usage, trust boundary and reproducible package validation](docs/DESKTOP.md) and [dated candidate results](docs/reports/DESKTOP_CANDIDATE_20261110.md). This is a source candidate until exact-source hosted acceptance and publication finish; earlier documentation remains tied to its original revision.
+
 ## Run locally
 
-Prerequisites: Python 3.12–3.14, Node.js 24 and npm. CI tests Python 3.12/3.14 on Linux and 3.14 on Windows/macOS. This is a browser-based local application, not a signed native/mobile installer or publicly hosted service.
+Prerequisites: Python 3.12â€“3.14, Node.js 24 and npm. CI tests Python 3.12/3.14 on Linux and 3.14 on Windows/macOS. The source CLI remains available; the portable desktop candidate adds native owner controls around the same browser application. Neither is a signed mobile installer or publicly hosted service.
 
 Windows PowerShell, from the cloned repository:
 
@@ -102,7 +106,7 @@ npx playwright install chromium firefox webkit
 npm run test:e2e
 ```
 
-On Linux browser hosts use `npx playwright install --with-deps chromium firefox webkit`. The e2e launcher starts a fresh real service/database per engine; tests do not bypass authentication throttling or retry failures. CI requires at least 90% branch-aware Python package coverage, 100% tested `view.ts` helper coverage, exact committed source maps, compressed payload budgets and live zero-finding dependency scans. Browser acceptance, rather than helper coverage, exercises the full DOM controller.
+On Linux browser hosts use `npx playwright install --with-deps chromium firefox webkit`. The e2e launcher starts a fresh real service/database per engine; tests do not bypass authentication throttling or retry failures. CI requires at least 90% branch-aware Python package coverage, 100% tested `view.ts` and bounded-file-reader helper coverage, exact committed source maps, compressed payload budgets and live zero-finding dependency scans. Browser acceptance, rather than helper coverage, exercises the full DOM controller.
 
 [Validation results](docs/VALIDATION.md) distinguish measured checks from limits and unknowns. [GitHub Actions](https://github.com/JasonStys/drone-maintenance-readiness-studio/actions) contains the commit-specific results. MIT-licensed original source; see [contributing](CONTRIBUTING.md) and [security reporting](SECURITY.md).
 
@@ -110,4 +114,4 @@ On Linux browser hosts use `npx playwright install --with-deps chromium firefox 
 
 Start with the [organized handbook](docs/handbook.md) for current usage, design, security and test guidance. Reviewed downloadable editions: [project-guide.docx](docs/reports/project-guide.docx).
 
-[Publication identities and source scope](docs/reports/publications.json) · [Documentation validation record](docs/reports/documentation-refresh-2026-11-09.md). Historical results retain their own tested revision and date.
+[Publication identities and source scope](docs/reports/publications.json) Â· [Documentation validation record](docs/reports/documentation-refresh-2026-11-09.md). Historical results retain their own tested revision and date.
