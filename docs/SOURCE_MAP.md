@@ -26,6 +26,38 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/conftest.py` | 74 | `post(client)` |
 | `tests/conftest.py` | 77 | `submit(path)` |
 | `tests/conftest.py` | 78 | `generation` |
+| `tests/runtime_notice_cases.py` | 10 | `ROOT` |
+| `tests/runtime_notice_cases.py` | 14 | `interpreter()` |
+| `tests/runtime_notice_cases.py` | 16 | `root` |
+| `tests/runtime_notice_cases.py` | 24 | `test_actual_tcl_notice_reader_preserves_bytes_and_missing_identity(tmp_path, interpreter)` |
+| `tests/runtime_notice_cases.py` | 26 | `path` |
+| `tests/runtime_notice_cases.py` | 27 | `raw` |
+| `tests/runtime_notice_cases.py` | 34 | `raw` |
+| `tests/runtime_notice_cases.py` | 42 | `test_exact_mac_version_uses_verbatim_upstream_notice_and_binds_digest(tmp_path, kind, interpreter)` |
+| `tests/runtime_notice_cases.py` | 46 | `library` |
+| `tests/runtime_notice_cases.py` | 47 | `file` |
+| `tests/runtime_notice_cases.py` | 48 | `target` |
+| `tests/runtime_notice_cases.py` | 51 | `raw` |
+| `tests/runtime_notice_cases.py` | 51 | `source` |
+| `tests/runtime_notice_cases.py` | 78 | `test_unreviewed_platform_version_or_library_cannot_substitute_notice(version, library, system, interpreter)` |
+| `tests/runtime_notice_cases.py` | 87 | `test_ubuntu_uses_actual_runtime_package_copyright_not_guessed_script_file(tmp_path, monkeypatch, kind, interpreter)` |
+| `tests/runtime_notice_cases.py` | 91 | `fixture` |
+| `tests/runtime_notice_cases.py` | 93 | `actual` |
+| `tests/runtime_notice_cases.py` | 94 | `calls` |
+| `tests/runtime_notice_cases.py` | 95 | `library` |
+| `tests/runtime_notice_cases.py` | 96 | `package_path` |
+| `tests/runtime_notice_cases.py` | 98 | `installed(interpreter, path)` |
+| `tests/runtime_notice_cases.py` | 105 | `raw` |
+| `tests/runtime_notice_cases.py` | 105 | `source` |
+| `tests/runtime_notice_cases.py` | 110 | `test_present_invalid_runtime_notice_never_falls_back_to_other_terms(tmp_path, interpreter)` |
+| `tests/runtime_notice_cases.py` | 118 | `test_mac_pre905_terms_require_exact_psf_sdk_recipe(tmp_path, monkeypatch, interpreter, python_version, accepted)` |
+| `tests/runtime_notice_cases.py` | 123 | `library` |
+| `tests/runtime_notice_cases.py` | 124 | `name` |
+| `tests/runtime_notice_cases.py` | 128 | `raw` |
+| `tests/runtime_notice_cases.py` | 128 | `source` |
+| `tests/runtime_notice_cases.py` | 136 | `test_mac_pre905_changed_notice_is_rejected(tmp_path, monkeypatch, interpreter)` |
+| `tests/runtime_notice_cases.py` | 140 | `path` |
+| `tests/runtime_notice_cases.py` | 142 | `library` |
 | `tests/test_cli.py` | 11 | `test_init_provision_and_mismatch(tmp_path, monkeypatch, capsys)` |
 | `tests/test_cli.py` | 13 | `db` |
 | `tests/test_cli.py` | 20 | `answers` |
@@ -441,38 +473,18 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/test_publication_text.py` | 78 | `test_active_parts_rejected_by_exact_publication_name(tmp_path, member)` |
 | `tests/test_publication_text.py` | 80 | `path` |
 | `tests/test_publication_text.py` | 81 | `package` |
-| `tests/test_runtime_notices.py` | 10 | `ROOT` |
-| `tests/test_runtime_notices.py` | 14 | `interpreter(capfd)` |
-| `tests/test_runtime_notices.py` | 17 | `root` |
-| `tests/test_runtime_notices.py` | 25 | `test_actual_tcl_notice_reader_preserves_bytes_and_missing_identity(tmp_path, interpreter)` |
-| `tests/test_runtime_notices.py` | 27 | `path` |
-| `tests/test_runtime_notices.py` | 28 | `raw` |
-| `tests/test_runtime_notices.py` | 35 | `raw` |
-| `tests/test_runtime_notices.py` | 43 | `test_exact_mac_version_uses_verbatim_upstream_notice_and_binds_digest(tmp_path, kind, interpreter)` |
-| `tests/test_runtime_notices.py` | 47 | `library` |
-| `tests/test_runtime_notices.py` | 48 | `file` |
-| `tests/test_runtime_notices.py` | 49 | `target` |
-| `tests/test_runtime_notices.py` | 52 | `raw` |
-| `tests/test_runtime_notices.py` | 52 | `source` |
-| `tests/test_runtime_notices.py` | 79 | `test_unreviewed_platform_version_or_library_cannot_substitute_notice(version, library, system, interpreter)` |
-| `tests/test_runtime_notices.py` | 88 | `test_ubuntu_uses_actual_runtime_package_copyright_not_guessed_script_file(tmp_path, monkeypatch, kind, interpreter)` |
-| `tests/test_runtime_notices.py` | 92 | `fixture` |
-| `tests/test_runtime_notices.py` | 94 | `actual` |
-| `tests/test_runtime_notices.py` | 95 | `calls` |
-| `tests/test_runtime_notices.py` | 96 | `library` |
-| `tests/test_runtime_notices.py` | 97 | `package_path` |
-| `tests/test_runtime_notices.py` | 99 | `installed(interpreter, path)` |
-| `tests/test_runtime_notices.py` | 106 | `raw` |
-| `tests/test_runtime_notices.py` | 106 | `source` |
-| `tests/test_runtime_notices.py` | 111 | `test_present_invalid_runtime_notice_never_falls_back_to_other_terms(tmp_path, interpreter)` |
-| `tests/test_runtime_notices.py` | 119 | `test_mac_pre905_terms_require_exact_psf_sdk_recipe(tmp_path, monkeypatch, interpreter, python_version, accepted)` |
-| `tests/test_runtime_notices.py` | 124 | `library` |
-| `tests/test_runtime_notices.py` | 125 | `name` |
-| `tests/test_runtime_notices.py` | 129 | `raw` |
-| `tests/test_runtime_notices.py` | 129 | `source` |
-| `tests/test_runtime_notices.py` | 137 | `test_mac_pre905_changed_notice_is_rejected(tmp_path, monkeypatch, interpreter)` |
-| `tests/test_runtime_notices.py` | 141 | `path` |
-| `tests/test_runtime_notices.py` | 143 | `library` |
+| `tests/test_runtime_notices.py` | 13 | `test_all_thirteen_actual_notice_contracts_in_one_fresh_owned_interpreter()` |
+| `tests/test_runtime_notices.py` | 15 | `root` |
+| `tests/test_runtime_notices.py` | 16 | `cases` |
+| `tests/test_runtime_notices.py` | 17 | `temporary` |
+| `tests/test_runtime_notices.py` | 18 | `result_path` |
+| `tests/test_runtime_notices.py` | 19 | `result` |
+| `tests/test_runtime_notices.py` | 35 | `records` |
+| `tests/test_runtime_notices.py` | 37 | `item` |
+| `tests/test_runtime_notices.py` | 38 | `item` |
+| `tests/test_runtime_notices.py` | 39 | `receipt` |
+| `tests/test_runtime_notices.py` | 41 | `item` |
+| `tests/test_runtime_notices.py` | 52 | `target` |
 | `tests/test_security.py` | 14 | `test_anonymous_boundary_and_private_static_files(client)` |
 | `tests/test_security.py` | 16 | `path` |
 | `tests/test_security.py` | 24 | `path` |
@@ -566,34 +578,34 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tools/docs_index.py` | 18 | `ROOT` |
 | `tools/docs_index.py` | 19 | `EXCLUDE` |
 | `tools/docs_index.py` | 33 | `SPECIAL` |
-| `tools/docs_index.py` | 58 | `files()` |
-| `tools/docs_index.py` | 60 | `result` |
-| `tools/docs_index.py` | 61 | `children` |
-| `tools/docs_index.py` | 61 | `directory` |
-| `tools/docs_index.py` | 61 | `names` |
-| `tools/docs_index.py` | 62 | `child` |
-| `tools/docs_index.py` | 63 | `name` |
-| `tools/docs_index.py` | 69 | `render()` |
-| `tools/docs_index.py` | 71 | `catalog` |
-| `tools/docs_index.py` | 79 | `source` |
-| `tools/docs_index.py` | 88 | `path` |
-| `tools/docs_index.py` | 89 | `relative` |
-| `tools/docs_index.py` | 90 | `content` |
-| `tools/docs_index.py` | 91 | `description` |
-| `tools/docs_index.py` | 94 | `line` |
-| `tools/docs_index.py` | 102 | `records` |
-| `tools/docs_index.py` | 104 | `node` |
-| `tools/docs_index.py` | 106 | `args` |
-| `tools/docs_index.py` | 109 | `a` |
-| `tools/docs_index.py` | 117 | `line` |
-| `tools/docs_index.py` | 117 | `value` |
-| `tools/docs_index.py` | 120 | `line` |
-| `tools/docs_index.py` | 120 | `name` |
-| `tools/docs_index.py` | 121 | `node` |
-| `tools/docs_index.py` | 135 | `main()` |
-| `tools/docs_index.py` | 137 | `content` |
-| `tools/docs_index.py` | 137 | `relative` |
-| `tools/docs_index.py` | 138 | `path` |
+| `tools/docs_index.py` | 59 | `files()` |
+| `tools/docs_index.py` | 61 | `result` |
+| `tools/docs_index.py` | 62 | `children` |
+| `tools/docs_index.py` | 62 | `directory` |
+| `tools/docs_index.py` | 62 | `names` |
+| `tools/docs_index.py` | 63 | `child` |
+| `tools/docs_index.py` | 64 | `name` |
+| `tools/docs_index.py` | 70 | `render()` |
+| `tools/docs_index.py` | 72 | `catalog` |
+| `tools/docs_index.py` | 80 | `source` |
+| `tools/docs_index.py` | 89 | `path` |
+| `tools/docs_index.py` | 90 | `relative` |
+| `tools/docs_index.py` | 91 | `content` |
+| `tools/docs_index.py` | 92 | `description` |
+| `tools/docs_index.py` | 95 | `line` |
+| `tools/docs_index.py` | 103 | `records` |
+| `tools/docs_index.py` | 105 | `node` |
+| `tools/docs_index.py` | 107 | `args` |
+| `tools/docs_index.py` | 110 | `a` |
+| `tools/docs_index.py` | 118 | `line` |
+| `tools/docs_index.py` | 118 | `value` |
+| `tools/docs_index.py` | 121 | `line` |
+| `tools/docs_index.py` | 121 | `name` |
+| `tools/docs_index.py` | 122 | `node` |
+| `tools/docs_index.py` | 136 | `main()` |
+| `tools/docs_index.py` | 138 | `content` |
+| `tools/docs_index.py` | 138 | `relative` |
+| `tools/docs_index.py` | 139 | `path` |
 | `tools/package_app.py` | 28 | `ROOT` |
 | `tools/package_app.py` | 29 | `APPLICATION` |
 | `tools/package_app.py` | 30 | `PRODUCT` |
@@ -610,38 +622,38 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tools/package_app.py` | 92 | `main(argv)` |
 | `tools/package_app.py` | 94 | `parser` |
 | `tools/package_app.py` | 101 | `args` |
-| `tools/package_app.py` | 106 | `version` |
-| `tools/package_app.py` | 107 | `notices` |
-| `tools/package_app.py` | 107 | `versions` |
-| `tools/package_app.py` | 108 | `metadata` |
-| `tools/package_app.py` | 110 | `generated` |
-| `tools/package_app.py` | 112 | `identity_file` |
-| `tools/package_app.py` | 114 | `notice_file` |
-| `tools/package_app.py` | 116 | `pyinstaller` |
-| `tools/package_app.py` | 117 | `licenses` |
-| `tools/package_app.py` | 119 | `path` |
-| `tools/package_app.py` | 123 | `build` |
-| `tools/package_app.py` | 124 | `command` |
-| `tools/package_app.py` | 141 | `destination` |
-| `tools/package_app.py` | 141 | `source` |
-| `tools/package_app.py` | 150 | `source_path` |
-| `tools/package_app.py` | 152 | `source_path` |
-| `tools/package_app.py` | 153 | `command` |
-| `tools/package_app.py` | 154 | `hidden` |
-| `tools/package_app.py` | 159 | `command` |
-| `tools/package_app.py` | 160 | `command` |
-| `tools/package_app.py` | 161 | `environment` |
-| `tools/package_app.py` | 167 | `bundle` |
-| `tools/package_app.py` | 169 | `suffix` |
-| `tools/package_app.py` | 170 | `name` |
-| `tools/package_app.py` | 171 | `output` |
-| `tools/package_app.py` | 173 | `archive` |
-| `tools/package_app.py` | 173 | `sidecar` |
-| `tools/package_app.py` | 177 | `temporary` |
-| `tools/package_app.py` | 178 | `extracted` |
-| `tools/package_app.py` | 179 | `executable` |
-| `tools/package_app.py` | 192 | `stream` |
-| `tools/package_app.py` | 193 | `digest` |
+| `tools/package_app.py` | 121 | `version` |
+| `tools/package_app.py` | 122 | `notices` |
+| `tools/package_app.py` | 122 | `versions` |
+| `tools/package_app.py` | 123 | `metadata` |
+| `tools/package_app.py` | 125 | `generated` |
+| `tools/package_app.py` | 127 | `identity_file` |
+| `tools/package_app.py` | 129 | `notice_file` |
+| `tools/package_app.py` | 131 | `pyinstaller` |
+| `tools/package_app.py` | 132 | `licenses` |
+| `tools/package_app.py` | 134 | `path` |
+| `tools/package_app.py` | 138 | `build` |
+| `tools/package_app.py` | 139 | `command` |
+| `tools/package_app.py` | 156 | `destination` |
+| `tools/package_app.py` | 156 | `source` |
+| `tools/package_app.py` | 165 | `source_path` |
+| `tools/package_app.py` | 167 | `source_path` |
+| `tools/package_app.py` | 168 | `command` |
+| `tools/package_app.py` | 169 | `hidden` |
+| `tools/package_app.py` | 174 | `command` |
+| `tools/package_app.py` | 175 | `command` |
+| `tools/package_app.py` | 176 | `environment` |
+| `tools/package_app.py` | 182 | `bundle` |
+| `tools/package_app.py` | 184 | `suffix` |
+| `tools/package_app.py` | 185 | `name` |
+| `tools/package_app.py` | 186 | `output` |
+| `tools/package_app.py` | 189 | `archive` |
+| `tools/package_app.py` | 189 | `sidecar` |
+| `tools/package_app.py` | 193 | `temporary` |
+| `tools/package_app.py` | 194 | `extracted` |
+| `tools/package_app.py` | 195 | `executable` |
+| `tools/package_app.py` | 208 | `stream` |
+| `tools/package_app.py` | 209 | `digest` |
 | `tools/portable_archive.py` | 17 | `MAX_BYTES` |
 | `tools/portable_archive.py` | 18 | `MAX_MEMBERS` |
 | `tools/portable_archive.py` | 21 | `require(condition, message)` |
