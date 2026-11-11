@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "repository": "drone-maintenance-readiness-studio",
+  "runtimeVersion": "0.2.1",
+  "runtimeSource": "f11c4bd4cbd0f2c9177b9cc1778aa6de9123582a",
+  "createdAt": "2026-11-11T15:40:22.577Z",
+  "author": "Jason Stys",
+  "document": "windows-application-guide-0.2.1.docx",
+  "sha256": "034145c434f0d050a1d724362d795d1a2cb59bdd8478ea2adda07dce0e32ae91",
+  "screenshots": [
+    {
+      "file": "01-imported-policy-impact-focused.png",
+      "sha256": "4a8175ef0ea3b5da74b77900f18e1549044989303a8ca97dabae420ea2ecf18c",
+      "width": 1019,
+      "height": 162,
+      "caption": "Complete aircraft-level summary of the unpublished policy comparison: its heading, source-generation notice and three aircraft results. Component details remain in the full app and evidence download."
+    },
+    {
+      "file": "02-independent-repair-evidence.png",
+      "sha256": "bb62846dcf656774e6159867cc2eebb2d4a01af9af29ebd5f9887aea0d003bd6",
+      "width": 1058,
+      "height": 436,
+      "caption": "The installed maintenance app displays retained corrective-work evidence and the separate review workflow."
+    }
+  ],
+  "snippets": [
+    {
+      "file": "workbench/engine.py",
+      "first": 40,
+      "last": 60,
+      "sha256": "4b13a7501d50680e8667dde77edf21e40cd38185b685203a6863a55e2051f476",
+      "url": "https://github.com/JasonStys/drone-maintenance-readiness-studio/blob/f11c4bd4cbd0f2c9177b9cc1778aa6de9123582a/workbench/engine.py#L40"
+    }
+  ],
+  "observedTests": [
+    {
+      "name": "Real native workflows",
+      "observed": "The complete original installed consumer passed domain inputs, real results, refusal, role boundaries and exact exports. Both launches exited normally.",
+      "result": "Passed"
+    },
+    {
+      "name": "Actual same-profile upgrade",
+      "observed": "Same-profile 0.2.0 to 0.2.1 retained stored policy, ledger and exports across four roles. Time-derived readiness was recomputed; both observations were retained.",
+      "result": "Passed"
+    },
+    {
+      "name": "Distribution identity",
+      "observed": "Both downloaded assets matched provider hashes; all 120 installed files stayed unchanged. Exact-main workflows and processed raw CodeQL passed.",
+      "result": "Verified"
+    },
+    {
+      "name": "PC scope",
+      "observed": "New per-user version folder and individual links verified. Synthetic profiles only; existing data and Docker were not used or changed.",
+      "result": "Verified"
+    }
+  ],
+  "visualReview": {
+    "approved": true,
+    "reviewer": "audit_space_drone",
+    "ooxmlSchema": "passed",
+    "pages": [
+      {
+        "page": 1,
+        "sha256": "e4c11ca1f8df76cad7c15b7470707ce80c6fe8ea574688033033d8967b21c621"
+      },
+      {
+        "page": 2,
+        "sha256": "e76e214c73a596b4a8135c4187f14ea201b556fc86b931a72859ed35afafb7f1"
+      },
+      {
+        "page": 3,
+        "sha256": "860f70138f92211c5febc1a355301a376fc088d89c363a5bf4ead16373f24432"
+      },
+      {
+        "page": 4,
+        "sha256": "933bfdcf8e0e0027086f738b654709579e2a247e51ab9f2c18bf5cc09bab627d"
+      }
+    ],
+    "scope": "All four final pages individually viewed; actual installed synthetic screenshots and immutable-source snippets; earlier editions retained."
+  }
+}
