@@ -44,6 +44,20 @@ async function ready() {
   await expect(page.locator("#message")).toContainText("Ready");
 }
 
+/** Complete real server revocation before navigating roles; a button click alone is not completion. */
+async function signOut() {
+  const response = page.waitForResponse(
+    (response) =>
+      new URL(response.url()).pathname === "/api/logout" &&
+      response.request().method() === "POST",
+  );
+  await page.getByRole("button", { name: "Sign out", exact: true }).click();
+  assert.equal((await response).status(), 200);
+  await expect(
+    page.getByRole("button", { name: "Sign in", exact: true }),
+  ).toBeEnabled();
+}
+
 /** Retain and parse the actual browser download for independent content/digest checks. */
 async function download(locator) {
   const pending = page.waitForEvent("download");
@@ -184,7 +198,7 @@ try {
     page.getByRole("button", { name: "Download unpublished impact" }),
   ).toBeDisabled();
   assert.equal(await page.locator("#policy-json").inputValue(), beforeInvalid);
-  await page.getByRole("button", { name: "Sign out" }).click();
+  await signOut();
   await login("operator");
   await expect(page.locator("#admin-panel")).toBeHidden();
   await expect(
@@ -210,7 +224,7 @@ try {
   assert.equal(report.flight_authorization, false);
   assert.equal(report.state.usage.length, 1);
   assert.equal(report.state.policy_version, 1);
-  await page.getByRole("button", { name: "Sign out" }).click();
+  await signOut();
   await login("technician");
   await page.locator("#component-select").selectOption("inspection-propulsion");
   await page.locator("#work-defect").selectOption("1");
@@ -238,7 +252,7 @@ try {
     repaired.state.defects.find((defect) => defect.id === 1).closed,
     0,
   );
-  await page.getByRole("button", { name: "Sign out" }).click();
+  await signOut();
   await login("reviewer");
   await page.locator("#verify-work").selectOption("1");
   await page
