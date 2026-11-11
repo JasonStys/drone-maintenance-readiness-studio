@@ -11,9 +11,9 @@ from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
 from workbench import __version__
-from workbench.desktop import inspect_tk
 from workbench.desktop_host import Host
 from workbench.desktop_profile import FIRST_ROLE, ROLES, Profile
+from workbench.runtime_gui import inspect_tk
 
 
 class OwnerWindow:
