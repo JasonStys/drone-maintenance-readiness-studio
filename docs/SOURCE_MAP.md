@@ -69,29 +69,29 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/test_desktop_host.py` | 103 | `message` |
 | `tests/test_desktop_host.py` | 113 | `connection` |
 | `tests/test_desktop_host.py` | 124 | `response` |
-| `tests/test_desktop_host.py` | 137 | `test_startup_failure_is_never_reported_as_ready(tmp_path, monkeypatch)` |
-| `tests/test_desktop_host.py` | 139 | `profile` |
-| `tests/test_desktop_host.py` | 140 | `host` |
-| `tests/test_desktop_host.py` | 142 | `broken()` |
-| `tests/test_desktop_host.py` | 156 | `test_two_actual_profiles_keep_sessions_in_one_host_scoped_cookie_jar(tmp_path)` |
-| `tests/test_desktop_host.py` | 158 | `first` |
-| `tests/test_desktop_host.py` | 159 | `second` |
-| `tests/test_desktop_host.py` | 160 | `password` |
-| `tests/test_desktop_host.py` | 164 | `hosts` |
-| `tests/test_desktop_host.py` | 166 | `host` |
-| `tests/test_desktop_host.py` | 168 | `client` |
-| `tests/test_desktop_host.py` | 169 | `host` |
-| `tests/test_desktop_host.py` | 169 | `name` |
-| `tests/test_desktop_host.py` | 170 | `response` |
-| `tests/test_desktop_host.py` | 176 | `cookie` |
-| `tests/test_desktop_host.py` | 180 | `host` |
-| `tests/test_desktop_host.py` | 180 | `users` |
-| `tests/test_desktop_host.py` | 181 | `user` |
-| `tests/test_desktop_host.py` | 182 | `foreign_cookie` |
-| `tests/test_desktop_host.py` | 189 | `wrong_csrf` |
-| `tests/test_desktop_host.py` | 206 | `host` |
-| `tests/test_desktop_host.py` | 213 | `test_invalid_cookie_namespace_is_rejected_before_database_creation(tmp_path, invalid)` |
-| `tests/test_desktop_host.py` | 217 | `database` |
+| `tests/test_desktop_host.py` | 140 | `test_startup_failure_is_never_reported_as_ready(tmp_path, monkeypatch, failure)` |
+| `tests/test_desktop_host.py` | 142 | `profile` |
+| `tests/test_desktop_host.py` | 143 | `host` |
+| `tests/test_desktop_host.py` | 145 | `broken()` |
+| `tests/test_desktop_host.py` | 163 | `test_two_actual_profiles_keep_sessions_in_one_host_scoped_cookie_jar(tmp_path)` |
+| `tests/test_desktop_host.py` | 165 | `first` |
+| `tests/test_desktop_host.py` | 166 | `second` |
+| `tests/test_desktop_host.py` | 167 | `password` |
+| `tests/test_desktop_host.py` | 171 | `hosts` |
+| `tests/test_desktop_host.py` | 173 | `host` |
+| `tests/test_desktop_host.py` | 175 | `client` |
+| `tests/test_desktop_host.py` | 176 | `host` |
+| `tests/test_desktop_host.py` | 176 | `name` |
+| `tests/test_desktop_host.py` | 177 | `response` |
+| `tests/test_desktop_host.py` | 183 | `cookie` |
+| `tests/test_desktop_host.py` | 187 | `host` |
+| `tests/test_desktop_host.py` | 187 | `users` |
+| `tests/test_desktop_host.py` | 188 | `user` |
+| `tests/test_desktop_host.py` | 189 | `foreign_cookie` |
+| `tests/test_desktop_host.py` | 196 | `wrong_csrf` |
+| `tests/test_desktop_host.py` | 213 | `host` |
+| `tests/test_desktop_host.py` | 220 | `test_invalid_cookie_namespace_is_rejected_before_database_creation(tmp_path, invalid)` |
+| `tests/test_desktop_host.py` | 224 | `database` |
 | `tests/test_desktop_package.py` | 24 | `test_freeze_refuses_old_cached_or_prerelease_runtime(version, level, allowed)` |
 | `tests/test_desktop_package.py` | 29 | `test_all_product_version_surfaces_agree()` |
 | `tests/test_desktop_package.py` | 40 | `test_mismatched_version_or_identity_cannot_build(tmp_path, surface)` |
@@ -158,16 +158,16 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/test_desktop_resources.py` | 162 | `output` |
 | `tests/test_desktop_resources.py` | 163 | `record` |
 | `tests/test_desktop_resources.py` | 164 | `name` |
-| `tests/test_desktop_resources.py` | 168 | `test_console_interrupt_drains_the_actual_owned_host_and_releases_profile(tmp_path, monkeypatch)` |
-| `tests/test_desktop_resources.py` | 172 | `path` |
-| `tests/test_desktop_resources.py` | 173 | `profile` |
-| `tests/test_desktop_resources.py` | 178 | `actual_host` |
-| `tests/test_desktop_resources.py` | 179 | `observed` |
-| `tests/test_desktop_resources.py` | 181 | `remember()` |
-| `tests/test_desktop_resources.py` | 182 | `host` |
-| `tests/test_desktop_resources.py` | 186 | `Interrupted(class)` |
-| `tests/test_desktop_resources.py` | 187 | `__iter__(self)` |
-| `tests/test_desktop_resources.py` | 198 | `reopened` |
+| `tests/test_desktop_resources.py` | 168 | `test_console_interrupt_drains_the_actual_owned_host_and_releases_profile(tmp_path, monkeypatch, capsys)` |
+| `tests/test_desktop_resources.py` | 174 | `path` |
+| `tests/test_desktop_resources.py` | 175 | `profile` |
+| `tests/test_desktop_resources.py` | 180 | `actual_host` |
+| `tests/test_desktop_resources.py` | 181 | `observed` |
+| `tests/test_desktop_resources.py` | 183 | `remember()` |
+| `tests/test_desktop_resources.py` | 184 | `host` |
+| `tests/test_desktop_resources.py` | 188 | `Interrupted(class)` |
+| `tests/test_desktop_resources.py` | 189 | `__iter__(self)` |
+| `tests/test_desktop_resources.py` | 200 | `reopened` |
 | `tests/test_engine.py` | 12 | `result(state, assumptions, at)` |
 | `tests/test_engine.py` | 14 | `report` |
 | `tests/test_engine.py` | 15 | `p` |
@@ -566,34 +566,34 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tools/docs_index.py` | 18 | `ROOT` |
 | `tools/docs_index.py` | 19 | `EXCLUDE` |
 | `tools/docs_index.py` | 33 | `SPECIAL` |
-| `tools/docs_index.py` | 57 | `files()` |
-| `tools/docs_index.py` | 59 | `result` |
-| `tools/docs_index.py` | 60 | `children` |
-| `tools/docs_index.py` | 60 | `directory` |
-| `tools/docs_index.py` | 60 | `names` |
-| `tools/docs_index.py` | 61 | `child` |
-| `tools/docs_index.py` | 62 | `name` |
-| `tools/docs_index.py` | 68 | `render()` |
-| `tools/docs_index.py` | 70 | `catalog` |
-| `tools/docs_index.py` | 78 | `source` |
-| `tools/docs_index.py` | 87 | `path` |
-| `tools/docs_index.py` | 88 | `relative` |
-| `tools/docs_index.py` | 89 | `content` |
-| `tools/docs_index.py` | 90 | `description` |
-| `tools/docs_index.py` | 93 | `line` |
-| `tools/docs_index.py` | 101 | `records` |
-| `tools/docs_index.py` | 103 | `node` |
-| `tools/docs_index.py` | 105 | `args` |
-| `tools/docs_index.py` | 108 | `a` |
-| `tools/docs_index.py` | 116 | `line` |
-| `tools/docs_index.py` | 116 | `value` |
-| `tools/docs_index.py` | 119 | `line` |
-| `tools/docs_index.py` | 119 | `name` |
-| `tools/docs_index.py` | 120 | `node` |
-| `tools/docs_index.py` | 134 | `main()` |
-| `tools/docs_index.py` | 136 | `content` |
-| `tools/docs_index.py` | 136 | `relative` |
-| `tools/docs_index.py` | 137 | `path` |
+| `tools/docs_index.py` | 58 | `files()` |
+| `tools/docs_index.py` | 60 | `result` |
+| `tools/docs_index.py` | 61 | `children` |
+| `tools/docs_index.py` | 61 | `directory` |
+| `tools/docs_index.py` | 61 | `names` |
+| `tools/docs_index.py` | 62 | `child` |
+| `tools/docs_index.py` | 63 | `name` |
+| `tools/docs_index.py` | 69 | `render()` |
+| `tools/docs_index.py` | 71 | `catalog` |
+| `tools/docs_index.py` | 79 | `source` |
+| `tools/docs_index.py` | 88 | `path` |
+| `tools/docs_index.py` | 89 | `relative` |
+| `tools/docs_index.py` | 90 | `content` |
+| `tools/docs_index.py` | 91 | `description` |
+| `tools/docs_index.py` | 94 | `line` |
+| `tools/docs_index.py` | 102 | `records` |
+| `tools/docs_index.py` | 104 | `node` |
+| `tools/docs_index.py` | 106 | `args` |
+| `tools/docs_index.py` | 109 | `a` |
+| `tools/docs_index.py` | 117 | `line` |
+| `tools/docs_index.py` | 117 | `value` |
+| `tools/docs_index.py` | 120 | `line` |
+| `tools/docs_index.py` | 120 | `name` |
+| `tools/docs_index.py` | 121 | `node` |
+| `tools/docs_index.py` | 135 | `main()` |
+| `tools/docs_index.py` | 137 | `content` |
+| `tools/docs_index.py` | 137 | `relative` |
+| `tools/docs_index.py` | 138 | `path` |
 | `tools/package_app.py` | 28 | `ROOT` |
 | `tools/package_app.py` | 29 | `APPLICATION` |
 | `tools/package_app.py` | 30 | `PRODUCT` |
@@ -892,33 +892,28 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `workbench/auth.py` | 105 | `user` |
 | `workbench/auth.py` | 115 | `sign_out(request)` |
 | `workbench/auth.py` | 118 | `db` |
-| `workbench/desktop.py` | 20 | `ROOT` |
-| `workbench/desktop.py` | 23 | `read_resource(path)` |
-| `workbench/desktop.py` | 25 | `descriptor` |
-| `workbench/desktop.py` | 28 | `stream` |
-| `workbench/desktop.py` | 29 | `info` |
-| `workbench/desktop.py` | 32 | `raw` |
-| `workbench/desktop.py` | 38 | `identity(root)` |
-| `workbench/desktop.py` | 41 | `value` |
-| `workbench/desktop.py` | 60 | `inspect_tk(root, metadata)` |
-| `workbench/desktop.py` | 62 | `versions` |
-| `workbench/desktop.py` | 66 | `value` |
-| `workbench/desktop.py` | 69 | `name` |
-| `workbench/desktop.py` | 69 | `value` |
-| `workbench/desktop.py` | 75 | `console_session(directory, metadata)` |
-| `workbench/desktop.py` | 77 | `profile` |
-| `workbench/desktop.py` | 78 | `host` |
-| `workbench/desktop.py` | 82 | `host` |
-| `workbench/desktop.py` | 89 | `line` |
-| `workbench/desktop.py` | 104 | `main(argv)` |
-| `workbench/desktop.py` | 106 | `parser` |
-| `workbench/desktop.py` | 123 | `args` |
-| `workbench/desktop.py` | 127 | `metadata` |
-| `workbench/desktop.py` | 132 | `root` |
-| `workbench/desktop.py` | 135 | `versions` |
-| `workbench/desktop.py` | 140 | `directory` |
-| `workbench/desktop.py` | 148 | `root` |
-| `workbench/desktop.py` | 149 | `window` |
+| `workbench/desktop.py` | 21 | `ROOT` |
+| `workbench/desktop.py` | 24 | `read_resource(path)` |
+| `workbench/desktop.py` | 26 | `descriptor` |
+| `workbench/desktop.py` | 29 | `stream` |
+| `workbench/desktop.py` | 30 | `info` |
+| `workbench/desktop.py` | 33 | `raw` |
+| `workbench/desktop.py` | 39 | `identity(root)` |
+| `workbench/desktop.py` | 42 | `value` |
+| `workbench/desktop.py` | 61 | `console_session(directory, metadata)` |
+| `workbench/desktop.py` | 63 | `profile` |
+| `workbench/desktop.py` | 64 | `host` |
+| `workbench/desktop.py` | 68 | `host` |
+| `workbench/desktop.py` | 75 | `line` |
+| `workbench/desktop.py` | 90 | `main(argv)` |
+| `workbench/desktop.py` | 92 | `parser` |
+| `workbench/desktop.py` | 109 | `args` |
+| `workbench/desktop.py` | 113 | `metadata` |
+| `workbench/desktop.py` | 118 | `root` |
+| `workbench/desktop.py` | 121 | `versions` |
+| `workbench/desktop.py` | 126 | `directory` |
+| `workbench/desktop.py` | 134 | `root` |
+| `workbench/desktop.py` | 135 | `window` |
 | `workbench/desktop_host.py` | 18 | `OwnedServer(class)` |
 | `workbench/desktop_host.py` | 21 | `__init__(self, config, ready, record)` |
 | `workbench/desktop_host.py` | 27 | `startup(self, sockets)` |
@@ -927,8 +922,8 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `workbench/desktop_host.py` | 54 | `app` |
 | `workbench/desktop_host.py` | 56 | `config` |
 | `workbench/desktop_host.py` | 76 | `_run(self)` |
-| `workbench/desktop_host.py` | 86 | `start(self, timeout)` |
-| `workbench/desktop_host.py` | 94 | `stop(self, timeout)` |
+| `workbench/desktop_host.py` | 89 | `start(self, timeout)` |
+| `workbench/desktop_host.py` | 97 | `stop(self, timeout)` |
 | `workbench/desktop_profile.py` | 17 | `PRODUCT` |
 | `workbench/desktop_profile.py` | 18 | `ROLES` |
 | `workbench/desktop_profile.py` | 19 | `FIRST_ROLE` |
@@ -1164,6 +1159,11 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `workbench/owner_window.py` | 207 | `open_browser(self)` |
 | `workbench/owner_window.py` | 212 | `quit(self)` |
 | `workbench/owner_window.py` | 222 | `stop(self)` |
+| `workbench/runtime_gui.py` | 7 | `inspect_tk(root, metadata)` |
+| `workbench/runtime_gui.py` | 9 | `versions` |
+| `workbench/runtime_gui.py` | 13 | `value` |
+| `workbench/runtime_gui.py` | 16 | `name` |
+| `workbench/runtime_gui.py` | 16 | `value` |
 | `workbench/schema.sql` | 3 | `PRAGMA foreign_keys=ON;` |
 | `workbench/schema.sql` | 4 | `CREATE TABLE IF NOT EXISTS users(name TEXT PRIMARY KEY,password_hash TEXT NOT NULL,role TEXT NOT NULL CHECK(role IN ('admin','operator','technician','reviewer')));` |
 | `workbench/schema.sql` | 5 | `CREATE TABLE IF NOT EXISTS sessions(digest TEXT PRIMARY KEY,username TEXT NOT NULL REFERENCES users(name),csrf TEXT NOT NULL,expires REAL NOT NULL,created REAL NOT NULL);` |
