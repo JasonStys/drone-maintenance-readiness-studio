@@ -286,6 +286,9 @@ function text(id: string, content: string): void {
 }
 /** Buttons respect current role even after a task's finally block; UI checks are not authorization. */
 function buttons(): void {
+  // Startup/session checks may clear an old password; do not accept new credentials until that check completes.
+  for (const id of ["username", "password"])
+    el<HTMLInputElement>(id).disabled = busy || logoutPending;
   for (const button of document.querySelectorAll<HTMLButtonElement>("button")) {
     const roles = button.dataset.roles?.split(" ");
     button.disabled =
