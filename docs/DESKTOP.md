@@ -33,7 +33,7 @@ The owner footer remains visible at the 700Ã—600 minimum; the variable-height
 Use final Python 3.14.10 or a later supported 3.14 security patch, Node.js 24, and the exact locks:
 
 ```text
-python -m pip install --require-hashes -r requirements.lock -r requirements-package.lock
+python -m pip install --require-hashes -r requirements-dev.lock -r requirements-package.lock
 npm ci --ignore-scripts --no-audit
 npm run build
 python tools/package_app.py
@@ -48,3 +48,5 @@ The new read-only desktop workflow builds/test-extracts on Windows, macOS and Ub
 All included fleet/scenario/policy values are fictional. The application provides educational evidence review, not dispatch, airworthiness certification, flight permission, prediction of physical safety, or live equipment control. The application is unsigned; archive extraction/launch is not a signed clean-install or uninstall transaction. Automated tests suppress the operating system's default-browser opener; Desktop shortcut and manual OS/browser integration are separate acceptance steps. Existing CLI workspaces are not automatically imported into native profiles.
 
 See [candidate measurements and corrections](reports/DESKTOP_CANDIDATE_20261110.md), [source navigation](SOURCE_MAP.md) and [file catalog](FILE_CATALOG.md). Earlier Office editions and immutable reports retain their own source/date; they are not rebuilt or relabelled by this candidate.
+
+The build acceptance requires the development and packaging hash locks. The same 13 real Tcl/Tk notice assertions run in one mandatory fresh process with stable descriptors and capture=sys, both from ordinary pytest and the native packager. Child errors, missing/duplicate cases or skipped cases fail the parent; there are no retries. [Dated observed fixture failure and correction](reports/NATIVE_NOTICE_ISOLATION_20261111.md).

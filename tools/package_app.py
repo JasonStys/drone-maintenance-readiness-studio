@@ -103,6 +103,21 @@ def main(argv=None) -> int:
         build_python_supported(tuple(sys.version_info[:3]), sys.version_info.releaselevel),
         "Freeze requires final Python 3.14.10 or a later 3.14 security patch",
     )
+    # The same thirteen actual notice assertions run in a fresh process with
+    # stable native descriptors. A failure is never retried or accepted as absence.
+    subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            str(ROOT / "tests/test_runtime_notices.py"),
+            "--capture=sys",
+            "-q",
+        ],
+        cwd=ROOT,
+        check=True,
+        timeout=45,
+    )
     version = configuration()
     versions, notices = collect(ROOT)
     metadata = {**source_metadata(version, allow_dirty=args.allow_dirty), **versions}
@@ -170,6 +185,7 @@ def main(argv=None) -> int:
     name = f"{PRODUCT}-v{version}-{metadata['platform']}-{metadata['machine']}"
     output = args.output_root.resolve()
     output.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(ROOT / ".runtime/notices-contract.json", output / "notices-contract.json")
     archive, sidecar = output / (name + suffix), output / (name + ".sha256")
     require(not archive.exists() and not sidecar.exists(), "Existing package evidence preserved")
     create_archive(bundle, archive)
