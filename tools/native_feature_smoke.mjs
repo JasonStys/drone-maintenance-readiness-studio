@@ -108,7 +108,7 @@ function canonicalPolicy(value) {
 try {
   await login("admin");
   await expect(page.locator("#application-version")).toHaveText(
-    "Application v0.2.0",
+    "Application v0.2.1",
   );
   const original = await (
     await page.request.get(new URL("api/workspace", base).href)

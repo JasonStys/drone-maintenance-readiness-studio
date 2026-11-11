@@ -2,7 +2,7 @@
 
 # Drone Maintenance Readiness Studio: portable desktop application
 
-The 0.2.0 source candidate packages the project's complete existing authenticated browser application with Python, SQL storage, built TypeScript UI and native Tk owner controls. It is one application, with optional prepared inputs inside it. It is not a signed installer, a cloud service, a native mobile app, or a live aircraft controller. Publication and operating-system acceptance require the exact-source hosted gates; local candidate results do not claim a public release.
+The 0.2.1 source candidate packages the project's complete existing authenticated browser application with Python, SQL storage, built TypeScript UI and native Tk owner controls. It is one application, with optional prepared inputs inside it. It is not a signed installer, a cloud service, a native mobile app, or a live aircraft controller. Publication and operating-system acceptance require the exact-source hosted gates; local candidate results do not claim a public release.
 
 ## Launch, provision and use
 
@@ -50,3 +50,9 @@ All included fleet/scenario/policy values are fictional. The application provide
 See [candidate measurements and corrections](reports/DESKTOP_CANDIDATE_20261110.md), [source navigation](SOURCE_MAP.md) and [file catalog](FILE_CATALOG.md). Earlier Office editions and immutable reports retain their own source/date; they are not rebuilt or relabelled by this candidate.
 
 The build acceptance requires the development and packaging hash locks. The same 13 real Tcl/Tk notice assertions run in one mandatory fresh process with stable descriptors and capture=sys, both from ordinary pytest and the native packager. Child errors, missing/duplicate cases or skipped cases fail the parent; there are no retries. [Dated observed fixture failure and correction](reports/NATIVE_NOTICE_ISOLATION_20261111.md).
+
+## Profile path admission
+
+Choose an ordinary physical directory outside the extracted application. Existing ancestors must be real directories: symbolic links and Windows reparse points (including junctions) are refused. The identity, owner lock, SQLite database and any journal/WAL/SHM companions must be regular singly linked files; an unsafe member is refused before opening/writing the workspace. The frozen executable/internal directories and enclosing macOS .app bundle are never data locations. Ordinary existing identified profiles need no migration/reset; their accounts, roles and cookie namespace remain compatible.
+
+These are pre-mutation guards for accidental/trusted-owner path mistakes. The same OS account and administrators remain trusted; SQLite/pathname APIs do not provide an atomic namespace against a concurrent same-OS-user replacing entries after admission. Stop normally and retain the entire external profile. [Dated reproduction and validation](reports/PROFILE_PATH_ADMISSION_20261111.md).
