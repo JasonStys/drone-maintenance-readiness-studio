@@ -40,6 +40,134 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/test_contracts.py` | 68 | `policy` |
 | `tests/test_contracts.py` | 77 | `model` |
 | `tests/test_contracts.py` | 78 | `changes` |
+| `tests/test_desktop_host.py` | 15 | `prepared(tmp_path)` |
+| `tests/test_desktop_host.py` | 17 | `profile` |
+| `tests/test_desktop_host.py` | 24 | `request(host, path)` |
+| `tests/test_desktop_host.py` | 26 | `connection` |
+| `tests/test_desktop_host.py` | 31 | `response` |
+| `tests/test_desktop_host.py` | 37 | `test_actual_readiness_private_login_and_owned_stop(tmp_path)` |
+| `tests/test_desktop_host.py` | 39 | `profile` |
+| `tests/test_desktop_host.py` | 40 | `metadata` |
+| `tests/test_desktop_host.py` | 41 | `host` |
+| `tests/test_desktop_host.py` | 44 | `_` |
+| `tests/test_desktop_host.py` | 44 | `code` |
+| `tests/test_desktop_host.py` | 44 | `raw` |
+| `tests/test_desktop_host.py` | 45 | `health` |
+| `tests/test_desktop_host.py` | 50 | `login` |
+| `tests/test_desktop_host.py` | 61 | `code` |
+| `tests/test_desktop_host.py` | 61 | `headers` |
+| `tests/test_desktop_host.py` | 61 | `raw` |
+| `tests/test_desktop_host.py` | 69 | `cookie` |
+| `tests/test_desktop_host.py` | 89 | `test_actual_partial_body_bounds_pre_shutdown_drain(tmp_path)` |
+| `tests/test_desktop_host.py` | 91 | `profile` |
+| `tests/test_desktop_host.py` | 92 | `host` |
+| `tests/test_desktop_host.py` | 93 | `received` |
+| `tests/test_desktop_host.py` | 95 | `ObserveRead(class)` |
+| `tests/test_desktop_host.py` | 98 | `__init__(self, app)` |
+| `tests/test_desktop_host.py` | 101 | `__call__(self, scope, receive, send)` |
+| `tests/test_desktop_host.py` | 102 | `observed()` |
+| `tests/test_desktop_host.py` | 103 | `message` |
+| `tests/test_desktop_host.py` | 113 | `connection` |
+| `tests/test_desktop_host.py` | 124 | `response` |
+| `tests/test_desktop_host.py` | 137 | `test_startup_failure_is_never_reported_as_ready(tmp_path, monkeypatch)` |
+| `tests/test_desktop_host.py` | 139 | `profile` |
+| `tests/test_desktop_host.py` | 140 | `host` |
+| `tests/test_desktop_host.py` | 142 | `broken()` |
+| `tests/test_desktop_host.py` | 156 | `test_two_actual_profiles_keep_sessions_in_one_host_scoped_cookie_jar(tmp_path)` |
+| `tests/test_desktop_host.py` | 158 | `first` |
+| `tests/test_desktop_host.py` | 159 | `second` |
+| `tests/test_desktop_host.py` | 160 | `password` |
+| `tests/test_desktop_host.py` | 164 | `hosts` |
+| `tests/test_desktop_host.py` | 166 | `host` |
+| `tests/test_desktop_host.py` | 168 | `client` |
+| `tests/test_desktop_host.py` | 169 | `host` |
+| `tests/test_desktop_host.py` | 169 | `name` |
+| `tests/test_desktop_host.py` | 170 | `response` |
+| `tests/test_desktop_host.py` | 176 | `cookie` |
+| `tests/test_desktop_host.py` | 180 | `host` |
+| `tests/test_desktop_host.py` | 180 | `users` |
+| `tests/test_desktop_host.py` | 181 | `user` |
+| `tests/test_desktop_host.py` | 182 | `foreign_cookie` |
+| `tests/test_desktop_host.py` | 189 | `wrong_csrf` |
+| `tests/test_desktop_host.py` | 206 | `host` |
+| `tests/test_desktop_host.py` | 213 | `test_invalid_cookie_namespace_is_rejected_before_database_creation(tmp_path, invalid)` |
+| `tests/test_desktop_host.py` | 217 | `database` |
+| `tests/test_desktop_package.py` | 24 | `test_freeze_refuses_old_cached_or_prerelease_runtime(version, level, allowed)` |
+| `tests/test_desktop_package.py` | 29 | `test_all_product_version_surfaces_agree()` |
+| `tests/test_desktop_package.py` | 40 | `test_mismatched_version_or_identity_cannot_build(tmp_path, surface)` |
+| `tests/test_desktop_package.py` | 42 | `root` |
+| `tests/test_desktop_package.py` | 43 | `path` |
+| `tests/test_desktop_package.py` | 44 | `output` |
+| `tests/test_desktop_package.py` | 47 | `selected` |
+| `tests/test_desktop_package.py` | 55 | `path` |
+| `tests/test_desktop_package.py` | 59 | `value` |
+| `tests/test_desktop_package.py` | 83 | `test_source_cleanliness_is_not_a_release_flag_waiver(monkeypatch, dirty, ci, override, sha, allowed)` |
+| `tests/test_desktop_package.py` | 88 | `output(command)` |
+| `tests/test_desktop_package.py` | 105 | `value` |
+| `tests/test_desktop_package.py` | 109 | `test_archive_rejection_remains_active_with_optimized_python()` |
+| `tests/test_desktop_package.py` | 111 | `result` |
+| `tests/test_desktop_profile.py` | 13 | `test_provision_persist_login_and_existing_roles(tmp_path)` |
+| `tests/test_desktop_profile.py` | 15 | `path` |
+| `tests/test_desktop_profile.py` | 16 | `profile` |
+| `tests/test_desktop_profile.py` | 24 | `original` |
+| `tests/test_desktop_profile.py` | 25 | `namespace` |
+| `tests/test_desktop_profile.py` | 26 | `marker_bytes` |
+| `tests/test_desktop_profile.py` | 33 | `reopened` |
+| `tests/test_desktop_profile.py` | 40 | `client` |
+| `tests/test_desktop_profile.py` | 42 | `response` |
+| `tests/test_desktop_profile.py` | 48 | `db` |
+| `tests/test_desktop_profile.py` | 49 | `row` |
+| `tests/test_desktop_profile.py` | 49 | `values` |
+| `tests/test_desktop_profile.py` | 50 | `value` |
+| `tests/test_desktop_profile.py` | 55 | `test_invalid_duplicate_and_first_role_do_not_create_account(tmp_path)` |
+| `tests/test_desktop_profile.py` | 57 | `profile` |
+| `tests/test_desktop_profile.py` | 59 | `args` |
+| `tests/test_desktop_profile.py` | 68 | `db` |
+| `tests/test_desktop_profile.py` | 69 | `original_hash` |
+| `tests/test_desktop_profile.py` | 77 | `db` |
+| `tests/test_desktop_profile.py` | 98 | `test_invalid_marker_never_adopts_unknown_profile(tmp_path, content)` |
+| `tests/test_desktop_profile.py` | 100 | `folder` |
+| `tests/test_desktop_profile.py` | 108 | `test_unknown_folder_and_wrong_product_are_preserved(tmp_path)` |
+| `tests/test_desktop_profile.py` | 110 | `important` |
+| `tests/test_desktop_profile.py` | 119 | `marker` |
+| `tests/test_desktop_profile.py` | 127 | `test_default_directory_is_per_user_and_outside_source(monkeypatch, tmp_path)` |
+| `tests/test_desktop_resources.py` | 13 | `test_source_mode_is_explicit_and_frozen_missing_identity_fails(tmp_path, monkeypatch)` |
+| `tests/test_desktop_resources.py` | 36 | `test_each_wrong_frozen_identity_surface_is_rejected(tmp_path, field, value)` |
+| `tests/test_desktop_resources.py` | 38 | `path` |
+| `tests/test_desktop_resources.py` | 40 | `valid` |
+| `tests/test_desktop_resources.py` | 55 | `test_resources_are_real_regular_nonempty_bounded_files(tmp_path)` |
+| `tests/test_desktop_resources.py` | 57 | `path` |
+| `tests/test_desktop_resources.py` | 60 | `raw` |
+| `tests/test_desktop_resources.py` | 68 | `test_console_owner_uses_actual_saved_profile_and_quits_without_password_input(tmp_path, monkeypatch, capsys)` |
+| `tests/test_desktop_resources.py` | 74 | `path` |
+| `tests/test_desktop_resources.py` | 75 | `profile` |
+| `tests/test_desktop_resources.py` | 82 | `output` |
+| `tests/test_desktop_resources.py` | 85 | `reopened` |
+| `tests/test_desktop_resources.py` | 92 | `test_console_cannot_create_preset_first_account(tmp_path)` |
+| `tests/test_desktop_resources.py` | 96 | `path` |
+| `tests/test_desktop_resources.py` | 99 | `profile` |
+| `tests/test_desktop_resources.py` | 106 | `test_entrypoint_requires_explicit_console_mode_and_real_resources(tmp_path, monkeypatch, capsys)` |
+| `tests/test_desktop_resources.py` | 110 | `error` |
+| `tests/test_desktop_resources.py` | 121 | `test_normal_entrypoint_presents_native_controls(tmp_path, monkeypatch)` |
+| `tests/test_desktop_resources.py` | 125 | `observed` |
+| `tests/test_desktop_resources.py` | 127 | `close_after_construct(root, directory, metadata)` |
+| `tests/test_desktop_resources.py` | 141 | `test_actual_loaded_tk_matches_package_and_runtime_info_opens_no_profile(tmp_path, monkeypatch, capsys)` |
+| `tests/test_desktop_resources.py` | 147 | `root` |
+| `tests/test_desktop_resources.py` | 150 | `versions` |
+| `tests/test_desktop_resources.py` | 159 | `_` |
+| `tests/test_desktop_resources.py` | 162 | `output` |
+| `tests/test_desktop_resources.py` | 163 | `record` |
+| `tests/test_desktop_resources.py` | 164 | `name` |
+| `tests/test_desktop_resources.py` | 168 | `test_console_interrupt_drains_the_actual_owned_host_and_releases_profile(tmp_path, monkeypatch)` |
+| `tests/test_desktop_resources.py` | 172 | `path` |
+| `tests/test_desktop_resources.py` | 173 | `profile` |
+| `tests/test_desktop_resources.py` | 178 | `actual_host` |
+| `tests/test_desktop_resources.py` | 179 | `observed` |
+| `tests/test_desktop_resources.py` | 181 | `remember()` |
+| `tests/test_desktop_resources.py` | 182 | `host` |
+| `tests/test_desktop_resources.py` | 186 | `Interrupted(class)` |
+| `tests/test_desktop_resources.py` | 187 | `__iter__(self)` |
+| `tests/test_desktop_resources.py` | 198 | `reopened` |
 | `tests/test_engine.py` | 12 | `result(state, assumptions, at)` |
 | `tests/test_engine.py` | 14 | `report` |
 | `tests/test_engine.py` | 15 | `p` |
@@ -223,6 +351,80 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/test_osv_policy.py` | 57 | `data` |
 | `tests/test_osv_policy.py` | 82 | `test_incomplete_or_finding_never_passes(change)` |
 | `tests/test_osv_policy.py` | 84 | `data` |
+| `tests/test_owner_window.py` | 12 | `window(tmp_path)` |
+| `tests/test_owner_window.py` | 14 | `root` |
+| `tests/test_owner_window.py` | 16 | `view` |
+| `tests/test_owner_window.py` | 33 | `credentials(view, name, password, confirmation)` |
+| `tests/test_owner_window.py` | 35 | `password` |
+| `tests/test_owner_window.py` | 41 | `test_actual_buttons_first_account_staff_and_no_password_retention(window, monkeypatch)` |
+| `tests/test_owner_window.py` | 43 | `_` |
+| `tests/test_owner_window.py` | 43 | `view` |
+| `tests/test_owner_window.py` | 44 | `opened` |
+| `tests/test_owner_window.py` | 63 | `original_host` |
+| `tests/test_owner_window.py` | 78 | `test_folder_choice_and_unknown_existing_files_are_not_adopted(window, tmp_path, monkeypatch)` |
+| `tests/test_owner_window.py` | 80 | `_` |
+| `tests/test_owner_window.py` | 80 | `view` |
+| `tests/test_owner_window.py` | 81 | `original` |
+| `tests/test_owner_window.py` | 85 | `target` |
+| `tests/test_owner_window.py` | 87 | `note` |
+| `tests/test_owner_window.py` | 96 | `test_cancelled_or_busy_quit_retains_owner_until_actual_completion(window, monkeypatch)` |
+| `tests/test_owner_window.py` | 98 | `root` |
+| `tests/test_owner_window.py` | 98 | `view` |
+| `tests/test_owner_window.py` | 107 | `busy()` |
+| `tests/test_owner_window.py` | 110 | `change` |
+| `tests/test_owner_window.py` | 120 | `test_identified_profile_automatically_reopens_without_reset(tmp_path, monkeypatch)` |
+| `tests/test_owner_window.py` | 122 | `path` |
+| `tests/test_owner_window.py` | 123 | `profile` |
+| `tests/test_owner_window.py` | 127 | `before` |
+| `tests/test_owner_window.py` | 129 | `opened` |
+| `tests/test_owner_window.py` | 131 | `root` |
+| `tests/test_owner_window.py` | 133 | `view` |
+| `tests/test_owner_window.py` | 149 | `test_quit_after_real_startup_failure_releases_owner_and_retains_failure_exit(tmp_path, monkeypatch)` |
+| `tests/test_owner_window.py` | 153 | `path` |
+| `tests/test_owner_window.py` | 154 | `profile` |
+| `tests/test_owner_window.py` | 159 | `actual_host` |
+| `tests/test_owner_window.py` | 161 | `failed_host()` |
+| `tests/test_owner_window.py` | 162 | `host` |
+| `tests/test_owner_window.py` | 164 | `fail()` |
+| `tests/test_owner_window.py` | 172 | `root` |
+| `tests/test_owner_window.py` | 174 | `view` |
+| `tests/test_owner_window.py` | 181 | `test_minimum_window_keeps_lifecycle_controls_visible_and_long_status_scrollable(window)` |
+| `tests/test_owner_window.py` | 183 | `root` |
+| `tests/test_owner_window.py` | 183 | `view` |
+| `tests/test_owner_window.py` | 188 | `control` |
+| `tests/test_owner_window.py` | 189 | `top` |
+| `tests/test_portable_archive.py` | 17 | `APPLICATION` |
+| `tests/test_portable_archive.py` | 21 | `test_roundtrip_keeps_one_application_root_and_metadata(tmp_path, suffix)` |
+| `tests/test_portable_archive.py` | 23 | `bundle` |
+| `tests/test_portable_archive.py` | 27 | `destination` |
+| `tests/test_portable_archive.py` | 30 | `extracted` |
+| `tests/test_portable_archive.py` | 38 | `test_posix_archive_keeps_relative_link_and_executable_mode(tmp_path)` |
+| `tests/test_portable_archive.py` | 40 | `path` |
+| `tests/test_portable_archive.py` | 41 | `output` |
+| `tests/test_portable_archive.py` | 42 | `member` |
+| `tests/test_portable_archive.py` | 45 | `link` |
+| `tests/test_portable_archive.py` | 48 | `bundle` |
+| `tests/test_portable_archive.py` | 68 | `test_member_escape_or_alias_is_rejected_before_writes(tmp_path, name)` |
+| `tests/test_portable_archive.py` | 70 | `target` |
+| `tests/test_portable_archive.py` | 71 | `output` |
+| `tests/test_portable_archive.py` | 73 | `sentinel` |
+| `tests/test_portable_archive.py` | 81 | `test_tar_link_escape_rejected_without_creating_links(tmp_path, target)` |
+| `tests/test_portable_archive.py` | 83 | `path` |
+| `tests/test_portable_archive.py` | 84 | `output` |
+| `tests/test_portable_archive.py` | 85 | `member` |
+| `tests/test_portable_archive.py` | 93 | `test_zip_symlink_and_duplicate_members_are_rejected(tmp_path)` |
+| `tests/test_portable_archive.py` | 95 | `path` |
+| `tests/test_portable_archive.py` | 96 | `output` |
+| `tests/test_portable_archive.py` | 97 | `member` |
+| `tests/test_portable_archive.py` | 102 | `path` |
+| `tests/test_portable_archive.py` | 103 | `output` |
+| `tests/test_portable_archive.py` | 104 | `_` |
+| `tests/test_portable_archive.py` | 105 | `member` |
+| `tests/test_portable_archive.py` | 111 | `test_member_content_and_metadata_budgets_are_checked(tmp_path, monkeypatch)` |
+| `tests/test_portable_archive.py` | 113 | `path` |
+| `tests/test_portable_archive.py` | 114 | `output` |
+| `tests/test_portable_archive.py` | 120 | `path` |
+| `tests/test_portable_archive.py` | 121 | `output` |
 | `tests/test_publication_text.py` | 15 | `edition(root, name, main, text)` |
 | `tests/test_publication_text.py` | 17 | `path` |
 | `tests/test_publication_text.py` | 19 | `package` |
@@ -239,6 +441,38 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/test_publication_text.py` | 78 | `test_active_parts_rejected_by_exact_publication_name(tmp_path, member)` |
 | `tests/test_publication_text.py` | 80 | `path` |
 | `tests/test_publication_text.py` | 81 | `package` |
+| `tests/test_runtime_notices.py` | 10 | `ROOT` |
+| `tests/test_runtime_notices.py` | 14 | `interpreter(capfd)` |
+| `tests/test_runtime_notices.py` | 17 | `root` |
+| `tests/test_runtime_notices.py` | 25 | `test_actual_tcl_notice_reader_preserves_bytes_and_missing_identity(tmp_path, interpreter)` |
+| `tests/test_runtime_notices.py` | 27 | `path` |
+| `tests/test_runtime_notices.py` | 28 | `raw` |
+| `tests/test_runtime_notices.py` | 35 | `raw` |
+| `tests/test_runtime_notices.py` | 43 | `test_exact_mac_version_uses_verbatim_upstream_notice_and_binds_digest(tmp_path, kind, interpreter)` |
+| `tests/test_runtime_notices.py` | 47 | `library` |
+| `tests/test_runtime_notices.py` | 48 | `file` |
+| `tests/test_runtime_notices.py` | 49 | `target` |
+| `tests/test_runtime_notices.py` | 52 | `raw` |
+| `tests/test_runtime_notices.py` | 52 | `source` |
+| `tests/test_runtime_notices.py` | 79 | `test_unreviewed_platform_version_or_library_cannot_substitute_notice(version, library, system, interpreter)` |
+| `tests/test_runtime_notices.py` | 88 | `test_ubuntu_uses_actual_runtime_package_copyright_not_guessed_script_file(tmp_path, monkeypatch, kind, interpreter)` |
+| `tests/test_runtime_notices.py` | 92 | `fixture` |
+| `tests/test_runtime_notices.py` | 94 | `actual` |
+| `tests/test_runtime_notices.py` | 95 | `calls` |
+| `tests/test_runtime_notices.py` | 96 | `library` |
+| `tests/test_runtime_notices.py` | 97 | `package_path` |
+| `tests/test_runtime_notices.py` | 99 | `installed(interpreter, path)` |
+| `tests/test_runtime_notices.py` | 106 | `raw` |
+| `tests/test_runtime_notices.py` | 106 | `source` |
+| `tests/test_runtime_notices.py` | 111 | `test_present_invalid_runtime_notice_never_falls_back_to_other_terms(tmp_path, interpreter)` |
+| `tests/test_runtime_notices.py` | 119 | `test_mac_pre905_terms_require_exact_psf_sdk_recipe(tmp_path, monkeypatch, interpreter, python_version, accepted)` |
+| `tests/test_runtime_notices.py` | 124 | `library` |
+| `tests/test_runtime_notices.py` | 125 | `name` |
+| `tests/test_runtime_notices.py` | 129 | `raw` |
+| `tests/test_runtime_notices.py` | 129 | `source` |
+| `tests/test_runtime_notices.py` | 137 | `test_mac_pre905_changed_notice_is_rejected(tmp_path, monkeypatch, interpreter)` |
+| `tests/test_runtime_notices.py` | 141 | `path` |
+| `tests/test_runtime_notices.py` | 143 | `library` |
 | `tests/test_security.py` | 14 | `test_anonymous_boundary_and_private_static_files(client)` |
 | `tests/test_security.py` | 16 | `path` |
 | `tests/test_security.py` | 24 | `path` |
@@ -332,34 +566,144 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tools/docs_index.py` | 18 | `ROOT` |
 | `tools/docs_index.py` | 19 | `EXCLUDE` |
 | `tools/docs_index.py` | 33 | `SPECIAL` |
-| `tools/docs_index.py` | 51 | `files()` |
-| `tools/docs_index.py` | 53 | `result` |
-| `tools/docs_index.py` | 54 | `children` |
-| `tools/docs_index.py` | 54 | `directory` |
-| `tools/docs_index.py` | 54 | `names` |
-| `tools/docs_index.py` | 55 | `child` |
-| `tools/docs_index.py` | 56 | `name` |
-| `tools/docs_index.py` | 62 | `render()` |
-| `tools/docs_index.py` | 64 | `catalog` |
-| `tools/docs_index.py` | 72 | `source` |
-| `tools/docs_index.py` | 81 | `path` |
-| `tools/docs_index.py` | 82 | `relative` |
-| `tools/docs_index.py` | 83 | `content` |
-| `tools/docs_index.py` | 84 | `description` |
-| `tools/docs_index.py` | 87 | `line` |
-| `tools/docs_index.py` | 95 | `records` |
-| `tools/docs_index.py` | 97 | `node` |
-| `tools/docs_index.py` | 99 | `args` |
-| `tools/docs_index.py` | 102 | `a` |
-| `tools/docs_index.py` | 110 | `line` |
-| `tools/docs_index.py` | 110 | `value` |
-| `tools/docs_index.py` | 113 | `line` |
-| `tools/docs_index.py` | 113 | `name` |
-| `tools/docs_index.py` | 114 | `node` |
-| `tools/docs_index.py` | 128 | `main()` |
-| `tools/docs_index.py` | 130 | `content` |
-| `tools/docs_index.py` | 130 | `relative` |
-| `tools/docs_index.py` | 131 | `path` |
+| `tools/docs_index.py` | 57 | `files()` |
+| `tools/docs_index.py` | 59 | `result` |
+| `tools/docs_index.py` | 60 | `children` |
+| `tools/docs_index.py` | 60 | `directory` |
+| `tools/docs_index.py` | 60 | `names` |
+| `tools/docs_index.py` | 61 | `child` |
+| `tools/docs_index.py` | 62 | `name` |
+| `tools/docs_index.py` | 68 | `render()` |
+| `tools/docs_index.py` | 70 | `catalog` |
+| `tools/docs_index.py` | 78 | `source` |
+| `tools/docs_index.py` | 87 | `path` |
+| `tools/docs_index.py` | 88 | `relative` |
+| `tools/docs_index.py` | 89 | `content` |
+| `tools/docs_index.py` | 90 | `description` |
+| `tools/docs_index.py` | 93 | `line` |
+| `tools/docs_index.py` | 101 | `records` |
+| `tools/docs_index.py` | 103 | `node` |
+| `tools/docs_index.py` | 105 | `args` |
+| `tools/docs_index.py` | 108 | `a` |
+| `tools/docs_index.py` | 116 | `line` |
+| `tools/docs_index.py` | 116 | `value` |
+| `tools/docs_index.py` | 119 | `line` |
+| `tools/docs_index.py` | 119 | `name` |
+| `tools/docs_index.py` | 120 | `node` |
+| `tools/docs_index.py` | 134 | `main()` |
+| `tools/docs_index.py` | 136 | `content` |
+| `tools/docs_index.py` | 136 | `relative` |
+| `tools/docs_index.py` | 137 | `path` |
+| `tools/package_app.py` | 28 | `ROOT` |
+| `tools/package_app.py` | 29 | `APPLICATION` |
+| `tools/package_app.py` | 30 | `PRODUCT` |
+| `tools/package_app.py` | 33 | `build_python_supported(version, releaselevel)` |
+| `tools/package_app.py` | 43 | `configuration(root)` |
+| `tools/package_app.py` | 45 | `project` |
+| `tools/package_app.py` | 46 | `package` |
+| `tools/package_app.py` | 47 | `lock` |
+| `tools/package_app.py` | 48 | `version` |
+| `tools/package_app.py` | 62 | `source_metadata(version)` |
+| `tools/package_app.py` | 68 | `command` |
+| `tools/package_app.py` | 69 | `source` |
+| `tools/package_app.py` | 70 | `changed` |
+| `tools/package_app.py` | 92 | `main(argv)` |
+| `tools/package_app.py` | 94 | `parser` |
+| `tools/package_app.py` | 101 | `args` |
+| `tools/package_app.py` | 106 | `version` |
+| `tools/package_app.py` | 107 | `notices` |
+| `tools/package_app.py` | 107 | `versions` |
+| `tools/package_app.py` | 108 | `metadata` |
+| `tools/package_app.py` | 110 | `generated` |
+| `tools/package_app.py` | 112 | `identity_file` |
+| `tools/package_app.py` | 114 | `notice_file` |
+| `tools/package_app.py` | 116 | `pyinstaller` |
+| `tools/package_app.py` | 117 | `licenses` |
+| `tools/package_app.py` | 119 | `path` |
+| `tools/package_app.py` | 123 | `build` |
+| `tools/package_app.py` | 124 | `command` |
+| `tools/package_app.py` | 141 | `destination` |
+| `tools/package_app.py` | 141 | `source` |
+| `tools/package_app.py` | 150 | `source_path` |
+| `tools/package_app.py` | 152 | `source_path` |
+| `tools/package_app.py` | 153 | `command` |
+| `tools/package_app.py` | 154 | `hidden` |
+| `tools/package_app.py` | 159 | `command` |
+| `tools/package_app.py` | 160 | `command` |
+| `tools/package_app.py` | 161 | `environment` |
+| `tools/package_app.py` | 167 | `bundle` |
+| `tools/package_app.py` | 169 | `suffix` |
+| `tools/package_app.py` | 170 | `name` |
+| `tools/package_app.py` | 171 | `output` |
+| `tools/package_app.py` | 173 | `archive` |
+| `tools/package_app.py` | 173 | `sidecar` |
+| `tools/package_app.py` | 177 | `temporary` |
+| `tools/package_app.py` | 178 | `extracted` |
+| `tools/package_app.py` | 179 | `executable` |
+| `tools/package_app.py` | 192 | `stream` |
+| `tools/package_app.py` | 193 | `digest` |
+| `tools/portable_archive.py` | 17 | `MAX_BYTES` |
+| `tools/portable_archive.py` | 18 | `MAX_MEMBERS` |
+| `tools/portable_archive.py` | 21 | `require(condition, message)` |
+| `tools/portable_archive.py` | 27 | `safe_name(name, application)` |
+| `tools/portable_archive.py` | 29 | `parts` |
+| `tools/portable_archive.py` | 30 | `raw_parts` |
+| `tools/portable_archive.py` | 38 | `part` |
+| `tools/portable_archive.py` | 39 | `char` |
+| `tools/portable_archive.py` | 44 | `safe_link(name, target, application)` |
+| `tools/portable_archive.py` | 51 | `char` |
+| `tools/portable_archive.py` | 54 | `resolved` |
+| `tools/portable_archive.py` | 60 | `create_archive(bundle, archive)` |
+| `tools/portable_archive.py` | 66 | `members` |
+| `tools/portable_archive.py` | 68 | `total` |
+| `tools/portable_archive.py` | 69 | `path` |
+| `tools/portable_archive.py` | 78 | `total` |
+| `tools/portable_archive.py` | 82 | `path` |
+| `tools/portable_archive.py` | 84 | `target` |
+| `tools/portable_archive.py` | 85 | `path` |
+| `tools/portable_archive.py` | 88 | `target` |
+| `tools/portable_archive.py` | 89 | `path` |
+| `tools/portable_archive.py` | 97 | `inspected(archive, application)` |
+| `tools/portable_archive.py` | 102 | `members` |
+| `tools/portable_archive.py` | 103 | `total` |
+| `tools/portable_archive.py` | 104 | `names` |
+| `tools/portable_archive.py` | 106 | `source` |
+| `tools/portable_archive.py` | 107 | `member` |
+| `tools/portable_archive.py` | 111 | `total` |
+| `tools/portable_archive.py` | 112 | `kind` |
+| `tools/portable_archive.py` | 114 | `source` |
+| `tools/portable_archive.py` | 115 | `member` |
+| `tools/portable_archive.py` | 124 | `total` |
+| `tools/portable_archive.py` | 129 | `kind` |
+| `tools/portable_archive.py` | 136 | `member` |
+| `tools/portable_archive.py` | 137 | `name` |
+| `tools/portable_archive.py` | 143 | `archive_metadata(archive, application)` |
+| `tools/portable_archive.py` | 145 | `kind` |
+| `tools/portable_archive.py` | 145 | `members` |
+| `tools/portable_archive.py` | 146 | `expected` |
+| `tools/portable_archive.py` | 147 | `m` |
+| `tools/portable_archive.py` | 147 | `selected` |
+| `tools/portable_archive.py` | 149 | `member` |
+| `tools/portable_archive.py` | 150 | `size` |
+| `tools/portable_archive.py` | 155 | `source` |
+| `tools/portable_archive.py` | 156 | `value` |
+| `tools/portable_archive.py` | 158 | `source` |
+| `tools/portable_archive.py` | 159 | `stream` |
+| `tools/portable_archive.py` | 161 | `value` |
+| `tools/portable_archive.py` | 166 | `extract_archive(archive, destination, application)` |
+| `tools/portable_archive.py` | 168 | `kind` |
+| `tools/portable_archive.py` | 168 | `members` |
+| `tools/portable_archive.py` | 171 | `source` |
+| `tools/portable_archive.py` | 172 | `member` |
+| `tools/portable_archive.py` | 173 | `target` |
+| `tools/portable_archive.py` | 178 | `total` |
+| `tools/portable_archive.py` | 179 | `incoming` |
+| `tools/portable_archive.py` | 179 | `outgoing` |
+| `tools/portable_archive.py` | 180 | `chunk` |
+| `tools/portable_archive.py` | 181 | `total` |
+| `tools/portable_archive.py` | 186 | `source` |
+| `tools/portable_archive.py` | 188 | `bundle` |
+| `tools/portable_archive.py` | 190 | `path` |
 | `tools/publication_text.py` | 11 | `EDITION_ROOTS` |
 | `tools/publication_text.py` | 16 | `MAX_PACKAGE_BYTES` |
 | `tools/publication_text.py` | 17 | `MAX_EXPANDED_BYTES` |
@@ -377,6 +721,95 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tools/publication_text.py` | 41 | `member` |
 | `tools/publication_text.py` | 51 | `stream` |
 | `tools/publication_text.py` | 52 | `payload` |
+| `tools/runtime_notices.py` | 10 | `UPSTREAM_904` |
+| `tools/runtime_notices.py` | 22 | `read_tcl_notice(interpreter, path)` |
+| `tools/runtime_notices.py` | 27 | `channel` |
+| `tools/runtime_notices.py` | 29 | `code` |
+| `tools/runtime_notices.py` | 34 | `raw` |
+| `tools/runtime_notices.py` | 37 | `raw` |
+| `tools/runtime_notices.py` | 43 | `gui_notice(interpreter, root, kind, version, library, system)` |
+| `tools/runtime_notices.py` | 45 | `system` |
+| `tools/runtime_notices.py` | 58 | `path` |
+| `tools/runtime_notices.py` | 60 | `framework` |
+| `tools/runtime_notices.py` | 63 | `commit` |
+| `tools/runtime_notices.py` | 63 | `expected` |
+| `tools/runtime_notices.py` | 64 | `stream` |
+| `tools/runtime_notices.py` | 65 | `raw` |
+| `tools/runtime_notices.py` | 81 | `stream` |
+| `tools/runtime_notices.py` | 82 | `raw` |
+| `tools/runtime_notices.py` | 96 | `collect(root)` |
+| `tools/runtime_notices.py` | 100 | `window` |
+| `tools/runtime_notices.py` | 103 | `versions` |
+| `tools/runtime_notices.py` | 107 | `value` |
+| `tools/runtime_notices.py` | 109 | `blocks` |
+| `tools/runtime_notices.py` | 110 | `kind` |
+| `tools/runtime_notices.py` | 110 | `library` |
+| `tools/runtime_notices.py` | 110 | `version` |
+| `tools/runtime_notices.py` | 114 | `provenance` |
+| `tools/runtime_notices.py` | 114 | `raw` |
+| `tools/runtime_notices.py` | 120 | `names` |
+| `tools/runtime_notices.py` | 123 | `name` |
+| `tools/runtime_notices.py` | 124 | `info` |
+| `tools/runtime_notices.py` | 125 | `files` |
+| `tools/runtime_notices.py` | 127 | `path` |
+| `tools/runtime_notices.py` | 133 | `path` |
+| `tools/runtime_notices.py` | 134 | `stream` |
+| `tools/runtime_notices.py` | 135 | `raw` |
+| `tools/runtime_notices.py` | 139 | `raw` |
+| `tools/runtime_notices.py` | 139 | `title` |
+| `tools/smoke_app.py` | 22 | `ROOT` |
+| `tools/smoke_app.py` | 26 | `require(condition, message)` |
+| `tools/smoke_app.py` | 32 | `request(url, path)` |
+| `tools/smoke_app.py` | 34 | `target` |
+| `tools/smoke_app.py` | 43 | `connection` |
+| `tools/smoke_app.py` | 46 | `response` |
+| `tools/smoke_app.py` | 47 | `raw` |
+| `tools/smoke_app.py` | 57 | `main(argv)` |
+| `tools/smoke_app.py` | 62 | `parser` |
+| `tools/smoke_app.py` | 65 | `args` |
+| `tools/smoke_app.py` | 66 | `executable` |
+| `tools/smoke_app.py` | 67 | `expected` |
+| `tools/smoke_app.py` | 75 | `output` |
+| `tools/smoke_app.py` | 77 | `node` |
+| `tools/smoke_app.py` | 79 | `profile_directory` |
+| `tools/smoke_app.py` | 80 | `password` |
+| `tools/smoke_app.py` | 81 | `profile` |
+| `tools/smoke_app.py` | 82 | `expected_cookie` |
+| `tools/smoke_app.py` | 84 | `role` |
+| `tools/smoke_app.py` | 88 | `allowed` |
+| `tools/smoke_app.py` | 104 | `environment` |
+| `tools/smoke_app.py` | 104 | `key` |
+| `tools/smoke_app.py` | 104 | `value` |
+| `tools/smoke_app.py` | 113 | `diagnostic` |
+| `tools/smoke_app.py` | 122 | `lines` |
+| `tools/smoke_app.py` | 123 | `line` |
+| `tools/smoke_app.py` | 126 | `actual_runtime` |
+| `tools/smoke_app.py` | 129 | `key` |
+| `tools/smoke_app.py` | 133 | `process` |
+| `tools/smoke_app.py` | 143 | `events` |
+| `tools/smoke_app.py` | 144 | `log` |
+| `tools/smoke_app.py` | 146 | `read_output()` |
+| `tools/smoke_app.py` | 149 | `line` |
+| `tools/smoke_app.py` | 155 | `reader` |
+| `tools/smoke_app.py` | 157 | `actual_exit` |
+| `tools/smoke_app.py` | 157 | `forced` |
+| `tools/smoke_app.py` | 157 | `passed` |
+| `tools/smoke_app.py` | 157 | `url` |
+| `tools/smoke_app.py` | 159 | `deadline` |
+| `tools/smoke_app.py` | 161 | `remaining` |
+| `tools/smoke_app.py` | 163 | `line` |
+| `tools/smoke_app.py` | 166 | `ready` |
+| `tools/smoke_app.py` | 173 | `url` |
+| `tools/smoke_app.py` | 174 | `code` |
+| `tools/smoke_app.py` | 174 | `raw` |
+| `tools/smoke_app.py` | 220 | `actual_exit` |
+| `tools/smoke_app.py` | 226 | `target` |
+| `tools/smoke_app.py` | 228 | `connection` |
+| `tools/smoke_app.py` | 234 | `reopened` |
+| `tools/smoke_app.py` | 243 | `line` |
+| `tools/smoke_app.py` | 245 | `passed` |
+| `tools/smoke_app.py` | 253 | `forced` |
+| `workbench/__init__.py` | 3 | `__version__` |
 | `workbench/__main__.py` | 14 | `main()` |
 | `workbench/__main__.py` | 16 | `parser` |
 | `workbench/__main__.py` | 18 | `commands` |
@@ -386,77 +819,141 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `workbench/__main__.py` | 28 | `args` |
 | `workbench/__main__.py` | 29 | `store` |
 | `workbench/__main__.py` | 36 | `password` |
-| `workbench/api.py` | 35 | `ROOT` |
-| `workbench/api.py` | 36 | `BODY_GATE` |
-| `workbench/api.py` | 37 | `HEADERS` |
-| `workbench/api.py` | 47 | `create_app(database, port)` |
-| `workbench/api.py` | 51 | `authority` |
-| `workbench/api.py` | 51 | `origin` |
-| `workbench/api.py` | 52 | `app` |
-| `workbench/api.py` | 55 | `store` |
-| `workbench/api.py` | 58 | `boundary(request, call_next)` |
-| `workbench/api.py` | 60 | `acquired` |
-| `workbench/api.py` | 80 | `acquired` |
-| `workbench/api.py` | 81 | `data` |
-| `workbench/api.py` | 83 | `chunk` |
-| `workbench/api.py` | 88 | `response` |
-| `workbench/api.py` | 90 | `response` |
-| `workbench/api.py` | 92 | `response` |
-| `workbench/api.py` | 100 | `invalid(_request, error)` |
-| `workbench/api.py` | 105 | `e` |
-| `workbench/api.py` | 111 | `conflict(_request, _error)` |
-| `workbench/api.py` | 118 | `health()` |
-| `workbench/api.py` | 123 | `login(body, request)` |
-| `workbench/api.py` | 125 | `token` |
-| `workbench/api.py` | 125 | `user` |
-| `workbench/api.py` | 126 | `response` |
-| `workbench/api.py` | 133 | `me(request)` |
-| `workbench/api.py` | 138 | `logout(request)` |
-| `workbench/api.py` | 141 | `response` |
-| `workbench/api.py` | 146 | `workspace(request)` |
-| `workbench/api.py` | 152 | `aircraft(body, request)` |
-| `workbench/api.py` | 158 | `component(body, request)` |
-| `workbench/api.py` | 164 | `publish(body, request)` |
-| `workbench/api.py` | 170 | `preview_policy(body, request)` |
-| `workbench/api.py` | 175 | `swap(body, request)` |
-| `workbench/api.py` | 181 | `usage(body, request)` |
-| `workbench/api.py` | 183 | `result` |
-| `workbench/api.py` | 187 | `inspect(body, request)` |
-| `workbench/api.py` | 193 | `defect(body, request)` |
-| `workbench/api.py` | 199 | `work(body, request)` |
-| `workbench/api.py` | 205 | `verify(body, request)` |
-| `workbench/api.py` | 211 | `retire(body, request)` |
-| `workbench/api.py` | 217 | `assess(body, request)` |
-| `workbench/api.py` | 219 | `identifier` |
-| `workbench/api.py` | 223 | `report(identifier, request)` |
-| `workbench/api.py` | 229 | `review(identifier, body, request)` |
-| `workbench/api.py` | 235 | `export(identifier, request)` |
-| `workbench/api.py` | 244 | `evidence(request)` |
-| `workbench/api.py` | 253 | `index()` |
+| `workbench/api.py` | 37 | `ROOT` |
+| `workbench/api.py` | 38 | `BODY_GATE` |
+| `workbench/api.py` | 39 | `HEADERS` |
+| `workbench/api.py` | 49 | `create_app(database, port)` |
+| `workbench/api.py` | 55 | `authority` |
+| `workbench/api.py` | 55 | `origin` |
+| `workbench/api.py` | 56 | `app` |
+| `workbench/api.py` | 59 | `store` |
+| `workbench/api.py` | 63 | `boundary(request, call_next)` |
+| `workbench/api.py` | 65 | `acquired` |
+| `workbench/api.py` | 85 | `acquired` |
+| `workbench/api.py` | 86 | `data` |
+| `workbench/api.py` | 88 | `chunk` |
+| `workbench/api.py` | 93 | `response` |
+| `workbench/api.py` | 95 | `response` |
+| `workbench/api.py` | 97 | `response` |
+| `workbench/api.py` | 105 | `invalid(_request, error)` |
+| `workbench/api.py` | 110 | `e` |
+| `workbench/api.py` | 116 | `conflict(_request, _error)` |
+| `workbench/api.py` | 123 | `health()` |
+| `workbench/api.py` | 125 | `result` |
+| `workbench/api.py` | 131 | `login(body, request)` |
+| `workbench/api.py` | 133 | `token` |
+| `workbench/api.py` | 133 | `user` |
+| `workbench/api.py` | 134 | `response` |
+| `workbench/api.py` | 139 | `me(request)` |
+| `workbench/api.py` | 144 | `logout(request)` |
+| `workbench/api.py` | 147 | `response` |
+| `workbench/api.py` | 152 | `workspace(request)` |
+| `workbench/api.py` | 158 | `aircraft(body, request)` |
+| `workbench/api.py` | 164 | `component(body, request)` |
+| `workbench/api.py` | 170 | `publish(body, request)` |
+| `workbench/api.py` | 176 | `preview_policy(body, request)` |
+| `workbench/api.py` | 181 | `swap(body, request)` |
+| `workbench/api.py` | 187 | `usage(body, request)` |
+| `workbench/api.py` | 189 | `result` |
+| `workbench/api.py` | 193 | `inspect(body, request)` |
+| `workbench/api.py` | 199 | `defect(body, request)` |
+| `workbench/api.py` | 205 | `work(body, request)` |
+| `workbench/api.py` | 211 | `verify(body, request)` |
+| `workbench/api.py` | 217 | `retire(body, request)` |
+| `workbench/api.py` | 223 | `assess(body, request)` |
+| `workbench/api.py` | 225 | `identifier` |
+| `workbench/api.py` | 229 | `report(identifier, request)` |
+| `workbench/api.py` | 235 | `review(identifier, body, request)` |
+| `workbench/api.py` | 241 | `export(identifier, request)` |
+| `workbench/api.py` | 250 | `evidence(request)` |
+| `workbench/api.py` | 259 | `index()` |
 | `workbench/auth.py` | 17 | `HASHER` |
 | `workbench/auth.py` | 18 | `DUMMY` |
 | `workbench/auth.py` | 19 | `VERIFY_GATE` |
-| `workbench/auth.py` | 22 | `add_user(store, username, password, role)` |
-| `workbench/auth.py` | 35 | `hashed` |
-| `workbench/auth.py` | 36 | `db` |
-| `workbench/auth.py` | 40 | `sign_in(request, username, password)` |
-| `workbench/auth.py` | 42 | `store` |
-| `workbench/auth.py` | 43 | `now` |
-| `workbench/auth.py` | 44 | `client` |
-| `workbench/auth.py` | 47 | `db` |
-| `workbench/auth.py` | 49 | `row` |
-| `workbench/auth.py` | 58 | `user` |
-| `workbench/auth.py` | 69 | `csrf` |
-| `workbench/auth.py` | 69 | `token` |
-| `workbench/auth.py` | 70 | `db` |
-| `workbench/auth.py` | 83 | `identity(request)` |
-| `workbench/auth.py` | 85 | `token` |
-| `workbench/auth.py` | 88 | `db` |
-| `workbench/auth.py` | 89 | `row` |
-| `workbench/auth.py` | 98 | `authorize(request, role)` |
-| `workbench/auth.py` | 100 | `user` |
-| `workbench/auth.py` | 110 | `sign_out(request)` |
-| `workbench/auth.py` | 113 | `db` |
+| `workbench/auth.py` | 22 | `session_cookie_name(request)` |
+| `workbench/auth.py` | 27 | `add_user(store, username, password, role)` |
+| `workbench/auth.py` | 40 | `hashed` |
+| `workbench/auth.py` | 41 | `db` |
+| `workbench/auth.py` | 45 | `sign_in(request, username, password)` |
+| `workbench/auth.py` | 47 | `store` |
+| `workbench/auth.py` | 48 | `now` |
+| `workbench/auth.py` | 49 | `client` |
+| `workbench/auth.py` | 52 | `db` |
+| `workbench/auth.py` | 54 | `row` |
+| `workbench/auth.py` | 63 | `user` |
+| `workbench/auth.py` | 74 | `csrf` |
+| `workbench/auth.py` | 74 | `token` |
+| `workbench/auth.py` | 75 | `db` |
+| `workbench/auth.py` | 88 | `identity(request)` |
+| `workbench/auth.py` | 90 | `token` |
+| `workbench/auth.py` | 93 | `db` |
+| `workbench/auth.py` | 94 | `row` |
+| `workbench/auth.py` | 103 | `authorize(request, role)` |
+| `workbench/auth.py` | 105 | `user` |
+| `workbench/auth.py` | 115 | `sign_out(request)` |
+| `workbench/auth.py` | 118 | `db` |
+| `workbench/desktop.py` | 20 | `ROOT` |
+| `workbench/desktop.py` | 23 | `read_resource(path)` |
+| `workbench/desktop.py` | 25 | `descriptor` |
+| `workbench/desktop.py` | 28 | `stream` |
+| `workbench/desktop.py` | 29 | `info` |
+| `workbench/desktop.py` | 32 | `raw` |
+| `workbench/desktop.py` | 38 | `identity(root)` |
+| `workbench/desktop.py` | 41 | `value` |
+| `workbench/desktop.py` | 60 | `inspect_tk(root, metadata)` |
+| `workbench/desktop.py` | 62 | `versions` |
+| `workbench/desktop.py` | 66 | `value` |
+| `workbench/desktop.py` | 69 | `name` |
+| `workbench/desktop.py` | 69 | `value` |
+| `workbench/desktop.py` | 75 | `console_session(directory, metadata)` |
+| `workbench/desktop.py` | 77 | `profile` |
+| `workbench/desktop.py` | 78 | `host` |
+| `workbench/desktop.py` | 82 | `host` |
+| `workbench/desktop.py` | 89 | `line` |
+| `workbench/desktop.py` | 104 | `main(argv)` |
+| `workbench/desktop.py` | 106 | `parser` |
+| `workbench/desktop.py` | 123 | `args` |
+| `workbench/desktop.py` | 127 | `metadata` |
+| `workbench/desktop.py` | 132 | `root` |
+| `workbench/desktop.py` | 135 | `versions` |
+| `workbench/desktop.py` | 140 | `directory` |
+| `workbench/desktop.py` | 148 | `root` |
+| `workbench/desktop.py` | 149 | `window` |
+| `workbench/desktop_host.py` | 18 | `OwnedServer(class)` |
+| `workbench/desktop_host.py` | 21 | `__init__(self, config, ready, record)` |
+| `workbench/desktop_host.py` | 27 | `startup(self, sockets)` |
+| `workbench/desktop_host.py` | 36 | `Host(class)` |
+| `workbench/desktop_host.py` | 39 | `__init__(self, profile, metadata)` |
+| `workbench/desktop_host.py` | 54 | `app` |
+| `workbench/desktop_host.py` | 56 | `config` |
+| `workbench/desktop_host.py` | 76 | `_run(self)` |
+| `workbench/desktop_host.py` | 86 | `start(self, timeout)` |
+| `workbench/desktop_host.py` | 94 | `stop(self, timeout)` |
+| `workbench/desktop_profile.py` | 17 | `PRODUCT` |
+| `workbench/desktop_profile.py` | 18 | `ROLES` |
+| `workbench/desktop_profile.py` | 19 | `FIRST_ROLE` |
+| `workbench/desktop_profile.py` | 22 | `default_directory()` |
+| `workbench/desktop_profile.py` | 25 | `base` |
+| `workbench/desktop_profile.py` | 27 | `base` |
+| `workbench/desktop_profile.py` | 29 | `base` |
+| `workbench/desktop_profile.py` | 35 | `read_marker(path)` |
+| `workbench/desktop_profile.py` | 37 | `descriptor` |
+| `workbench/desktop_profile.py` | 38 | `stream` |
+| `workbench/desktop_profile.py` | 39 | `info` |
+| `workbench/desktop_profile.py` | 42 | `raw` |
+| `workbench/desktop_profile.py` | 45 | `value` |
+| `workbench/desktop_profile.py` | 58 | `Profile(class)` |
+| `workbench/desktop_profile.py` | 61 | `__init__(self, directory)` |
+| `workbench/desktop_profile.py` | 67 | `marker` |
+| `workbench/desktop_profile.py` | 71 | `stream` |
+| `workbench/desktop_profile.py` | 73 | `metadata` |
+| `workbench/desktop_profile.py` | 75 | `namespace` |
+| `workbench/desktop_profile.py` | 77 | `lock` |
+| `workbench/desktop_profile.py` | 97 | `database` |
+| `workbench/desktop_profile.py` | 108 | `count_users(self)` |
+| `workbench/desktop_profile.py` | 110 | `database` |
+| `workbench/desktop_profile.py` | 113 | `create_account(self, username, password, confirmation, role)` |
+| `workbench/desktop_profile.py` | 123 | `close(self)` |
 | `workbench/engine.py` | 10 | `RANK` |
 | `workbench/engine.py` | 13 | `worst(statuses)` |
 | `workbench/engine.py` | 18 | `active_policy(state)` |
@@ -643,6 +1140,30 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `workbench/models.py` | 206 | `assumptions` |
 | `workbench/models.py` | 209 | `Review(class)` |
 | `workbench/models.py` | 212 | `note` |
+| `workbench/owner_window.py` | 19 | `OwnerWindow(class)` |
+| `workbench/owner_window.py` | 22 | `__init__(self, root, directory, metadata)` |
+| `workbench/owner_window.py` | 42 | `shell` |
+| `workbench/owner_window.py` | 45 | `actions` |
+| `workbench/owner_window.py` | 53 | `content` |
+| `workbench/owner_window.py` | 56 | `scrollbar` |
+| `workbench/owner_window.py` | 60 | `body` |
+| `workbench/owner_window.py` | 61 | `item` |
+| `workbench/owner_window.py` | 82 | `location` |
+| `workbench/owner_window.py` | 100 | `account` |
+| `workbench/owner_window.py` | 110 | `caption` |
+| `workbench/owner_window.py` | 110 | `index` |
+| `workbench/owner_window.py` | 110 | `secret` |
+| `workbench/owner_window.py` | 110 | `variable` |
+| `workbench/owner_window.py` | 119 | `entry` |
+| `workbench/owner_window.py` | 142 | `choose_directory(self)` |
+| `workbench/owner_window.py` | 144 | `selected` |
+| `workbench/owner_window.py` | 150 | `open_profile(self)` |
+| `workbench/owner_window.py` | 156 | `control` |
+| `workbench/owner_window.py` | 173 | `create_account(self)` |
+| `workbench/owner_window.py` | 195 | `start_host(self)` |
+| `workbench/owner_window.py` | 207 | `open_browser(self)` |
+| `workbench/owner_window.py` | 212 | `quit(self)` |
+| `workbench/owner_window.py` | 222 | `stop(self)` |
 | `workbench/schema.sql` | 3 | `PRAGMA foreign_keys=ON;` |
 | `workbench/schema.sql` | 4 | `CREATE TABLE IF NOT EXISTS users(name TEXT PRIMARY KEY,password_hash TEXT NOT NULL,role TEXT NOT NULL CHECK(role IN ('admin','operator','technician','reviewer')));` |
 | `workbench/schema.sql` | 5 | `CREATE TABLE IF NOT EXISTS sessions(digest TEXT PRIMARY KEY,username TEXT NOT NULL REFERENCES users(name),csrf TEXT NOT NULL,expires REAL NOT NULL,created REAL NOT NULL);` |
@@ -835,173 +1356,204 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `workbench/store.py` | 590 | `state` |
 | `workbench/store.py` | 591 | `tip` |
 | `workbench/store.py` | 598 | `row` |
-| `ui/src/main.ts` | 10 | `User` |
-| `ui/src/main.ts` | 15 | `Finding` |
-| `ui/src/main.ts` | 20 | `Asset` |
-| `ui/src/main.ts` | 31 | `PartResult` |
-| `ui/src/main.ts` | 40 | `AircraftResult` |
-| `ui/src/main.ts` | 46 | `Policy` |
-| `ui/src/main.ts` | 50 | `State` |
-| `ui/src/main.ts` | 78 | `Dashboard` |
-| `ui/src/main.ts` | 85 | `Report` |
-| `ui/src/main.ts` | 97 | `ApiError` |
-| `ui/src/main.ts` | 99 | `message` |
-| `ui/src/main.ts` | 100 | `status` |
-| `ui/src/main.ts` | 105 | `user` |
-| `ui/src/main.ts` | 106 | `dashboard` |
-| `ui/src/main.ts` | 107 | `assessment` |
-| `ui/src/main.ts` | 108 | `selectedAircraft` |
-| `ui/src/main.ts` | 109 | `selectedComponent` |
-| `ui/src/main.ts` | 110 | `epoch` |
-| `ui/src/main.ts` | 111 | `busy` |
-| `ui/src/main.ts` | 112 | `logoutPending` |
-| `ui/src/main.ts` | 113 | `pendingUsage` |
-| `ui/src/main.ts` | 114 | `Impact` |
-| `ui/src/main.ts` | 133 | `impact` |
-| `ui/src/main.ts` | 134 | `impactRevision` |
-| `ui/src/main.ts` | 135 | `previewPolicy` |
-| `ui/src/main.ts` | 139 | `downloadImpact` |
-| `ui/src/main.ts` | 144 | `impactOutput` |
-| `ui/src/main.ts` | 153 | `clearImpact` |
-| `ui/src/main.ts` | 159 | `id` |
-| `ui/src/main.ts` | 165 | `requested` |
-| `ui/src/main.ts` | 166 | `result` |
-| `ui/src/main.ts` | 179 | `heading` |
-| `ui/src/main.ts` | 181 | `notice` |
-| `ui/src/main.ts` | 184 | `list` |
-| `ui/src/main.ts` | 185 | `row` |
-| `ui/src/main.ts` | 186 | `item` |
-| `ui/src/main.ts` | 190 | `row` |
-| `ui/src/main.ts` | 191 | `item` |
-| `ui/src/main.ts` | 192 | `finding` |
-| `ui/src/main.ts` | 199 | `url` |
-| `ui/src/main.ts` | 202 | `link` |
-| `ui/src/main.ts` | 209 | `el` |
-| `ui/src/main.ts` | 209 | `id` |
-| `ui/src/main.ts` | 213 | `value` |
-| `ui/src/main.ts` | 213 | `id` |
-| `ui/src/main.ts` | 217 | `text` |
-| `ui/src/main.ts` | 217 | `id` |
-| `ui/src/main.ts` | 217 | `content` |
-| `ui/src/main.ts` | 221 | `buttons` |
-| `ui/src/main.ts` | 222 | `button` |
-| `ui/src/main.ts` | 223 | `roles` |
-| `ui/src/main.ts` | 232 | `api` |
-| `ui/src/main.ts` | 232 | `path` |
-| `ui/src/main.ts` | 232 | `body` |
-| `ui/src/main.ts` | 233 | `generation` |
-| `ui/src/main.ts` | 234 | `response` |
-| `ui/src/main.ts` | 245 | `result` |
-| `ui/src/main.ts` | 256 | `task` |
-| `ui/src/main.ts` | 256 | `action` |
-| `ui/src/main.ts` | 258 | `generation` |
-| `ui/src/main.ts` | 266 | `error` |
-| `ui/src/main.ts` | 274 | `reset` |
-| `ui/src/main.ts` | 281 | `id` |
-| `ui/src/main.ts` | 283 | `id` |
-| `ui/src/main.ts` | 299 | `area` |
-| `ui/src/main.ts` | 301 | `id` |
-| `ui/src/main.ts` | 318 | `options` |
-| `ui/src/main.ts` | 319 | `id` |
-| `ui/src/main.ts` | 320 | `entries` |
-| `ui/src/main.ts` | 321 | `selection` |
-| `ui/src/main.ts` | 323 | `select` |
-| `ui/src/main.ts` | 324 | `previous` |
-| `ui/src/main.ts` | 326 | `[key, label]` |
-| `ui/src/main.ts` | 327 | `option` |
-| `ui/src/main.ts` | 332 | `[key]` |
-| `ui/src/main.ts` | 335 | `findings` |
-| `ui/src/main.ts` | 335 | `id` |
-| `ui/src/main.ts` | 335 | `entries` |
-| `ui/src/main.ts` | 336 | `root` |
-| `ui/src/main.ts` | 338 | `finding` |
-| `ui/src/main.ts` | 339 | `item` |
-| `ui/src/main.ts` | 346 | `render` |
-| `ui/src/main.ts` | 346 | `next` |
-| `ui/src/main.ts` | 349 | `state` |
-| `ui/src/main.ts` | 350 | `asset` |
-| `ui/src/main.ts` | 352 | `part` |
-| `ui/src/main.ts` | 354 | `metrics` |
-| `ui/src/main.ts` | 356 | `status` |
-| `ui/src/main.ts` | 362 | `div` |
-| `ui/src/main.ts` | 364 | `count` |
-| `ui/src/main.ts` | 366 | `asset` |
-| `ui/src/main.ts` | 368 | `label` |
-| `ui/src/main.ts` | 373 | `policy` |
-| `ui/src/main.ts` | 374 | `record` |
-| `ui/src/main.ts` | 419 | `part` |
-| `ui/src/main.ts` | 424 | `part` |
-| `ui/src/main.ts` | 433 | `d` |
-| `ui/src/main.ts` | 433 | `work` |
-| `ui/src/main.ts` | 435 | `d` |
-| `ui/src/main.ts` | 443 | `work` |
-| `ui/src/main.ts` | 444 | `work` |
-| `ui/src/main.ts` | 453 | `record` |
-| `ui/src/main.ts` | 462 | `defects` |
-| `ui/src/main.ts` | 464 | `defect` |
-| `ui/src/main.ts` | 464 | `entry` |
-| `ui/src/main.ts` | 465 | `p` |
-| `ui/src/main.ts` | 484 | `roster` |
-| `ui/src/main.ts` | 485 | `root` |
-| `ui/src/main.ts` | 488 | `asset` |
-| `ui/src/main.ts` | 489 | `result` |
-| `ui/src/main.ts` | 490 | `item` |
-| `ui/src/main.ts` | 497 | `button` |
-| `ui/src/main.ts` | 510 | `aircraftDesk` |
-| `ui/src/main.ts` | 512 | `asset` |
-| `ui/src/main.ts` | 513 | `item` |
-| `ui/src/main.ts` | 515 | `result` |
-| `ui/src/main.ts` | 516 | `item` |
-| `ui/src/main.ts` | 533 | `policy` |
-| `ui/src/main.ts` | 534 | `record` |
-| `ui/src/main.ts` | 536 | `profile` |
-| `ui/src/main.ts` | 536 | `entry` |
-| `ui/src/main.ts` | 539 | `slot` |
-| `ui/src/main.ts` | 545 | `slot` |
-| `ui/src/main.ts` | 546 | `row` |
-| `ui/src/main.ts` | 547 | `part` |
-| `ui/src/main.ts` | 548 | `entry` |
-| `ui/src/main.ts` | 550 | `status` |
-| `ui/src/main.ts` | 551 | `entry` |
-| `ui/src/main.ts` | 553 | `content` |
-| `ui/src/main.ts` | 561 | `cell` |
-| `ui/src/main.ts` | 570 | `componentDesk` |
-| `ui/src/main.ts` | 572 | `part` |
-| `ui/src/main.ts` | 573 | `entry` |
-| `ui/src/main.ts` | 575 | `result` |
-| `ui/src/main.ts` | 576 | `entry` |
-| `ui/src/main.ts` | 588 | `cumulative` |
-| `ui/src/main.ts` | 589 | `values` |
-| `ui/src/main.ts` | 590 | `record` |
-| `ui/src/main.ts` | 595 | `chart` |
-| `ui/src/main.ts` | 597 | `line` |
-| `ui/src/main.ts` | 608 | `refresh` |
-| `ui/src/main.ts` | 614 | `mutate` |
-| `ui/src/main.ts` | 615 | `path` |
-| `ui/src/main.ts` | 616 | `fields` |
-| `ui/src/main.ts` | 627 | `showReport` |
-| `ui/src/main.ts` | 627 | `report` |
-| `ui/src/main.ts` | 643 | `event` |
-| `ui/src/main.ts` | 659 | `csrf` |
-| `ui/src/main.ts` | 669 | `response` |
-| `ui/src/main.ts` | 695 | `sendUsage` |
-| `ui/src/main.ts` | 698 | `next` |
-| `ui/src/main.ts` | 708 | `error` |
-| `ui/src/main.ts` | 715 | `event` |
-| `ui/src/main.ts` | 735 | `event` |
-| `ui/src/main.ts` | 739 | `report` |
-| `ui/src/main.ts` | 752 | `id` |
-| `ui/src/main.ts` | 755 | `event` |
-| `ui/src/main.ts` | 766 | `event` |
-| `ui/src/main.ts` | 777 | `event` |
-| `ui/src/main.ts` | 780 | `battery` |
-| `ui/src/main.ts` | 781 | `part` |
-| `ui/src/main.ts` | 796 | `event` |
-| `ui/src/main.ts` | 806 | `event` |
-| `ui/src/main.ts` | 815 | `event` |
-| `ui/src/main.ts` | 833 | `event` |
-| `ui/src/main.ts` | 839 | `event` |
-| `ui/src/main.ts` | 845 | `event` |
+| `ui/src/env.d.ts` | 2 | `__APP_VERSION__` |
+| `ui/src/import_file.test.ts` | 11 | `value` |
+| `ui/src/import_file.test.ts` | 23 | `text` |
+| `ui/src/import_file.test.ts` | 34 | `incorrectMetadata` |
+| `ui/src/import_file.ts` | 2 | `MAX_IMPORT_BYTES` |
+| `ui/src/import_file.ts` | 5 | `objectFromText` |
+| `ui/src/import_file.ts` | 5 | `text` |
+| `ui/src/import_file.ts` | 8 | `value` |
+| `ui/src/import_file.ts` | 11 | `stack` |
+| `ui/src/import_file.ts` | 12 | `visited` |
+| `ui/src/import_file.ts` | 15 | `[node, depth]` |
+| `ui/src/import_file.ts` | 21 | `child` |
+| `ui/src/import_file.ts` | 27 | `readObjectFile` |
+| `ui/src/import_file.ts` | 28 | `file` |
+| `ui/src/import_file.ts` | 32 | `bytes` |
+| `ui/src/main.ts` | 11 | `User` |
+| `ui/src/main.ts` | 16 | `Finding` |
+| `ui/src/main.ts` | 21 | `Asset` |
+| `ui/src/main.ts` | 32 | `PartResult` |
+| `ui/src/main.ts` | 41 | `AircraftResult` |
+| `ui/src/main.ts` | 47 | `Policy` |
+| `ui/src/main.ts` | 51 | `State` |
+| `ui/src/main.ts` | 79 | `Dashboard` |
+| `ui/src/main.ts` | 86 | `Report` |
+| `ui/src/main.ts` | 98 | `ApiError` |
+| `ui/src/main.ts` | 100 | `message` |
+| `ui/src/main.ts` | 101 | `status` |
+| `ui/src/main.ts` | 106 | `user` |
+| `ui/src/main.ts` | 107 | `dashboard` |
+| `ui/src/main.ts` | 108 | `assessment` |
+| `ui/src/main.ts` | 109 | `selectedAircraft` |
+| `ui/src/main.ts` | 110 | `selectedComponent` |
+| `ui/src/main.ts` | 111 | `epoch` |
+| `ui/src/main.ts` | 112 | `busy` |
+| `ui/src/main.ts` | 113 | `logoutPending` |
+| `ui/src/main.ts` | 114 | `pendingUsage` |
+| `ui/src/main.ts` | 115 | `Impact` |
+| `ui/src/main.ts` | 134 | `impact` |
+| `ui/src/main.ts` | 135 | `impactRevision` |
+| `ui/src/main.ts` | 136 | `previewPolicy` |
+| `ui/src/main.ts` | 140 | `downloadImpact` |
+| `ui/src/main.ts` | 145 | `impactOutput` |
+| `ui/src/main.ts` | 154 | `clearImpact` |
+| `ui/src/main.ts` | 160 | `id` |
+| `ui/src/main.ts` | 169 | `importPolicy` |
+| `ui/src/main.ts` | 169 | `file` |
+| `ui/src/main.ts` | 172 | `requested` |
+| `ui/src/main.ts` | 173 | `generation` |
+| `ui/src/main.ts` | 176 | `policy` |
+| `ui/src/main.ts` | 185 | `formatted` |
+| `ui/src/main.ts` | 193 | `error` |
+| `ui/src/main.ts` | 201 | `event` |
+| `ui/src/main.ts` | 202 | `input` |
+| `ui/src/main.ts` | 203 | `file` |
+| `ui/src/main.ts` | 211 | `policy` |
+| `ui/src/main.ts` | 212 | `url` |
+| `ui/src/main.ts` | 215 | `link` |
+| `ui/src/main.ts` | 220 | `error` |
+| `ui/src/main.ts` | 232 | `requested` |
+| `ui/src/main.ts` | 233 | `result` |
+| `ui/src/main.ts` | 246 | `heading` |
+| `ui/src/main.ts` | 248 | `notice` |
+| `ui/src/main.ts` | 251 | `list` |
+| `ui/src/main.ts` | 252 | `row` |
+| `ui/src/main.ts` | 253 | `item` |
+| `ui/src/main.ts` | 257 | `row` |
+| `ui/src/main.ts` | 258 | `item` |
+| `ui/src/main.ts` | 259 | `finding` |
+| `ui/src/main.ts` | 266 | `url` |
+| `ui/src/main.ts` | 269 | `link` |
+| `ui/src/main.ts` | 276 | `el` |
+| `ui/src/main.ts` | 276 | `id` |
+| `ui/src/main.ts` | 280 | `value` |
+| `ui/src/main.ts` | 280 | `id` |
+| `ui/src/main.ts` | 284 | `text` |
+| `ui/src/main.ts` | 284 | `id` |
+| `ui/src/main.ts` | 284 | `content` |
+| `ui/src/main.ts` | 288 | `buttons` |
+| `ui/src/main.ts` | 290 | `id` |
+| `ui/src/main.ts` | 292 | `button` |
+| `ui/src/main.ts` | 293 | `roles` |
+| `ui/src/main.ts` | 302 | `api` |
+| `ui/src/main.ts` | 302 | `path` |
+| `ui/src/main.ts` | 302 | `body` |
+| `ui/src/main.ts` | 303 | `generation` |
+| `ui/src/main.ts` | 304 | `response` |
+| `ui/src/main.ts` | 315 | `result` |
+| `ui/src/main.ts` | 326 | `task` |
+| `ui/src/main.ts` | 326 | `action` |
+| `ui/src/main.ts` | 328 | `generation` |
+| `ui/src/main.ts` | 336 | `error` |
+| `ui/src/main.ts` | 344 | `reset` |
+| `ui/src/main.ts` | 351 | `id` |
+| `ui/src/main.ts` | 353 | `id` |
+| `ui/src/main.ts` | 369 | `area` |
+| `ui/src/main.ts` | 371 | `id` |
+| `ui/src/main.ts` | 388 | `options` |
+| `ui/src/main.ts` | 389 | `id` |
+| `ui/src/main.ts` | 390 | `entries` |
+| `ui/src/main.ts` | 391 | `selection` |
+| `ui/src/main.ts` | 393 | `select` |
+| `ui/src/main.ts` | 394 | `previous` |
+| `ui/src/main.ts` | 396 | `[key, label]` |
+| `ui/src/main.ts` | 397 | `option` |
+| `ui/src/main.ts` | 402 | `[key]` |
+| `ui/src/main.ts` | 405 | `findings` |
+| `ui/src/main.ts` | 405 | `id` |
+| `ui/src/main.ts` | 405 | `entries` |
+| `ui/src/main.ts` | 406 | `root` |
+| `ui/src/main.ts` | 408 | `finding` |
+| `ui/src/main.ts` | 409 | `item` |
+| `ui/src/main.ts` | 416 | `render` |
+| `ui/src/main.ts` | 416 | `next` |
+| `ui/src/main.ts` | 419 | `state` |
+| `ui/src/main.ts` | 420 | `asset` |
+| `ui/src/main.ts` | 422 | `part` |
+| `ui/src/main.ts` | 424 | `metrics` |
+| `ui/src/main.ts` | 426 | `status` |
+| `ui/src/main.ts` | 432 | `div` |
+| `ui/src/main.ts` | 434 | `count` |
+| `ui/src/main.ts` | 436 | `asset` |
+| `ui/src/main.ts` | 438 | `label` |
+| `ui/src/main.ts` | 443 | `policy` |
+| `ui/src/main.ts` | 444 | `record` |
+| `ui/src/main.ts` | 489 | `part` |
+| `ui/src/main.ts` | 494 | `part` |
+| `ui/src/main.ts` | 503 | `d` |
+| `ui/src/main.ts` | 503 | `work` |
+| `ui/src/main.ts` | 505 | `d` |
+| `ui/src/main.ts` | 513 | `work` |
+| `ui/src/main.ts` | 514 | `work` |
+| `ui/src/main.ts` | 523 | `record` |
+| `ui/src/main.ts` | 532 | `defects` |
+| `ui/src/main.ts` | 534 | `defect` |
+| `ui/src/main.ts` | 534 | `entry` |
+| `ui/src/main.ts` | 535 | `p` |
+| `ui/src/main.ts` | 542 | `notice` |
+| `ui/src/main.ts` | 560 | `roster` |
+| `ui/src/main.ts` | 561 | `root` |
+| `ui/src/main.ts` | 564 | `asset` |
+| `ui/src/main.ts` | 565 | `result` |
+| `ui/src/main.ts` | 566 | `item` |
+| `ui/src/main.ts` | 573 | `button` |
+| `ui/src/main.ts` | 586 | `aircraftDesk` |
+| `ui/src/main.ts` | 588 | `asset` |
+| `ui/src/main.ts` | 589 | `item` |
+| `ui/src/main.ts` | 591 | `result` |
+| `ui/src/main.ts` | 592 | `item` |
+| `ui/src/main.ts` | 609 | `policy` |
+| `ui/src/main.ts` | 610 | `record` |
+| `ui/src/main.ts` | 612 | `profile` |
+| `ui/src/main.ts` | 612 | `entry` |
+| `ui/src/main.ts` | 615 | `slot` |
+| `ui/src/main.ts` | 621 | `slot` |
+| `ui/src/main.ts` | 622 | `row` |
+| `ui/src/main.ts` | 623 | `part` |
+| `ui/src/main.ts` | 624 | `entry` |
+| `ui/src/main.ts` | 626 | `status` |
+| `ui/src/main.ts` | 627 | `entry` |
+| `ui/src/main.ts` | 629 | `content` |
+| `ui/src/main.ts` | 637 | `cell` |
+| `ui/src/main.ts` | 646 | `componentDesk` |
+| `ui/src/main.ts` | 648 | `part` |
+| `ui/src/main.ts` | 649 | `entry` |
+| `ui/src/main.ts` | 651 | `result` |
+| `ui/src/main.ts` | 652 | `entry` |
+| `ui/src/main.ts` | 664 | `cumulative` |
+| `ui/src/main.ts` | 665 | `values` |
+| `ui/src/main.ts` | 666 | `record` |
+| `ui/src/main.ts` | 671 | `chart` |
+| `ui/src/main.ts` | 673 | `line` |
+| `ui/src/main.ts` | 684 | `refresh` |
+| `ui/src/main.ts` | 690 | `mutate` |
+| `ui/src/main.ts` | 691 | `path` |
+| `ui/src/main.ts` | 692 | `fields` |
+| `ui/src/main.ts` | 703 | `showReport` |
+| `ui/src/main.ts` | 703 | `report` |
+| `ui/src/main.ts` | 719 | `event` |
+| `ui/src/main.ts` | 735 | `csrf` |
+| `ui/src/main.ts` | 745 | `response` |
+| `ui/src/main.ts` | 771 | `sendUsage` |
+| `ui/src/main.ts` | 774 | `next` |
+| `ui/src/main.ts` | 784 | `error` |
+| `ui/src/main.ts` | 791 | `event` |
+| `ui/src/main.ts` | 811 | `event` |
+| `ui/src/main.ts` | 815 | `report` |
+| `ui/src/main.ts` | 828 | `id` |
+| `ui/src/main.ts` | 831 | `event` |
+| `ui/src/main.ts` | 842 | `event` |
+| `ui/src/main.ts` | 853 | `event` |
+| `ui/src/main.ts` | 856 | `battery` |
+| `ui/src/main.ts` | 857 | `part` |
+| `ui/src/main.ts` | 872 | `event` |
+| `ui/src/main.ts` | 882 | `event` |
+| `ui/src/main.ts` | 891 | `event` |
+| `ui/src/main.ts` | 909 | `event` |
+| `ui/src/main.ts` | 915 | `event` |
+| `ui/src/main.ts` | 921 | `event` |
 | `ui/src/view.test.ts` | 17 | `value` |
 | `ui/src/view.ts` | 5 | `statusLabel` |
 | `ui/src/view.ts` | 5 | `status` |
@@ -1016,6 +1568,34 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `ui/src/view.ts` | 29 | `maximum` |
 | `ui/src/view.ts` | 32 | `value` |
 | `ui/src/view.ts` | 32 | `index` |
+| `tests/browser/import.spec.ts` | 7 | `Window` |
+| `tests/browser/import.spec.ts` | 14 | `login` |
+| `tests/browser/import.spec.ts` | 14 | `page` |
+| `tests/browser/import.spec.ts` | 14 | `role` |
+| `tests/browser/import.spec.ts` | 15 | `directory` |
+| `tests/browser/import.spec.ts` | 18 | `account` |
+| `tests/browser/import.spec.ts` | 29 | `{ page, }` |
+| `tests/browser/import.spec.ts` | 33 | `original` |
+| `tests/browser/import.spec.ts` | 35 | `draft` |
+| `tests/browser/import.spec.ts` | 52 | `after` |
+| `tests/browser/import.spec.ts` | 53 | `key` |
+| `tests/browser/import.spec.ts` | 55 | `pending` |
+| `tests/browser/import.spec.ts` | 57 | `file` |
+| `tests/browser/import.spec.ts` | 60 | `retained` |
+| `tests/browser/import.spec.ts` | 61 | `buffer` |
+| `tests/browser/import.spec.ts` | 80 | `{ page, }` |
+| `tests/browser/import.spec.ts` | 86 | `original` |
+| `tests/browser/import.spec.ts` | 90 | `resolve` |
+| `tests/browser/import.spec.ts` | 90 | `reject` |
+| `tests/browser/import.spec.ts` | 97 | `before` |
+| `tests/browser/import.spec.ts` | 98 | `older` |
+| `tests/browser/import.spec.ts` | 99 | `newer` |
+| `tests/browser/import.spec.ts` | 100 | `input` |
+| `tests/browser/import.spec.ts` | 101 | `hold` |
+| `tests/browser/import.spec.ts` | 138 | `{ page, }` |
+| `tests/browser/import.spec.ts` | 142 | `original` |
+| `tests/browser/import.spec.ts` | 143 | `retained` |
+| `tests/browser/import.spec.ts` | 153 | `after` |
 | `tests/browser/workspace.spec.ts` | 6 | `directory` |
 | `tests/browser/workspace.spec.ts` | 8 | `signIn` |
 | `tests/browser/workspace.spec.ts` | 8 | `page` |
@@ -1059,8 +1639,65 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tests/browser/workspace.spec.ts` | 279 | `resolve` |
 | `tests/browser/workspace.spec.ts` | 284 | `route` |
 | `tests/browser/workspace.spec.ts` | 285 | `response` |
+| `tests/browser/workspace.spec.ts` | 304 | `{ page, }` |
+| `tests/browser/workspace.spec.ts` | 307 | `release` |
+| `tests/browser/workspace.spec.ts` | 308 | `observed` |
+| `tests/browser/workspace.spec.ts` | 309 | `hold` |
+| `tests/browser/workspace.spec.ts` | 309 | `resolve` |
+| `tests/browser/workspace.spec.ts` | 312 | `responseReady` |
+| `tests/browser/workspace.spec.ts` | 312 | `resolve` |
+| `tests/browser/workspace.spec.ts` | 315 | `route` |
+| `tests/browser/workspace.spec.ts` | 316 | `response` |
 | `tools/browser_checks.mjs` | 8 | `project` |
 | `tools/browser_checks.mjs` | 9 | `result` |
+| `tools/native_feature_smoke.mjs` | 9 | `[base, output]` |
+| `tools/native_feature_smoke.mjs` | 11 | `origin` |
+| `tools/native_feature_smoke.mjs` | 12 | `browser` |
+| `tools/native_feature_smoke.mjs` | 13 | `context` |
+| `tools/native_feature_smoke.mjs` | 18 | `page` |
+| `tools/native_feature_smoke.mjs` | 19 | `errors` |
+| `tools/native_feature_smoke.mjs` | 20 | `external` |
+| `tools/native_feature_smoke.mjs` | 21 | `error` |
+| `tools/native_feature_smoke.mjs` | 22 | `request` |
+| `tools/native_feature_smoke.mjs` | 31 | `login` |
+| `tools/native_feature_smoke.mjs` | 31 | `role` |
+| `tools/native_feature_smoke.mjs` | 43 | `ready` |
+| `tools/native_feature_smoke.mjs` | 48 | `signOut` |
+| `tools/native_feature_smoke.mjs` | 49 | `response` |
+| `tools/native_feature_smoke.mjs` | 50 | `response` |
+| `tools/native_feature_smoke.mjs` | 62 | `download` |
+| `tools/native_feature_smoke.mjs` | 62 | `locator` |
+| `tools/native_feature_smoke.mjs` | 63 | `pending` |
+| `tools/native_feature_smoke.mjs` | 65 | `file` |
+| `tools/native_feature_smoke.mjs` | 71 | `canonical` |
+| `tools/native_feature_smoke.mjs` | 71 | `value` |
+| `tools/native_feature_smoke.mjs` | 78 | `key` |
+| `tools/native_feature_smoke.mjs` | 86 | `canonicalPolicy` |
+| `tools/native_feature_smoke.mjs` | 86 | `value` |
+| `tools/native_feature_smoke.mjs` | 87 | `floatFields` |
+| `tools/native_feature_smoke.mjs` | 95 | `key` |
+| `tools/native_feature_smoke.mjs` | 96 | `item` |
+| `tools/native_feature_smoke.mjs` | 97 | `encoded` |
+| `tools/native_feature_smoke.mjs` | 113 | `original` |
+| `tools/native_feature_smoke.mjs` | 119 | `draft` |
+| `tools/native_feature_smoke.mjs` | 121 | `battery` |
+| `tools/native_feature_smoke.mjs` | 121 | `limit` |
+| `tools/native_feature_smoke.mjs` | 140 | `impact` |
+| `tools/native_feature_smoke.mjs` | 161 | `change` |
+| `tools/native_feature_smoke.mjs` | 162 | `row` |
+| `tools/native_feature_smoke.mjs` | 169 | `finding` |
+| `tools/native_feature_smoke.mjs` | 175 | `after` |
+| `tools/native_feature_smoke.mjs` | 178 | `key` |
+| `tools/native_feature_smoke.mjs` | 191 | `beforeInvalid` |
+| `tools/native_feature_smoke.mjs` | 213 | `used` |
+| `tools/native_feature_smoke.mjs` | 218 | `part` |
+| `tools/native_feature_smoke.mjs` | 223 | `report` |
+| `tools/native_feature_smoke.mjs` | 248 | `repaired` |
+| `tools/native_feature_smoke.mjs` | 252 | `defect` |
+| `tools/native_feature_smoke.mjs` | 269 | `defect` |
+| `tools/native_feature_smoke.mjs` | 273 | `asset` |
+| `tools/native_feature_smoke.mjs` | 278 | `part` |
+| `tools/native_feature_smoke.mjs` | 312 | `cookies` |
 | `tools/source_index.mjs` | 7 | `collect` |
 | `tools/source_index.mjs` | 7 | `root` |
 | `tools/source_index.mjs` | 10 | `a` |
@@ -1076,6 +1713,7 @@ Python/TypeScript ASTs index declarations, parameters and bindings; SQL lists no
 | `tools/source_index.mjs` | 44 | `name` |
 | `tools/source_index.mjs` | 48 | `line` |
 | `tools/source_index.mjs` | 59 | `row` |
+| `vite.config.ts` | 4 | `version` |
 | `playwright.config.ts` | 5 | `directory` |
 | `playwright.config.ts` | 8 | `local` |
 | `playwright.config.ts` | 12 | `python` |

@@ -4,7 +4,9 @@ Exact endpoint/parameter/variable lines: docs/SOURCE_MAP.md. No device control, 
 """
 
 import asyncio
+import re
 import sqlite3
+import sys
 import threading
 from pathlib import Path
 
@@ -32,7 +34,7 @@ from workbench.models import (
 )
 from workbench.store import Store
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parents[1]))
 BODY_GATE = threading.BoundedSemaphore(4)
 HEADERS = {
     "Content-Security-Policy": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
@@ -44,15 +46,18 @@ HEADERS = {
 }
 
 
-def create_app(database: Path, port=8901):
+def create_app(database: Path, port=8901, *, cookie_name="readiness_session"):
     """One local trusted staff organization; do not expose this HTTP release as public SaaS."""
     if not 1024 <= port <= 65535:
         raise ValueError("Port outside supported range")
+    if not isinstance(cookie_name, str) or not re.fullmatch(r"[a-z][a-z0-9_]{2,63}", cookie_name):
+        raise ValueError("Invalid local session cookie namespace")
     authority, origin = f"127.0.0.1:{port}", f"http://127.0.0.1:{port}"
     app = FastAPI(
         title="Drone Maintenance Readiness Studio", docs_url=None, redoc_url=None, openapi_url=None
     )
     store = app.state.store = Store(database)
+    app.state.session_cookie_name = cookie_name
 
     @app.middleware("http")
     async def boundary(request: Request, call_next):
@@ -117,16 +122,17 @@ def create_app(database: Path, port=8901):
     @app.get("/healthz")
     def health():
         """Liveness only, never domain/account/database contents."""
-        return {"status": "ok", "mode": "local-record-based-maintenance"}
+        result = {"status": "ok", "mode": "local-record-based-maintenance"}
+        if hasattr(app.state, "desktop_identity"):
+            result["desktop"] = app.state.desktop_identity
+        return result
 
     @app.post("/api/login")
     def login(body: Login, request: Request):
         """Opaque HttpOnly/SameSite Strict one-hour local session, only bearer digest persisted."""
         token, user = auth.sign_in(request, body.username, body.password)
         response = JSONResponse(user)
-        response.set_cookie(
-            "readiness_session", token, httponly=True, samesite="strict", max_age=3600
-        )
+        response.set_cookie(cookie_name, token, httponly=True, samesite="strict", max_age=3600)
         return response
 
     @app.get("/api/me")
@@ -139,7 +145,7 @@ def create_app(database: Path, port=8901):
         """Immediate session revocation before clearing the browser cookie."""
         auth.sign_out(request)
         response = JSONResponse({"signed_out": True})
-        response.delete_cookie("readiness_session")
+        response.delete_cookie(cookie_name)
         return response
 
     @app.get("/api/workspace")

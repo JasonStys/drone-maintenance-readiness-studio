@@ -414,6 +414,16 @@
               </p>
               <form id="policy-form">
                 <label
+                  >Open policy JSON<input
+                    id="policy-file"
+                    type="file"
+                    accept=".json,application/json"
+                /></label>
+                <p>
+                  File import edits the draft only. Review and preview before
+                  publishing; no fleet history or accounts are imported.
+                </p>
+                <label
                   >Policy JSON<textarea
                     id="policy-json"
                     class="code"
@@ -421,6 +431,13 @@
                   ></textarea></label
                 ><button type="submit" data-roles="admin">
                   Publish new policy version
+                </button>
+                <button
+                  id="download-policy-draft"
+                  type="button"
+                  data-roles="admin"
+                >
+                  Download policy draft
                 </button>
               </form>
               <div class="two-col">
@@ -513,6 +530,7 @@
       </details>
     </main>
     <footer>
+      <span id="application-version"></span>
       Designed &amp; built by <strong>Jason Stys</strong>
       <nav aria-label="Author links">
         <a
