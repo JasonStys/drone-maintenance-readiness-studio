@@ -31,6 +31,12 @@ EXCLUDE = {
     "playwright-report",
 }
 SPECIAL = {
+    "docs/reports/browser-host-setup-2026-11-11.md": "Observed browser setup failure, exact official CI image, real launch controls and unchanged product test boundaries.",
+    "tools/check_browser_host.mjs": "Actual exact-locked browser launch/input and missing executable proof; no validation bypass.",
+    "tools/check_browser_host.test.mjs": "Seven genuine child-process negatives for malformed requests and forbidden browser bypass variables.",
+    "docs/reports/windows-application-guide-0.2.1.docx": "Peer-reviewed current installed application Word guide with real screenshots and immutable source.",
+    "docs/reports/windows-application-guide-0.2.1.json": "Exact current document, image, source and reviewed-page identities.",
+    "docs/reports/installed-windows-0.2.1-2026-11-11.md": "Observed installed and same-profile upgrade results with operating limits.",
     "docs/reports/NATIVE_NOTICE_ISOLATION_20261111.md": "Actual Windows notice-fixture failure, mandatory unchanged isolated native cases and retained coverage boundaries.",
     "docs/reports/NATIVE_CODEQL_20261111.md": "Dated actual CodeQL quality corrections, local tests and exact-source release limits.",
     "licenses/TK-9.0.5-pre-33904f039f48ed64.txt": "Verbatim archive-hash-verified prerelease Tk terms for the exact official Python3.14.10 Mac installer recipe.",
